@@ -1,0 +1,78 @@
+/* ----------
+-- Globals --
+---------- */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background: url(yo.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+a {
+  color: inherit;
+}
+
+p, h1 {
+  color: white;
+}
+
+.container {
+  margin-top: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-header {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  margin: 0;
+}
+
+.text-name {
+  margin: 0;
+  margin-top: 10px;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 40px;
+}
+
+.text-description {
+  margin-top: 10px;
+  font-weight: 400;
+  line-height: 1.8;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 200px;
+  width: 100%;
+  font-size: 30px;
+  color: white;
+}
+
+.fa-linkedin-in:hover {
+  color: #000000;
+}
+
+.fa-github:hover {
+  color: #000000;
+}
+
+.fa-angellist:hover {
+  color: #000000;
+}
+
+.page-wrap {
+  margin-top: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
