@@ -7,7 +7,7 @@ body {
 }
 
 html {
-  background: url(/yosemite.jpg) no-repeat center center fixed;
+  background: url(./yosemite.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -29,7 +29,7 @@ p, h1 {
 
 .text-header {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-size: 1em;
   margin: 0;
 }
 
@@ -37,7 +37,7 @@ p, h1 {
   margin: 0;
   margin-top: 10px;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 40px;
+  font-size: 2em;
 }
 
 .text-description {
@@ -53,7 +53,7 @@ p, h1 {
   justify-content: space-evenly;
   max-width: 200px;
   width: 100%;
-  font-size: 30px;
+  font-size: 1.5em;
   color: white;
 }
 
