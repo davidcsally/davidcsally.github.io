@@ -1,5 +1,8 @@
 console.log('hello there!')
 
+window.addEventListener('DOMContentLoaded', () =>
+  document.getElementById('main').style.marginTop = newMargin());
+
 window.addEventListener('resize', () =>
   document.getElementById('main').style.marginTop = newMargin());
 
