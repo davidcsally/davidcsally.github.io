@@ -19,7 +19,7 @@ function addAmplitudeListeners() {
   window.addEventListener('DOMContentLoaded', () => {
     const linkedin = document.getElementById('linkedin');
     const github = document.getElementById('github');
-    const angelist = document.getElementById('angelist');
+    const angelist = document.getElementById('angellist');
 
     linkedin.href='#';
     linkedin.addEventListener('mouseover', () => {
