@@ -1,0 +1,26 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "www.davidcsally.com",
+  "main": "script.js",
+  "scripts": {
+    "build": "webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidcsally/davidcsally.github.io.git"
+  },
+  "author": "David Sally",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidcsally/davidcsally.github.io/issues"
+  },
+  "homepage": "https://github.com/davidcsally/davidcsally.github.io#readme",
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13"
+  }
+}
