@@ -19,7 +19,7 @@ function addAmplitudeListeners() {
   window.addEventListener('DOMContentLoaded', () => {
     const linkedin = document.getElementById('linkedin');
     const github = document.getElementById('github');
-    const angelist = document.getElementById('angellist');
+    const angelist = document.getElementById('angelist');
 
     linkedin.href='#';
     linkedin.addEventListener('mouseover', () => {
@@ -27,7 +27,7 @@ function addAmplitudeListeners() {
     });
     linkedin.addEventListener('click', () => {
       logEvent('ButtonClick', { button: 'linkedin' });
-      window.open('https://www.linkedin.com/in/davidcsally', 'self');
+      window.open('https://www.linkedin.com/in/davidcsally', '_self');
     });
 
     github.href='#';
@@ -36,7 +36,7 @@ function addAmplitudeListeners() {
     });
     github.addEventListener('click', () => {
       logEvent('ButtonClick', { button: 'github' });
-      window.open('https://github.com/davidcsally', 'self');
+      window.open('https://github.com/davidcsally', '_self');
     });
 
     angelist.href='#';
@@ -45,7 +45,7 @@ function addAmplitudeListeners() {
     });
     angelist.addEventListener('click', () => {
       logEvent('ButtonClick', { button: 'angelist' });
-      window.open('https://angel.co/david-sally', 'self');
+      window.open('https://angel.co/david-sally', '_self');
     });
   });
 }
