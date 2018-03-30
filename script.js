@@ -1,4 +1,4 @@
-console.log('hello there!')
+console.log('hello there!');
 addAmplitudeListeners();
 
 // todo - throttle listener;
@@ -20,8 +20,10 @@ function addAmplitudeListeners() {
     const linkedin = document.getElementById('linkedin');
     const github = document.getElementById('github');
     const angelist = document.getElementById('angelist');
+    const medium = document.getElementById('medium');
 
-    linkedin.href='#';
+    // linkedin
+    linkedin.href = '#';
     linkedin.addEventListener('mouseover', () => {
       logEvent('ButtonMouseover', { button: 'linkedin' });
     });
@@ -30,7 +32,8 @@ function addAmplitudeListeners() {
       window.open('https://www.linkedin.com/in/davidcsally', '_self');
     });
 
-    github.href='#';
+    // github
+    github.href = '#';
     github.addEventListener('mouseover', () => {
       logEvent('ButtonMouseover', { button: 'github' });
     });
@@ -39,13 +42,24 @@ function addAmplitudeListeners() {
       window.open('https://github.com/davidcsally', '_self');
     });
 
-    angelist.href='#';
+    // angelist
+    angelist.href = '#';
     angelist.addEventListener('mouseover', () => {
       logEvent('ButtonMouseover', { button: 'angelist' });
     });
     angelist.addEventListener('click', () => {
       logEvent('ButtonClick', { button: 'angelist' });
       window.open('https://angel.co/david-sally', '_self');
+    });
+
+    // medium
+    medium.href = '#';
+    medium.addEventListener('mouseover', () => {
+      logEvent('ButtonMouseover', { button: 'medium' });
+    });
+    medium.addEventListener('click', () => {
+      logEvent('ButtonClick', { button: 'medium' });
+      window.open('https://medium.com/@davidchristophersally', '_self');
     });
   });
 }

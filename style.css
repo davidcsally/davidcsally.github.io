@@ -69,6 +69,10 @@ p, h1 {
   color: #000000;
 }
 
+.fa-medium-m:hover {
+  color: #000000;
+}
+
 .page-wrap {
   margin-top: 220px;
   display: flex;
