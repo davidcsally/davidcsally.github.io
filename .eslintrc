@@ -1,0 +1,11 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "no-undef": 0,
+    "no-return-assign": 0,
+    "quotes": 0
+  }
+}
