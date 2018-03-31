@@ -1,6 +1,3 @@
-console.log('hello there!');
-addAmplitudeListeners();
-
 // todo - throttle listener;
 window.addEventListener('DOMContentLoaded', () =>
   document.getElementById('main').style.marginTop = newMargin());
@@ -9,13 +6,18 @@ window.addEventListener('resize', () =>
   document.getElementById('main').style.marginTop = newMargin());
 
 /** keep the text in the  .~* ✨ stars 💫 *~.  */
-function newMargin() {
+const newMargin = () => {
   const height = document.documentElement.clientWidth * 0.2;
   return (height < 200) ? `${height}px` : `200px`;
-}
+};
+
+/** wrapper for amplitude event logging */
+const logEvent = (name, properties) => {
+  amplitude.getInstance().logEvent(name, properties);
+};
 
 // attach amplitude event listeners
-function addAmplitudeListeners() {
+const addAmplitudeListeners = () => {
   window.addEventListener('DOMContentLoaded', () => {
     const linkedin = document.getElementById('linkedin');
     const github = document.getElementById('github');
@@ -62,8 +64,29 @@ function addAmplitudeListeners() {
       window.open('https://medium.com/@davidchristophersally', '_self');
     });
   });
-}
+};
 
-function logEvent(name, properties) {
-  amplitude.getInstance().logEvent(name, properties);
-}
+/**
+ * big font from http://patorjk.com/software/taag/#p=display&f=Big&t=Sally
+ */
+const printAscii = () => {
+  console.log('  _____              _     _ \n' +
+    ' |  __ \\            (_)   | |\n' +
+    ' | |  | | __ ___   ___  __| |\n' +
+    ' | |  | |/ _` \\ \\ / / |/ _` |\n' +
+    ' | |__| | (_| |\\ V /| | (_| |\n' +
+    ' |_____/ \\__,_| \\_/ |_|\\__,_|\n' +
+    '                             \n' +
+    '                             \n');
+  console.log('    _____       _ _       \n' +
+    '    / ____|     | | |      \n' +
+    '   | (___   __ _| | |_   _ \n' +
+    '    \\___ \\ / _` | | | | | |\n' +
+    '    ____) | (_| | | | |_| |\n' +
+    '   |_____/ \\__,_|_|_|\\__, |\n' +
+    '                      __/ |\n' +
+    '                     |___/ \n');
+};
+
+printAscii();
+addAmplitudeListeners();
