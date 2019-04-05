@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import 'normalize.css';
+
+import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
+
+import { printAscii } from './utils';
+
+import './index.css';
+
+printAscii();
 
 ReactDOM.render(<App />, document.getElementById('groot'));
 
