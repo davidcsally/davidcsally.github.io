@@ -1,11 +1,21 @@
 {
   "name": "personal-site",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "www.davidcsally.com",
-  "main": "script.js",
+  "private": true,
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "2.1.8"
+  },
   "scripts": {
-    "build": "webpack -p",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "repository": {
     "type": "git",
@@ -17,13 +27,10 @@
     "url": "https://github.com/davidcsally/davidcsally.github.io/issues"
   },
   "homepage": "https://github.com/davidcsally/davidcsally.github.io#readme",
-  "devDependencies": {
-    "babel-loader": "^7.1.4",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.10.0",
-    "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.13"
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
