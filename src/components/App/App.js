@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import throttle from 'lodash.throttle';
 
 import * as S from './styles';
 
@@ -12,17 +13,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = { paddingTop: '200px' };
+    this.throttledPaddingTop = throttle(this.paddingTop, 100);
   }
+
   componentDidMount() {
-    window.addEventListener('resize', this.newMargin);
+    window.addEventListener('resize', throttle(this.throttledPaddingTop));
+    this.throttledPaddingTop();
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.newMargin);
+    window.removeEventListener('resize', this.throttledPaddingTop);
   }
 
   /** keep the text in the  .~* ✨ stars 💫 *~.  */
-  newMargin = () => {
+  paddingTop = () => {
     const height = document.documentElement.clientWidth * 0.2;
     this.setState({ paddingTop: (height < 200) ? `${height}px` : `200px` });
   }

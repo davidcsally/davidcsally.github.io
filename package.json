@@ -4,6 +4,7 @@
   "description": "www.davidcsally.com",
   "private": true,
   "dependencies": {
+    "lodash.throttle": "^4.1.1",
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
