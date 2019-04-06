@@ -67,10 +67,10 @@ const App = () => (
       <Description>Software Engineer | Los Angeles, CA</Description>
     </TextContainer>
     <ButtonContainer>
-      <LinkedIn href="#" />
-      <Github href="#" />
-      <Angellist href="#" />
-      <Medium href="#" />
+      <LinkedIn href="https://www.linkedin.com/in/davidcsally" />
+      <Github href="https://github.com/davidcsally" />
+      <Angellist href="https://angel.co/david-sally" />
+      <Medium href="https://medium.com/@davidchristophersally" />
     </ButtonContainer>
   </Container>
 );
