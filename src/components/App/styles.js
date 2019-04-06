@@ -9,13 +9,22 @@ export const Container = styled.div`
   background: url('${({backgroundImage}) => backgroundImage}') no-repeat center center fixed;
 `;
 
+export const H1Container = styled.div`
+  display: flex;
+  justify-content: center;
+  background-color: #D02120;
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+`;
+
 export const H1 = styled.h1`
   color: white;
   font-weight: normal;
   margin: 0;
-  margin-top: 10px;
   font-size: 2rem;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Futura-Medium';
+  font-style: italic;
 `;
 
 export const TextContainer = styled.div`
@@ -49,5 +58,4 @@ export const ButtonContainer = styled.div`
   max-width: 200px;
   width: 100%;
   font-size: 1.5em;
-  color: white;
 `;

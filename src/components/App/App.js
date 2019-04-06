@@ -36,7 +36,9 @@ class App extends Component {
       <S.Container backgroundImage={heroImage}>
         <S.TextContainer paddingTop={this.state.paddingTop}>
           <S.P>hello, world!</S.P>
-          <S.H1>David Sally</S.H1>
+          <S.H1Container>
+            <S.H1>David Sally</S.H1>
+          </S.H1Container>
           <S.Description>Software Engineer | Los Angeles, CA</S.Description>
         </S.TextContainer>
         <S.ButtonContainer>
