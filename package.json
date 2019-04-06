@@ -4,6 +4,7 @@
   "description": "www.davidcsally.com",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "lodash.throttle": "^4.1.1",
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
@@ -12,6 +13,8 @@
     "styled-components": "^4.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -29,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/davidcsally/davidcsally.github.io/issues"
   },
-  "homepage": "https://github.com/davidcsally/davidcsally.github.io#readme",
+  "homepage": "https://github.com/davidcsally/davidcsally.github.io",
   "browserslist": [
     ">0.2%",
     "not dead",
