@@ -2,9 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 import heroImage from '../../assets/yosemite.jpg';
-import LinkedIn from '../LinkedIn/LinkedIn';
+import LinkedIn from '../icons/LinkedIn/LinkedIn';
+import Github from '../icons/Github/Github';
+import Angellist from '../icons/Angellist/Angellist';
+import Medium from '../icons/Medium/Medium';
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   background: url('${heroImage}') no-repeat center center fixed;
@@ -62,6 +68,9 @@ const App = () => (
     </TextContainer>
     <ButtonContainer>
       <LinkedIn href="#" />
+      <Github href="#" />
+      <Angellist href="#" />
+      <Medium href="#" />
     </ButtonContainer>
   </Container>
 );
