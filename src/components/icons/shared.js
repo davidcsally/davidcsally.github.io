@@ -10,7 +10,7 @@ export const SVG = styled.svg`
   cursor: pointer;
 `;
 
-export const Container = styled.div`
+export const Container = styled.a`
   background-color: transparent;
 
   :hover {
