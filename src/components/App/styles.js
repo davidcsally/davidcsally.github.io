@@ -9,22 +9,22 @@ export const Container = styled.div`
   background: url('${({backgroundImage}) => backgroundImage}') no-repeat center center fixed;
 `;
 
-export const H1Container = styled.div`
-  display: flex;
-  justify-content: center;
-  background-color: #D02120;
-  width: 100%;
-  padding: 1rem;
-  margin: 1rem 0;
-`;
-
 export const H1 = styled.h1`
   color: white;
   font-weight: normal;
-  margin: 0;
+  background-color: #D02120;
+  padding: 1rem;
+  margin: 1rem 0;
   font-size: 2rem;
   font-family: 'Futura-Medium';
   font-style: italic;
+
+  transition: all 200ms linear;
+
+  :hover {
+    transform: translateX(1px);
+    box-shadow: 2px 3px 16px 7px rgba(0, 0, 0, 0.5);
+  }
 `;
 
 export const TextContainer = styled.div`
