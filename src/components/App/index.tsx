@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import heroImage from '../../assets/yosemite.jpg';
-import LinkedIn from '../icons/LinkedIn/LinkedIn';
-import Github from '../icons/Github/Github';
-import Angellist from '../icons/Angellist/Angellist';
-import Medium from '../icons/Medium/Medium';
+import LinkedIn from '../icons/LinkedIn';
+import Github from '../icons/Github';
+import Angellist from '../icons/Angellist';
+import Medium from '../icons/Medium';
 
 interface Props {
   backgroundImage?: string;
