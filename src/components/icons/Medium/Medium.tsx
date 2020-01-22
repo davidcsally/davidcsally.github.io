@@ -1,7 +1,7 @@
 import React from 'react';
 
 import withAnalytics from '../../../hocs/withAnalytics'
-import * as S from './../shared';
+import * as S from '../shared';
 
 // medium-m from font-awesome
 const Medium = ({ href="", className = '' }) => (

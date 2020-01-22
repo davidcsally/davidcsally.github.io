@@ -1,7 +1,7 @@
 import React from 'react';
 
 import withAnalytics from '../../../hocs/withAnalytics';
-import * as S from './../shared';
+import * as S from '../shared';
 
 // angellist-in from font-awesome
 const Angellist = ({ href="", className = '' }) => (

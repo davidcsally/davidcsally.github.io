@@ -1,7 +1,7 @@
 import React from 'react';
 
 import withAnalytics from '../../../hocs/withAnalytics';
-import * as S from './../shared';
+import * as S from '../shared';
 
 // github from font-awesome
 const Github = ({ href="", className = '' }) => (
