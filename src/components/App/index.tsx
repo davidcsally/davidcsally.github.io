@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import GlobalStyles from 'styles/global'
+
 import heroImage from '../../assets/yosemite.jpg';
 import LinkedIn from '../icons/LinkedIn';
 import Github from '../icons/Github';
@@ -74,6 +76,7 @@ const Container = styled.div<Props>`
 
 const App = () => (
   <Container backgroundImage={heroImage}>
+    <GlobalStyles />
     <TextContainer paddingTop={'100px'}>
       <P>hello, world!</P>
       <H1>David Sally</H1>
