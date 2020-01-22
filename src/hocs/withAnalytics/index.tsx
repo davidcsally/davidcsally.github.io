@@ -1,12 +1,12 @@
 import React from 'react';
 
 /** wrapper for amplitude event logging */
-const logEvent = (name, properties) => {
+const logEvent = (name: string, properties: object) => {
   window.amplitude.getInstance().logEvent(name, properties);
 };
 
-function withAnalytics(WrappedComponent, componentName) {
-  return class extends React.Component {
+function withAnalytics<T>(WrappedComponent: any, componentName: string) {
+  return class extends React.Component<T> {
     componentDidMount() {
       window.addEventListener('mouseover', this.logMouseOver);
       window.addEventListener('click', this.logButtonClick);
