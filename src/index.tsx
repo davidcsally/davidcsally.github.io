@@ -7,8 +7,6 @@ import * as serviceWorker from './serviceWorker';
 
 import { printAscii } from './utils';
 
-import './index.css';
-
 printAscii();
 
 ReactDOM.render(<App />, document.getElementById('groot'));
