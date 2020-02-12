@@ -63,21 +63,23 @@ const TextContainer = styled.div<Props>`
   align-items: center;
 `;
 
-const Container = styled.div<Props>`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
   min-height: 100vh;
-  background: url('${({ backgroundImage }) => backgroundImage}') no-repeat center center fixed;
+  background-image: url('${heroImage}');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `;
 
 const HeroBlock: React.FC<Props> = () => (
-  <Container backgroundImage={heroImage}>
+  <Container>
     <TextContainer paddingTop={'100px'}>
       <P>hello, world!</P>
       <H1>David Sally</H1>
-      <Description>Software Engineer | Los Angeles, CA</Description>
+      <Description>Software Engineer | Oakland, CA</Description>
     </TextContainer>
     <ButtonContainer>
       <LinkedIn href="https://www.linkedin.com/in/davidcsally" />

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Path = styled.path`
+  transition: fill 150ms linear;
   fill: white;
 `;
 
