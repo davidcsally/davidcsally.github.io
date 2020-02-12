@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
 
+import { palette} from './colors'
+import '../fonts.css'
+
+
 export default createGlobalStyle`
+  ${palette}
+
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
       "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -10,19 +16,15 @@ export default createGlobalStyle`
     cursor: url(assets/pixel.cur), auto;
   }
 
-  /* font loading */
-  @font-face {
-    font-family: 'Futura-Light';
-    src: url('./fonts/Futura-Light.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Futura-Medium';
-    src: url('./fonts/Futura-Medium.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Futura-Bold';
-    src: url('./fonts/Futura-Bold.woff') format('woff');
+  body {
+    * {
+      outline-width: 0;
+    }
+    *:focus {
+      outline-style: dashed;
+      outline-offset: 2px;
+      outline-width: 4px;
+      outline-color: var(--outline-color);
+    }
   }
 `

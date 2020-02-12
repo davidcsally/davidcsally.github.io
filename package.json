@@ -32,17 +32,20 @@
   ],
   "dependencies": {
     "border-box.css": "^1.0.0",
+    "framer-motion": "^1.8.4",
     "gh-pages": "^2.1.1",
     "lodash.throttle": "^4.1.1",
     "normalize.css": "^8.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-modal": "^3.11.1",
     "react-scripts": "^3.3.0",
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
     "@types/react": "^16.9.18",
     "@types/react-dom": "^16.9.5",
+    "@types/react-modal": "^3.10.4",
     "@types/styled-components": "^4.4.2",
     "typescript": "^3.7.5"
   }
