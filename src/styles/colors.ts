@@ -7,5 +7,7 @@ export const palette = css`
     --chat-primary: #0A5BFF;
 
     --system-red: #bc0f0b;
+
+    --white: #ffffff;
   }
 `
