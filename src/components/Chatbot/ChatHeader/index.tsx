@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import P from '../../Text'
-import CloseIcon from '../../icons/CloseIcon'
+import P from 'components/Text'
+import CloseIcon from 'components/icons/CloseIcon'
 
 interface Props {
   closeChat: () => void;

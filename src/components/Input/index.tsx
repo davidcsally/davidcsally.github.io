@@ -57,7 +57,7 @@ const InputContainer = styled.div`
   position: relative;
 `
 
-export const Input: React.FC<Props> = ({
+const Input: React.FC<Props> = ({
   id,
   className,
   children,
@@ -76,3 +76,5 @@ export const Input: React.FC<Props> = ({
     <Label htmlFor={id}>{children}</Label>
   </InputContainer>
 )
+
+export default Input

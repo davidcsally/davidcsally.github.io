@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Input } from '../../Input'
-import P from '../../Text'
+import Input from 'components/Input'
+import P from 'components/Text'
 
 interface Props {
   chatValue: string;

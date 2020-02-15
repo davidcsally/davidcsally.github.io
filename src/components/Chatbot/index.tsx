@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import Clippy from '../icons/Clippy'
+import Clippy from 'components/icons/Clippy'
 import ChatSection from './ChatSection'
 import ChatFooter from './ChatFooter'
 import ChatHeader from './ChatHeader'
