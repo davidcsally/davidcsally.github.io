@@ -7,6 +7,9 @@ import ChatSection from './ChatSection'
 import ChatFooter from './ChatFooter'
 import ChatHeader from './ChatHeader'
 
+import { ChatMessage } from './types'
+import { _messages } from './data'
+
 interface Props {
   isOpen: boolean;
   hideChat: boolean;
@@ -37,6 +40,23 @@ const Container = styled(motion.div)`
   transform: translateZ(0);
 `
 
+const animation = {
+  initial: {
+    opacity: 0,
+    y: 400
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.75 },
+  },
+  exit: {
+    opacity: 0,
+    y: 400,
+    transition: { duration: 0.5 },
+  },
+}
+
 const Chatbot: React.FC<Props> = ({
   isOpen,
   closeChat,
@@ -44,14 +64,21 @@ const Chatbot: React.FC<Props> = ({
   hideChat,
   setHideChat
 }) => {
-  const [userMessages, setUserMessages] = useState([] as string[])
+  const [messages, setMessages] = useState(_messages)
+  const [userMessages, setUserMessages] = useState([] as ChatMessage[])
   const [chatValue, setChatValue] = useState('')
 
   const submitMessage = (e: any) => {
     const { value } = e.currentTarget
 
     if (e.key === 'Enter') {
-      setUserMessages([ ...userMessages, value ])
+      const newMessage = {
+        message: value,
+        isSender: true,
+        initial: true,
+      }
+
+      setUserMessages([...userMessages, newMessage])
       setChatValue('')
     }
   }
@@ -62,27 +89,14 @@ const Chatbot: React.FC<Props> = ({
       {isOpen ?
         <Container
           key='chat'
-          positionTransition
-          initial={{
-            opacity: 0,
-            y: 400
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.75 }
-          }}
-          exit={{
-            opacity: 0,
-            y: 400,
-            transition: { duration: 0.5 }
-          }}
+          {...animation}
         >
           <ChatHeader closeChat={closeChat} />
           <ChatSection
             closeChat={closeChat}
             hideChat={setHideChat}
             userMessages={userMessages}
+            messages={messages}
           />
           <ChatFooter
             chatValue={chatValue}

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { motion, MotionProps } from 'framer-motion'
+import { motion, MotionProps, AnimatePresence } from 'framer-motion'
 
 import P from 'components/Text'
 
@@ -8,6 +8,7 @@ interface Props extends MotionProps {
   delayFactor: number;
   children: React.ReactNode;
   className?: string;
+  initial: boolean;
   justify?: 'flex-start' | 'flex-end';
 }
 
@@ -25,32 +26,39 @@ const Container = styled<any>(motion.div)`
   justify-content: ${({ justify }) => justify};
 `
 
+const animation = (delay: number) => ({
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay,
+    }
+  },
+  exit: {}
+})
+
 const ChatBubble: React.FC<Props> = ({
   children,
   className,
   delayFactor = 0,
+  initial,
   justify = 'flex-start',
   ...rest
 }) => (
-  <Container
-    className={className}
-    justify={justify}
-    initial={{
-      opacity: 0,
-      y: 20,
-    }}
-    animate={{
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: delayFactor
-      }
-    }}
-    exit={{}}
-    {...rest}
-  >
-    <StyledP>{children}</StyledP>
-  </Container>
+  <AnimatePresence initial={initial}>
+    <Container
+      className={className}
+      justify={justify}
+      {...animation(delayFactor)}
+      {...rest}
+    >
+      <StyledP>{children}</StyledP>
+    </Container>
+  </AnimatePresence>
 )
 
 export default ChatBubble
