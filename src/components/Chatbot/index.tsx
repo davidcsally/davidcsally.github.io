@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import Clippy from 'components/icons/Clippy';
+import MiniChat from './MiniChat';
 import ChatSection from './ChatSection';
 import ChatFooter from './ChatFooter';
 import ChatHeader from './ChatHeader';
@@ -15,7 +15,7 @@ interface Props {
   setHideChat: () => void;
 }
 
-const StyledClippy = styled(Clippy)`
+const StyledMiniChat = styled(MiniChat)`
   position: fixed;
   bottom: 1rem;
   right: 2rem;
@@ -31,11 +31,29 @@ const Container = styled(motion.div)`
   height: 100%;
   width: 100%;
   max-height: 32rem;
-  max-width: 300px;
-  border-radius: 4px;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
   background-color: rgb(255, 255, 255);
   transform: translateZ(0);
 `;
+
+const animation = {
+  initial: {
+    opacity: 0,
+    y: 400,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.75 },
+  },
+  exit: {
+    opacity: 0,
+    y: 400,
+    transition: { duration: 0.5 },
+  },
+};
 
 const Chatbot: React.FC<Props> = ({
   isOpen,
@@ -64,20 +82,7 @@ const Chatbot: React.FC<Props> = ({
           <Container
             key="chat"
             positionTransition
-            initial={{
-              opacity: 0,
-              y: 400,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.75 },
-            }}
-            exit={{
-              opacity: 0,
-              y: 400,
-              transition: { duration: 0.5 },
-            }}
+            {...animation}
           >
             <ChatHeader closeChat={closeChat} />
             <ChatSection
@@ -92,7 +97,7 @@ const Chatbot: React.FC<Props> = ({
             />
           </Container>
         )
-        : <StyledClippy onClick={openChat} />}
+        : <StyledMiniChat onClick={openChat} />}
     </AnimatePresence>
   );
 };
