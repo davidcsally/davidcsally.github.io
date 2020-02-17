@@ -1,4 +1,4 @@
-import { css } from 'styled-components'
+import { css } from 'styled-components';
 
 export const palette = css`
   :root {
@@ -10,4 +10,4 @@ export const palette = css`
 
     --white: #ffffff;
   }
-`
+`;

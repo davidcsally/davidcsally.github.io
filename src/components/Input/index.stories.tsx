@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Input from './'
+import Input from '.';
 
 export default {
   title: 'Input',
@@ -14,13 +14,13 @@ const Container = () => {
 
   return (
     <Input
-      id='test'
+      id="test"
       onChange={onChange}
       value={value}
-      placeholder='Leave a message for David'
+      placeholder="Leave a message for David"
       onKeyDown={() => { }}
     />
-  )
-}
+  );
+};
 
-export const normal = () => <Container />
+export const normal = () => <Container />;

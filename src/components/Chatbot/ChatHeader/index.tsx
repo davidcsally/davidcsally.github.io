@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import P from 'components/Text'
-import CloseIcon from 'components/icons/CloseIcon'
+import P from 'components/Text';
+import CloseIcon from 'components/icons/CloseIcon';
 
 interface Props {
   closeChat: () => void;
@@ -16,20 +16,20 @@ const TopSection = styled.div`
   min-height: 3.75rem;
   display: flex;
   width: 100%;
-`
+`;
 
 
 const Block = styled.div`
   display: block;
   margin: auto 0;
-`
+`;
 
 const Flex = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-`
+`;
 
 const InvertedP = styled(P)`
   color: white;
@@ -39,7 +39,7 @@ const InvertedP = styled(P)`
   width: 100%;
   font-size: 1.25rem;
   font-variation-settings: 'wght' 600;
-`
+`;
 
 const IconContainer = styled.div`
   display: flex;
@@ -50,7 +50,7 @@ const IconContainer = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-`
+`;
 
 const CloseButton = styled.button`
   background-color: transparent;
@@ -72,7 +72,7 @@ const CloseButton = styled.button`
   &:hover {
     transform: rotate(135deg);
   }
-`
+`;
 
 const ChatHeader: React.FC<Props> = ({ closeChat }) => (
   <TopSection>
@@ -81,12 +81,12 @@ const ChatHeader: React.FC<Props> = ({ closeChat }) => (
         <InvertedP>www.davidcsally.com</InvertedP>
         <CloseButton onClick={closeChat}>
           <IconContainer>
-            <CloseIcon fill='white' />
+            <CloseIcon fill="white" />
           </IconContainer>
         </CloseButton>
       </Flex>
     </Block>
   </TopSection>
-)
+);
 
-export default ChatHeader
+export default ChatHeader;

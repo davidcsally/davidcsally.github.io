@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 interface LabelProps {
   htmlFor: string;
@@ -24,7 +24,7 @@ const Label = styled.label<LabelProps>`
   left: 1rem;
   transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1);
   will-change: transform;
-`
+`;
 
 const StyledInput = styled.input`
   height: 3.5rem;
@@ -51,11 +51,11 @@ const StyledInput = styled.input`
     font-weight: normal;
     font-style: italic;
   }
-`
+`;
 
 const InputContainer = styled.div`
   position: relative;
-`
+`;
 
 const Input: React.FC<Props> = ({
   id,
@@ -63,7 +63,7 @@ const Input: React.FC<Props> = ({
   onChange,
   onKeyDown,
   placeholder = '',
-  value
+  value,
 }) => (
   <InputContainer className={className}>
     <StyledInput
@@ -75,6 +75,6 @@ const Input: React.FC<Props> = ({
     />
     <Label htmlFor={id}>{placeholder}</Label>
   </InputContainer>
-)
+);
 
-export default Input
+export default Input;

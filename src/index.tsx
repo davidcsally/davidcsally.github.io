@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css';
-import 'border-box.css'
+import 'border-box.css';
 
 import App from './components/App';
 
