@@ -33,9 +33,8 @@ const ChatFooter: React.FC<Props> = ({ chatValue, submitMessage, setChatValue })
       id='chat-input'
       onKeyDown={submitMessage}
       onChange={(e: any) => setChatValue(e.target.value)}
-    >
-      Leave a message for David
-    </Input>
+      placeholder='Leave a message for David'
+    />
     <Disclaimer>This does not collect or send any information</Disclaimer>
   </Container>
 )

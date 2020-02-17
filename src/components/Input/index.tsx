@@ -7,11 +7,11 @@ interface LabelProps {
 
 interface Props {
   id: string;
-  onChange: any;
+  onChange: (e: any) => any;
   value: any;
   onKeyDown: (e: any) => void;
-  children: React.ReactNode;
   className?: string;
+  placeholder: string | React.ReactNode;
 }
 
 const Label = styled.label<LabelProps>`
@@ -60,9 +60,9 @@ const InputContainer = styled.div`
 const Input: React.FC<Props> = ({
   id,
   className,
-  children,
   onChange,
   onKeyDown,
+  placeholder = '',
   value
 }) => (
   <InputContainer className={className}>
@@ -73,7 +73,7 @@ const Input: React.FC<Props> = ({
       placeholder="&nbsp;"
       onKeyDown={onKeyDown}
     />
-    <Label htmlFor={id}>{children}</Label>
+    <Label htmlFor={id}>{placeholder}</Label>
   </InputContainer>
 )
 
