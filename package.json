@@ -4,6 +4,7 @@
   "description": "www.davidcsally.com",
   "private": true,
   "scripts": {
+    "lint": "eslint src/**/*{.ts,.tsx}",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
@@ -34,6 +35,8 @@
   ],
   "dependencies": {
     "border-box.css": "^1.0.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-react": "^7.14.3",
     "framer-motion": "^1.8.4",
     "gh-pages": "^2.2.0",
     "lodash.throttle": "^4.1.1",
@@ -51,13 +54,20 @@
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/preset-typescript": "^1.2.0",
     "@storybook/react": "^5.3.13",
+    "@types/jest": "^25.1.2",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "@types/react-modal": "^3.10.4",
     "@types/styled-components": "^4.4.3",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
     "fork-ts-checker-webpack-plugin": "^4.0.4",
     "react-docgen-typescript-loader": "^3.6.0",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "typescript-eslint": "^0.0.1-alpha.0"
   }
 }
