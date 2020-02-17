@@ -9,6 +9,7 @@
     "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
@@ -67,6 +68,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "fork-ts-checker-webpack-plugin": "^4.0.4",
     "react-docgen-typescript-loader": "^3.6.0",
+    "react-snap": "^1.23.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5",
     "typescript-eslint": "^0.0.1-alpha.0"
