@@ -16,6 +16,7 @@ const Button = styled(motion.button)`
   display: inline-block;
   margin-bottom: 1rem;
   color: var(--system-red);
+  background-color: var(--white);
   transition: all 150ms linear;
 
   &:focus,
