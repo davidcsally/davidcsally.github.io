@@ -16,7 +16,7 @@ function withAnalytics<T>(WrappedComponent: any, componentName: string) {
       window.removeEventListener('mouseover', this.logMouseOver);
       window.removeEventListener('click', this.logButtonClick);
     }
-    
+
     logMouseOver = () => {
       logEvent('ButtonMouseover', { button: componentName });
     }

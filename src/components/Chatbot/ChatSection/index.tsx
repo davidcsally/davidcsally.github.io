@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
-import styled from 'styled-components'
-import { useAnimation, AnimatePresence } from 'framer-motion'
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
+import { useAnimation, AnimatePresence } from 'framer-motion';
 
-import ChatBubble from '../ChatBubble'
-import ChatButton from '../ChatButton'
+import ChatBubble from '../ChatBubble';
+import ChatButton from '../ChatButton';
 
 interface Props {
   closeChat: () => void;
@@ -20,28 +20,28 @@ const Container = styled.div`
   flex-grow: 1;
   overflow-y: auto;
   transform: translateZ(0);
-`
+`;
 
 const messages = [
   'Hello!',
   'Just checking in 👀',
-  'I hope you like my website!'
-]
+  'I hope you like my website!',
+];
 
 const ChatSection: React.FC<Props> = ({ closeChat, hideChat, userMessages }) => {
-  const controls = useAnimation()
+  const controls = useAnimation();
 
   useEffect(() => {
-    controls.start(i => ({
+    controls.start((i) => ({
       opacity: 0,
       x: 100,
       transition: { delay: i * 0.3 },
-    }))
-  })
+    }));
+  });
 
   return (
-    <Container id='messages-container'>
-      <AnimatePresence >
+    <Container id="messages-container">
+      <AnimatePresence>
         {messages.map((message, index) => (
           <ChatBubble
             key={message}
@@ -52,42 +52,44 @@ const ChatSection: React.FC<Props> = ({ closeChat, hideChat, userMessages }) => 
         ))}
 
         <ChatButton
-          key='please-stop'
+          key="please-stop"
           onClick={closeChat}
           initial={{
             opacity: 0,
-            y: 20
+            y: 20,
           }}
           animate={{
             opacity: 1,
             y: 0,
-            transition: { delay: messages.length * 1 + 2 }
+            transition: { delay: messages.length * 1 + 2 },
           }}
           exit={{}}
           onAnimationComplete={() => {
-            const el = document.getElementById('messages-container')
-            el!.scrollBy(1000, 1000)
+            const el = document.getElementById('messages-container');
+            el!.scrollBy(1000, 1000);
           }}
         >
-          Bye <span role='img' aria-label='hand waving goodbye'>👋</span>
+          Bye
+          {' '}
+          <span role="img" aria-label="hand waving goodbye">👋</span>
         </ChatButton>
 
         <ChatButton
-          key='please-remove'
+          key="please-remove"
           onClick={hideChat}
           initial={{
             opacity: 0,
-            y: 20
+            y: 20,
           }}
           animate={{
             opacity: 1,
             y: 0,
-            transition: { delay: messages.length * 1 + 3 }
+            transition: { delay: messages.length * 1 + 3 },
           }}
           exit={{}}
           onAnimationComplete={() => {
-            const el = document.getElementById('messages-container')
-            el?.scrollBy(1000, 1000)
+            const el = document.getElementById('messages-container');
+            el?.scrollBy(1000, 1000);
           }}
         >
           Remove forever
@@ -97,10 +99,10 @@ const ChatSection: React.FC<Props> = ({ closeChat, hideChat, userMessages }) => 
           <ChatBubble
             key={`${message}-${index}`}
             delayFactor={0}
-            justify='flex-end'
+            justify="flex-end"
             onAnimationStart={() => {
-              const el = document.getElementById('messages-container')
-              el!.scrollBy(1000, 1000)
+              const el = document.getElementById('messages-container');
+              el!.scrollBy(1000, 1000);
             }}
           >
             {message}
@@ -108,7 +110,7 @@ const ChatSection: React.FC<Props> = ({ closeChat, hideChat, userMessages }) => 
         ))}
       </AnimatePresence>
     </Container>
-  )
-}
+  );
+};
 
-export default ChatSection
+export default ChatSection;

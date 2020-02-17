@@ -56,7 +56,7 @@ const ButtonContainer = styled.div`
 `;
 
 const TextContainer = styled.div<Props>`
-  padding-top: ${({ paddingTop }) => paddingTop };
+  padding-top: ${({ paddingTop }) => paddingTop};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,7 +76,7 @@ const Container = styled.div`
 
 const HeroBlock: React.FC<Props> = () => (
   <Container>
-    <TextContainer paddingTop={'100px'}>
+    <TextContainer paddingTop="100px">
       <P>hello, world!</P>
       <H1>David Sally</H1>
       <Description>Software Engineer | Oakland, CA</Description>

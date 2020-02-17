@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
-import { palette} from './colors'
-import '../fonts.css'
+import { palette } from './colors';
+import '../fonts.css';
 
 
 export default createGlobalStyle`
@@ -27,4 +27,4 @@ export default createGlobalStyle`
       outline-color: var(--outline-color);
     }
   }
-`
+`;

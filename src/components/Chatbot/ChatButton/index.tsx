@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { motion, MotionProps } from 'framer-motion'
+import React from 'react';
+import styled from 'styled-components';
+import { motion, MotionProps } from 'framer-motion';
 
 interface Props extends MotionProps {
   onClick: () => void;
@@ -24,18 +24,23 @@ const Button = styled(motion.button)`
     color: white;
     background-color: var(--system-red);
   }
-`
+`;
 
 const Container = styled.div`
   align-self: flex-end;
-`
+`;
 
-const ChatButton: React.FC<Props> = ({ className, children, onClick, ...rest }) => (
+const ChatButton: React.FC<Props> = ({
+  className,
+  children,
+  onClick,
+  ...rest
+}) => (
   <Container className={className}>
-    <Button onClick={onClick} {...rest} >
+    <Button onClick={onClick} {...rest}>
       {children}
     </Button>
   </Container>
-)
+);
 
-export default ChatButton
+export default ChatButton;

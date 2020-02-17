@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import { motion, MotionProps } from 'framer-motion'
+import React from 'react';
+import styled from 'styled-components';
+import { motion, MotionProps } from 'framer-motion';
 
-import P from 'components/Text'
+import P from 'components/Text';
 
 interface Props extends MotionProps {
   delayFactor: number;
@@ -17,13 +17,13 @@ const StyledP = styled(P)`
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   display: inline-block;
-`
+`;
 
 const Container = styled<any>(motion.div)`
   display: flex;
   width: 100%;
   justify-content: ${({ justify }) => justify};
-`
+`;
 
 const ChatBubble: React.FC<Props> = ({
   children,
@@ -43,14 +43,14 @@ const ChatBubble: React.FC<Props> = ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: delayFactor
-      }
+        delay: delayFactor,
+      },
     }}
     exit={{}}
     {...rest}
   >
     <StyledP>{children}</StyledP>
   </Container>
-)
+);
 
-export default ChatBubble
+export default ChatBubble;
