@@ -1,5 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
+
+import ChatProfileImage from '../ChatProfileImage'
 
 import P from 'components/Text';
 import CloseIcon from 'components/icons/CloseIcon';
@@ -11,10 +13,11 @@ interface Props {
 
 const TopSection = styled.div`
   padding: 0 0.5rem;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   background-color: rgb(10, 91, 255);
   min-height: 3.75rem;
   display: flex;
+  align-items: center;
   width: 100%;
 `;
 
@@ -38,7 +41,7 @@ const InvertedP = styled(P)`
   align-items: center;
   width: 100%;
   font-size: 1.25rem;
-  font-variation-settings: 'wght' 600;
+  margin-left: 1rem;
 `;
 
 const IconContainer = styled.div`
@@ -78,7 +81,8 @@ const ChatHeader: React.FC<Props> = ({ closeChat }) => (
   <TopSection>
     <Block>
       <Flex>
-        <InvertedP>www.davidcsally.com</InvertedP>
+        <ChatProfileImage />
+        <InvertedP fontSize="1rem">David Sally</InvertedP>
         <CloseButton onClick={closeChat}>
           <IconContainer>
             <CloseIcon fill="white" />
