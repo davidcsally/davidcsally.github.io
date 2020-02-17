@@ -61,7 +61,7 @@ const ChatSection: React.FC<Props> = ({ closeChat, hideChat, userMessages }) => 
           animate={{
             opacity: 1,
             y: 0,
-            transition: { delay: messages.length * 1 + 2 },
+            transition: { delay: messages.length + 1 },
           }}
           exit={{}}
           onAnimationComplete={() => {
@@ -84,7 +84,7 @@ const ChatSection: React.FC<Props> = ({ closeChat, hideChat, userMessages }) => 
           animate={{
             opacity: 1,
             y: 0,
-            transition: { delay: messages.length * 1 + 3 },
+            transition: { delay: messages.length + 2 },
           }}
           exit={{}}
           onAnimationComplete={() => {
