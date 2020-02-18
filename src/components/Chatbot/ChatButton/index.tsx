@@ -6,6 +6,7 @@ interface Props extends MotionProps {
   onClick: () => void;
   children: React.ReactNode;
   className?: string;
+  justify?: 'flex-start' | 'flex-end';
 }
 
 
@@ -14,7 +15,6 @@ const Button = styled(motion.button)`
   border: 2px solid var(--system-red);
   padding: 0.5rem 1rem;
   display: inline-block;
-  margin-bottom: 1rem;
   color: var(--system-red);
   background-color: var(--white);
   transition: all 150ms linear;
@@ -26,17 +26,20 @@ const Button = styled(motion.button)`
   }
 `;
 
-const Container = styled.div`
-  align-self: flex-end;
+const Container = styled.div<any>`
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: ${({ justify }) => justify};
 `;
 
 const ChatButton: React.FC<Props> = ({
   className,
   children,
   onClick,
+  justify = 'flex-start',
   ...rest
 }) => (
-  <Container className={className}>
+  <Container className={className} justify={justify}>
     <Button onClick={onClick} {...rest}>
       {children}
     </Button>

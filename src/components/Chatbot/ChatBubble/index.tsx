@@ -15,13 +15,13 @@ const StyledP = styled(P)`
   background-color: #f8f8f8;
   border-radius: 20px;
   padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
   display: inline-block;
 `;
 
 const Container = styled<any>(motion.div)`
   display: flex;
   width: 100%;
+  margin-bottom: 1rem;
   justify-content: ${({ justify }) => justify};
 `;
 
