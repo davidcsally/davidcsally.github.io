@@ -22,7 +22,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 23px 0 rgba(0,0,0,.15);
-  height: 130px;
+  height: 8.25rem;
   padding: 0.75rem;
 `;
 

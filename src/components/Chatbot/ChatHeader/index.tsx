@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import ChatProfileImage from '../ChatProfileImage'
-
 import P from 'components/Text';
 import CloseIcon from 'components/icons/CloseIcon';
+import ChatProfileImage from '../ChatProfileImage';
 
 interface Props {
   closeChat: () => void;
@@ -15,7 +14,7 @@ const TopSection = styled.div`
   padding: 0 0.5rem;
   justify-content: flex-start;
   background-color: rgb(10, 91, 255);
-  min-height: 3.75rem;
+  height: 3.75rem;
   display: flex;
   align-items: center;
   width: 100%;

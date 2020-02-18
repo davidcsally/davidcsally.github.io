@@ -13,6 +13,8 @@ interface Props {
 
 const Container = styled.div`
   display: block;
+  height: 20rem;
+  flex-grow: 1;
   padding: 1.5rem;
   overflow-y: auto;
 `;
