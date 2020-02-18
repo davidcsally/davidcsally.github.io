@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - prod
+      - test
 
 jobs:
   build:
@@ -11,10 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Install
-      run: yarn install
-    - name: Deploy
-      run: yarn deploy
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+
+      - name: Install
+        run: yarn install
+
+      - name: Deploy
+        run: yarn deploy
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
