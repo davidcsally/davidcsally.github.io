@@ -11,10 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Install
-      run: yarn install
-    - name: Deploy
-      run: yarn deploy
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+
+      - name: Install
+        run: yarn install
+
+      - name: Setup Git credentials
+        run: |
+          git config --global user.name '@davidcsally'
+          git config --global user.email 'davidcsally@users.noreply.github.com'
+          git remote set-url origin https://davidcsally:${{ secrets.GITHUB_TOKEN }}@github.com/davidcsally/davidcsally.github.io
+
+      - name: Deploy to GH Pages
+        run: yarn run deploy
