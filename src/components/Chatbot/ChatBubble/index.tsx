@@ -15,15 +15,30 @@ const StyledP = styled(P)`
   background-color: #f8f8f8;
   border-radius: 20px;
   padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
   display: inline-block;
 `;
 
 const Container = styled<any>(motion.div)`
   display: flex;
   width: 100%;
+  margin-bottom: 1rem;
   justify-content: ${({ justify }) => justify};
 `;
+
+const animation = (delay: number) => ({
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay,
+    },
+  },
+  exit: {},
+});
 
 const ChatBubble: React.FC<Props> = ({
   children,
@@ -35,18 +50,7 @@ const ChatBubble: React.FC<Props> = ({
   <Container
     className={className}
     justify={justify}
-    initial={{
-      opacity: 0,
-      y: 20,
-    }}
-    animate={{
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: delayFactor,
-      },
-    }}
-    exit={{}}
+    {...animation(delayFactor)}
     {...rest}
   >
     <StyledP>{children}</StyledP>

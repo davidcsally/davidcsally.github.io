@@ -12,14 +12,9 @@ interface Props {
 }
 
 const Container = styled.div`
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: block;
   padding: 1.5rem;
-  flex-grow: 1;
   overflow-y: auto;
-  transform: translateZ(0);
 `;
 
 const messages = [
@@ -53,6 +48,7 @@ const ChatSection: React.FC<Props> = ({ closeChat, hideChat, userMessages }) => 
 
         <ChatButton
           key="please-stop"
+          justify="flex-end"
           onClick={closeChat}
           initial={{
             opacity: 0,
@@ -76,6 +72,7 @@ const ChatSection: React.FC<Props> = ({ closeChat, hideChat, userMessages }) => 
 
         <ChatButton
           key="please-remove"
+          justify="flex-end"
           onClick={hideChat}
           initial={{
             opacity: 0,
