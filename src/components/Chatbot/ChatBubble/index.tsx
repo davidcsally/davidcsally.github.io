@@ -25,6 +25,21 @@ const Container = styled<any>(motion.div)`
   justify-content: ${({ justify }) => justify};
 `;
 
+const animation = (delay: number) => ({
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay,
+    },
+  },
+  exit: {},
+});
+
 const ChatBubble: React.FC<Props> = ({
   children,
   className,
@@ -35,18 +50,7 @@ const ChatBubble: React.FC<Props> = ({
   <Container
     className={className}
     justify={justify}
-    initial={{
-      opacity: 0,
-      y: 20,
-    }}
-    animate={{
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: delayFactor,
-      },
-    }}
-    exit={{}}
+    {...animation(delayFactor)}
     {...rest}
   >
     <StyledP>{children}</StyledP>
