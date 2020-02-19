@@ -19,5 +19,13 @@ jobs:
       - name: Install
         run: yarn install
 
+      - name: Setup Git credentials
+        run: |
+          git config --global user.name '@davidcsally'
+          git config --global user.email 'davidcsally@users.noreply.github.com'
+          git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_PAT@github.com/davidcsally/davidcsally.github.io
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+
       - name: Deploy
         run: yarn deploy
