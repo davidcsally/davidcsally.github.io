@@ -28,4 +28,6 @@ jobs:
           GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
 
       - name: Deploy
-        run: yarn deploy
+        run: |
+          yarn deploy
+          ${{ secrets.GITHUB_TOKEN }}
