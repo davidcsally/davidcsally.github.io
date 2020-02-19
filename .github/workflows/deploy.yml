@@ -13,11 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install
         run: yarn install
 
       - name: Deploy
         run: yarn deploy
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
