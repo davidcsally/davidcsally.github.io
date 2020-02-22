@@ -1,3 +1,4 @@
+![Deploy](https://github.com/davidcsally/davidcsally.github.io/workflows/Deploy/badge.svg)
 # Welcome to my website
 
 This was built using:
