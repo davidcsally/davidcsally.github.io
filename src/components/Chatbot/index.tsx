@@ -59,6 +59,7 @@ const animation = {
     x: 0,
     transition: {
       duration: 0.4,
+      delay: 0.25,
     },
   },
   exit: {
