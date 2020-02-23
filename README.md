@@ -8,6 +8,10 @@ This was built using:
 
 That's about it!
 
+Hosting:
+- Github pages
+- Netlify deploy previews
+
 ## Available Scripts
 
 In the project directory, you can run:
