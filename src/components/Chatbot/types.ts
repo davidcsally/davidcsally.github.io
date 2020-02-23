@@ -5,4 +5,7 @@ export interface ChatMessage {
   initial: boolean;
   /** Flag to control which side of screen the message floats towards */
   isSender: boolean;
+  /** Unique index for each message */
+  type?: 'message' | 'button';
+  action?: any;
 }
