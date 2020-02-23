@@ -16,4 +16,17 @@ export const messages: ChatMessage[] = [
     initial: true,
     isSender: false,
   },
+  {
+    message: 'Bye 👋',
+    initial: true,
+    isSender: true,
+    type: 'button',
+  },
 ];
+
+const newMessages: ChatMessage[] = [];
+
+export const initialState = {
+  savedMessages: messages,
+  newMessages,
+};
