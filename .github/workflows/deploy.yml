@@ -21,7 +21,9 @@ jobs:
         run: |
           git config --global user.name '@davidcsally'
           git config --global user.email 'davidcsally@users.noreply.github.com'
-          git remote set-url origin https://github.com/settings/tokens/385888678@github.com/davidcsally/davidcsally.github.io.git
+          git remote set-url origin https://davidcsally:${{ secrets.GITHUB_TOKEN }}@github.com/davidcsally/davidcsally.github.io
+        # git remote set-url origin https://385888678@github.com/davidcsally/davidcsally.github.io.git
+        # git remote set-url origin https://scuzzlebuzzle:<MYTOKEN>@github.com/scuzzlebuzzle/ol3-1.git
 
       - name: Deploy to GH Pages
         run: yarn run deploy
