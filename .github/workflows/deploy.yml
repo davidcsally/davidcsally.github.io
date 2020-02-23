@@ -13,8 +13,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install
         run: yarn install
@@ -23,11 +21,7 @@ jobs:
         run: |
           git config --global user.name '@davidcsally'
           git config --global user.email 'davidcsally@users.noreply.github.com'
-          git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_PAT@github.com/davidcsally/davidcsally.github.io
-        env:
-          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+          git remote set-url origin https://your_personal_access_token>@github.com/davidcsally/davidcsally.github.io.git
 
-      - name: Deploy
-        run: |
-          yarn deploy
-          ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to GH Pages
+        run: yarn run deploy
