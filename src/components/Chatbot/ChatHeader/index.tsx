@@ -72,7 +72,10 @@ const CloseButton = styled.button`
 
   &:focus,
   &:hover {
-    transform: rotate(135deg);
+    transform: rotate(180deg);
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 50%;
   }
 `;
 
