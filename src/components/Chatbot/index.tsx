@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -8,6 +8,9 @@ import MiniChat from './MiniChat';
 import ChatSection from './ChatSection';
 import ChatFooter from './ChatFooter';
 import ChatHeader from './ChatHeader';
+import { initialState } from './mock';
+
+import { State, chatReducer, MOVE_NEW_TO_SAVED, ADD_MESSAGE } from './reducer';
 
 
 interface Props {
@@ -78,19 +81,23 @@ const Chatbot: React.FC<Props> = ({
   hideChat,
   setHideChat,
 }) => {
-  const [userMessages, setUserMessages] = useState([] as string[]);
+  const [chatMessages, updateMessages] = useReducer(chatReducer, initialState);
   const [chatValue, setChatValue] = useState('');
 
   const submitMessage = (e: any) => {
     const { value } = e.currentTarget;
 
     if (e.key === 'Enter') {
-      setUserMessages([...userMessages, value]);
+      updateMessages({ type: ADD_MESSAGE, payload: value });
       setChatValue('');
     }
   };
 
-  if (hideChat) return null;
+  const onClose = () => {
+    updateMessages({ action: MOVE_NEW_TO_SAVED });
+  };
+
+  if (hideChat) return <div />;
   return (
     <AnimatePresence>
       {isOpen
@@ -104,7 +111,9 @@ const Chatbot: React.FC<Props> = ({
             <ChatSection
               closeChat={closeChat}
               hideChat={setHideChat}
-              userMessages={userMessages}
+              savedMessages={chatMessages.savedMessages}
+              newMessages={chatMessages.newMessages}
+              updateMessages={updateMessages}
             />
             <ChatFooter
               chatValue={chatValue}
