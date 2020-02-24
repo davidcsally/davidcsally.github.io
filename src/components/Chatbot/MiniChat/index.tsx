@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components/macro';
+import styled from 'styled-components/macro';
+import { motion } from 'framer-motion';
 
 import Chat from 'components/icons/Chat';
 
@@ -13,7 +14,7 @@ interface Props {
   onClick: any;
 }
 
-const buttonCss = css`
+const Button = styled(motion.button)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,16 +25,36 @@ const buttonCss = css`
   background-color: var(--chat-primary);
 `;
 
+const animation = {
+  initial: {
+    opacity: 0,
+    y: 10,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.5,
+      duration: 0.4,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: 10,
+  },
+};
+
 const MiniChat: React.FC<Props> = ({ className, onClick }) => (
-  <button
+  <Button
     className={className}
     onClick={onClick}
-    css={buttonCss}
     aria-label="Open Chat"
     type="button"
+    tabIndex={0}
+    {...animation}
   >
     <StyledChat />
-  </button>
+  </Button>
 );
 
 export default MiniChat;
