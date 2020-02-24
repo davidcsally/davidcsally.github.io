@@ -39,8 +39,8 @@ export const chatReducer = (state: State, action) => {
     }
 
     case MOVE_NEW_TO_SAVED: {
-      const { savedMessages, newMessages } = state;
-
+      const savedMessages = state.savedMessages.map((m) => ({ ...m, initial: false }));
+      const newMessages = state.newMessages.map((m) => ({ ...m, initial: false }));
 
       return { savedMessages: [...savedMessages, ...newMessages], newMessages: [] };
     }
