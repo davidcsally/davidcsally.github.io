@@ -9,5 +9,6 @@ export const palette = css`
     --system-red: #bc0f0b;
 
     --white: #ffffff;
+    --grey: #eeeeee;
   }
 `;

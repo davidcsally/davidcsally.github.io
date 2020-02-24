@@ -9,7 +9,6 @@ import { ChatMessage } from '../types';
 
 interface Props {
   closeChat: () => void;
-  hideChat: () => void;
   savedMessages: ChatMessage[];
   newMessages: ChatMessage[];
   updateMessages: any;
