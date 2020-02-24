@@ -23,6 +23,7 @@ const Label = styled.label<LabelProps>`
   left: 1rem;
   transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1);
   will-change: transform;
+  border: 1px solid transparent;
 `;
 
 const StyledInput = styled.input`
@@ -33,6 +34,7 @@ const StyledInput = styled.input`
   position: relative;
   font-size: 1rem;
   width: 100%;
+  border: 1px solid var(--grey);
 
   &:focus, &:hover {
     border-color: black;
