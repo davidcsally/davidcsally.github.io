@@ -10,7 +10,11 @@ import ChatFooter from './ChatFooter';
 import ChatHeader from './ChatHeader';
 import { initialState } from './mock';
 
-import { State, chatReducer, MOVE_NEW_TO_SAVED, ADD_MESSAGE } from './reducer';
+import {
+  chatReducer,
+  MOVE_NEW_TO_SAVED,
+  ADD_MESSAGE,
+} from './reducer';
 
 
 interface Props {
@@ -94,7 +98,8 @@ const Chatbot: React.FC<Props> = ({
   };
 
   const onClose = () => {
-    updateMessages({ action: MOVE_NEW_TO_SAVED });
+    updateMessages({ type: MOVE_NEW_TO_SAVED });
+    closeChat();
   };
 
   if (hideChat) return <div />;
@@ -107,9 +112,9 @@ const Chatbot: React.FC<Props> = ({
             positionTransition
             {...animation}
           >
-            <ChatHeader closeChat={closeChat} />
+            <ChatHeader closeChat={onClose} />
             <ChatSection
-              closeChat={closeChat}
+              closeChat={onClose}
               hideChat={setHideChat}
               savedMessages={chatMessages.savedMessages}
               newMessages={chatMessages.newMessages}

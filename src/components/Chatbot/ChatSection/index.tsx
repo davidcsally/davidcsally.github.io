@@ -1,14 +1,19 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { useAnimation, AnimatePresence } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
 
 import ChatBubble from '../ChatBubble';
 import ChatButton from '../ChatButton';
 
+import { ChatMessage } from '../types';
+import { SET_ANIMATION } from '../reducer';
+
 interface Props {
   closeChat: () => void;
   hideChat: () => void;
-  userMessages: string[];
+  savedMessages: ChatMessage[];
+  newMessages: ChatMessage[];
+  updateMessages: any;
 }
 
 const Container = styled.div`
@@ -19,13 +24,17 @@ const Container = styled.div`
   overflow-y: auto;
 `;
 
-const messages = [
-  'Hello!',
-  'Just checking in 👀',
-  'I hope you like my website!',
-];
+const Placeholder = styled(ChatBubble)`
+  p {
+    background-color: transparent
+  }
+`;
 
-const ChatSection: React.FC<Props> = ({ closeChat, hideChat, userMessages }) => {
+const ChatSection: React.FC<Props> = ({
+  closeChat,
+  savedMessages,
+  newMessages,
+}) => {
   const controls = useAnimation();
 
   useEffect(() => {
@@ -34,80 +43,82 @@ const ChatSection: React.FC<Props> = ({ closeChat, hideChat, userMessages }) => 
       x: 100,
       transition: { delay: i * 0.3 },
     }));
+
+    // scroll after mount in case there are saved messages
+    const el = document.getElementById('messages-container');
+    if (el) el.scrollBy(1000, 1000);
   });
 
   return (
     <Container id="messages-container">
-      <AnimatePresence>
-        {messages.map((message, index) => (
+      {savedMessages.map((m, index) => {
+        const {
+          message,
+          initial,
+          type,
+          action,
+          isSender,
+        } = m;
+
+        if (type === 'button') {
+          return (
+            <ChatButton
+              delay={index}
+              key={`${message}-${index}`}
+              initial={initial}
+              justify={isSender ? 'flex-end' : 'flex-start'}
+              onClick={action === 'close' ? closeChat : () => { }}
+              onAnimationComplete={() => {
+                const el = document.getElementById('messages-container');
+                el!.scrollBy(1000, 1000);
+              }}
+            >
+              {message}
+            </ChatButton>
+          );
+        }
+
+        return (
           <ChatBubble
-            key={message}
-            delayFactor={index + 1}
-          >
-            {message}
-          </ChatBubble>
-        ))}
-
-        <ChatButton
-          key="please-stop"
-          justify="flex-end"
-          onClick={closeChat}
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            transition: { delay: messages.length + 1 },
-          }}
-          exit={{}}
-          onAnimationComplete={() => {
-            const el = document.getElementById('messages-container');
-            el!.scrollBy(1000, 1000);
-          }}
-        >
-          Bye
-          {' '}
-          <span role="img" aria-label="hand waving goodbye">👋</span>
-        </ChatButton>
-
-        <ChatButton
-          key="please-remove"
-          justify="flex-end"
-          onClick={hideChat}
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            transition: { delay: messages.length + 2 },
-          }}
-          exit={{}}
-          onAnimationComplete={() => {
-            const el = document.getElementById('messages-container');
-            el?.scrollBy(1000, 1000);
-          }}
-        >
-          Remove forever
-        </ChatButton>
-
-        {userMessages.map((message, index) => (
-          <ChatBubble
-            key={`${message}-${index}`}
-            delayFactor={0}
-            justify="flex-end"
-            onAnimationStart={() => {
+            key={index}
+            initial={initial}
+            delay={index}
+            justify={isSender ? 'flex-end' : 'flex-start'}
+            onAnimationComplete={() => {
               const el = document.getElementById('messages-container');
               el!.scrollBy(1000, 1000);
             }}
           >
             {message}
           </ChatBubble>
-        ))}
-      </AnimatePresence>
+        );
+      })}
+
+      {
+        newMessages.map((m, index) => {
+          const {
+            message,
+            initial,
+            isSender,
+          } = m;
+
+          return (
+            <ChatBubble
+              key={index}
+              initial={initial}
+              justify={isSender ? 'flex-end' : 'flex-start'}
+              delay={0}
+              onAnimationStart={() => {
+                const el = document.getElementById('messages-container');
+                el!.scrollBy(1000, 1000);
+              }}
+            >
+              {message}
+            </ChatBubble>
+          );
+        })
+      }
+      <Placeholder delay={0}> </Placeholder>
     </Container>
   );
 };

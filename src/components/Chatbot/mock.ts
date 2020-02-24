@@ -21,6 +21,7 @@ export const messages: ChatMessage[] = [
     initial: true,
     isSender: true,
     type: 'button',
+    action: 'close',
   },
 ];
 
