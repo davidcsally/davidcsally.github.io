@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import { motion, MotionProps } from 'framer-motion';
+import { AnimatePresence, motion, MotionProps } from 'framer-motion';
 
 import P from 'components/Text';
 
-interface Props extends MotionProps {
-  delayFactor: number;
-  children: React.ReactNode;
-  className?: string;
+interface ContainerProps {
   justify?: 'flex-start' | 'flex-end';
 }
+
+interface ComponentProps extends ContainerProps {
+  delay: number;
+  children: React.ReactNode;
+  className?: string;
+}
+
+type Props = MotionProps & ComponentProps;
 
 const StyledP = styled(P)`
   background-color: #f8f8f8;
@@ -43,18 +48,21 @@ const animation = (delay: number) => ({
 const ChatBubble: React.FC<Props> = ({
   children,
   className,
-  delayFactor = 0,
+  initial,
+  delay = 0,
   justify = 'flex-start',
   ...rest
 }) => (
-  <Container
-    className={className}
-    justify={justify}
-    {...animation(delayFactor)}
-    {...rest}
-  >
-    <StyledP>{children}</StyledP>
-  </Container>
+  <AnimatePresence initial={!!initial}>
+    <Container
+      className={className}
+      justify={justify}
+      {...rest}
+      {...animation(delay)}
+    >
+      <StyledP>{children}</StyledP>
+    </Container>
+  </AnimatePresence>
 );
 
 export default ChatBubble;
