@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { motion, MotionProps } from 'framer-motion';
+import { motion, MotionProps, AnimatePresence } from 'framer-motion';
 
 interface Props extends MotionProps {
+  delay: number;
   onClick: () => void;
   children: React.ReactNode;
   className?: string;
@@ -32,18 +33,40 @@ const Container = styled.div<any>`
   justify-content: ${({ justify }) => justify};
 `;
 
+const animation = (delay: number) => ({
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay,
+    },
+  },
+  exit: {},
+});
+
 const ChatButton: React.FC<Props> = ({
+  delay = 0,
   className,
   children,
   onClick,
   justify = 'flex-start',
+  initial,
   ...rest
 }) => (
-  <Container className={className} justify={justify}>
-    <Button onClick={onClick} {...rest}>
-      {children}
-    </Button>
-  </Container>
+  <AnimatePresence initial={!!initial}>
+    <Container
+      className={className}
+      justify={justify}
+    >
+      <Button onClick={onClick} {...rest} {...animation(delay)}>
+        {children}
+      </Button>
+    </Container>
+  </AnimatePresence>
 );
 
 export default ChatButton;
