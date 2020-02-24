@@ -14,7 +14,7 @@ interface ComponentProps {
 type Props = React.InputHTMLAttributes<HTMLInputElement> & ComponentProps;
 
 const Label = styled.label<LabelProps>`
-  font-family: "Futura", Helvetica, sans-serif;  
+  font-family: "Inter", Helvetica, sans-serif;  
   position: absolute;
   z-index: 5;
   font-size: 0.75rem;
