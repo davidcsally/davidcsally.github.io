@@ -6,6 +6,7 @@ interface LabelProps {
 }
 
 interface ComponentProps {
+  id: string;
   onChange: (e: any) => any;
   onKeyDown: (e: any) => void;
 }

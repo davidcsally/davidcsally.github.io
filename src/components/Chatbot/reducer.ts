@@ -5,7 +5,7 @@ export const ADD_MESSAGE = 'ADD_MESSAGE';
 export const SET_ANIMATION = 'SET_ANIMATION';
 export const MOVE_NEW_TO_SAVED = 'MOVE_NEW_TO_SAVED';
 
-export const moveNewToSaved = (payload) => ({
+export const moveNewToSaved = (payload: any) => ({
   action: MOVE_NEW_TO_SAVED,
 });
 
@@ -14,7 +14,7 @@ export interface State {
   newMessages: ChatMessage[];
 }
 
-export const chatReducer = (state: State, action) => {
+export const chatReducer = (state: State, action: any) => {
   const { payload, type } = action;
 
   switch (type) {

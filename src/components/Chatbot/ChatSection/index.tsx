@@ -6,7 +6,6 @@ import ChatBubble from '../ChatBubble';
 import ChatButton from '../ChatButton';
 
 import { ChatMessage } from '../types';
-import { SET_ANIMATION } from '../reducer';
 
 interface Props {
   closeChat: () => void;
