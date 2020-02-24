@@ -19,10 +19,8 @@ import {
 
 interface Props {
   isOpen: boolean;
-  hideChat: boolean;
   closeChat: () => void;
   openChat: () => void;
-  setHideChat: () => void;
 }
 
 const StyledMiniChat = styled(MiniChat)`
@@ -82,8 +80,6 @@ const Chatbot: React.FC<Props> = ({
   isOpen,
   closeChat,
   openChat,
-  hideChat,
-  setHideChat,
 }) => {
   const [chatMessages, updateMessages] = useReducer(chatReducer, initialState);
   const [chatValue, setChatValue] = useState('');
@@ -102,7 +98,6 @@ const Chatbot: React.FC<Props> = ({
     closeChat();
   };
 
-  if (hideChat) return <div />;
   return (
     <AnimatePresence>
       {isOpen
@@ -115,7 +110,6 @@ const Chatbot: React.FC<Props> = ({
             <ChatHeader closeChat={onClose} />
             <ChatSection
               closeChat={onClose}
-              hideChat={setHideChat}
               savedMessages={chatMessages.savedMessages}
               newMessages={chatMessages.newMessages}
               updateMessages={updateMessages}

@@ -7,8 +7,6 @@ import Chatbot from '../Chatbot';
 
 interface State {
   isChatOpen: boolean;
-  isModalOpen: boolean;
-  hideChat: boolean;
 }
 
 class App extends Component<{}, State> {
@@ -16,9 +14,7 @@ class App extends Component<{}, State> {
     super(props);
 
     this.state = {
-      isModalOpen: false,
       isChatOpen: false,
-      hideChat: false,
     };
   }
 
@@ -29,8 +25,8 @@ class App extends Component<{}, State> {
   }
 
   render() {
-    const { closeChat, openChat, setHideChat } = this;
-    const { isChatOpen, hideChat } = this.state;
+    const { closeChat, openChat } = this;
+    const { isChatOpen } = this.state;
 
     return (
       <div>
@@ -40,8 +36,6 @@ class App extends Component<{}, State> {
           isOpen={isChatOpen}
           closeChat={closeChat}
           openChat={openChat}
-          hideChat={hideChat}
-          setHideChat={setHideChat}
         />
       </div>
     );
@@ -50,8 +44,6 @@ class App extends Component<{}, State> {
   openChat = () => this.setState({ isChatOpen: true })
 
   closeChat = () => this.setState({ isChatOpen: false })
-
-  setHideChat = () => this.setState({ hideChat: true })
 }
 
 export default App;
