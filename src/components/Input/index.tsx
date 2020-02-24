@@ -5,14 +5,12 @@ interface LabelProps {
   htmlFor: string;
 }
 
-interface Props {
-  id: string;
+interface ComponentProps {
   onChange: (e: any) => any;
-  value: any;
   onKeyDown: (e: any) => void;
-  className?: string;
-  placeholder: string | React.ReactNode;
 }
+
+type Props = React.InputHTMLAttributes<HTMLInputElement> & ComponentProps;
 
 const Label = styled.label<LabelProps>`
   font-family: "Futura", Helvetica, sans-serif;  
@@ -59,6 +57,7 @@ const InputContainer = styled.div`
 
 const Input: React.FC<Props> = ({
   id,
+  autoFocus = false,
   className,
   onChange,
   onKeyDown,
@@ -72,6 +71,7 @@ const Input: React.FC<Props> = ({
       onChange={onChange}
       placeholder="&nbsp;"
       onKeyDown={onKeyDown}
+      autoFocus={autoFocus}
     />
     <Label htmlFor={id}>{placeholder}</Label>
   </InputContainer>
