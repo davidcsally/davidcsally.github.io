@@ -1,0 +1,26 @@
+.btn-animated {
+  animation: btn-animation 3s ease-in-out forwards;
+}
+
+@keyframes btn-animation {
+  0% {
+    transform-origin: bottom left;
+    transform: rotate(0deg);
+  }
+  16% {
+    transform-origin: bottom left;
+    transform: rotate(135deg);
+  }
+  32% {
+    transform-origin: bottom left;
+    transform: rotate(75deg);
+  }
+  48% {
+    transform-origin: bottom left;
+    transform: rotate(115deg);
+  }
+  100% {
+    transform-origin: bottom left;
+    transform: rotate(0deg);
+    transform: translateY(500px);
+  }
