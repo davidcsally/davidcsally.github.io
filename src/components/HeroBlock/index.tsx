@@ -25,7 +25,7 @@ const Description = styled.p`
   margin-top: 10px;
   font-weight: 400;
   line-height: 1.8;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Inter', "Helvetica Neue", Helvetica, Arial, sans-serif;
 `;
 
 const H1 = styled.h1`
