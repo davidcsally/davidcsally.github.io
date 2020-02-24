@@ -20,6 +20,7 @@ export default createGlobalStyle`
     * {
       outline-width: 0;
     }
+
     *:focus {
       outline-style: dashed;
       outline-offset: 2px;
