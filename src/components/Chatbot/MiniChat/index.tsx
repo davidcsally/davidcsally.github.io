@@ -14,7 +14,7 @@ interface Props {
   onClick: any;
 }
 
-const buttonCss = css`
+const Button = styled(motion.button)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,17 +45,16 @@ const animation = {
 };
 
 const MiniChat: React.FC<Props> = ({ className, onClick }) => (
-  <motion.button
+  <Button
     className={className}
     onClick={onClick}
-    css={buttonCss}
     aria-label="Open Chat"
     type="button"
     tabIndex={0}
     {...animation}
   >
     <StyledChat />
-  </motion.button>
+  </Button>
 );
 
 export default MiniChat;
