@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -9,6 +9,13 @@ import ChatSection from './ChatSection';
 import ChatFooter from './ChatFooter';
 import ChatHeader from './ChatHeader';
 
+import { initialState } from './mock';
+
+import {
+  chatReducer,
+  MOVE_NEW_TO_SAVED,
+  ADD_MESSAGE,
+} from './reducer';
 
 interface Props {
   isOpen: boolean;
@@ -59,6 +66,7 @@ const animation = {
     x: 0,
     transition: {
       duration: 0.4,
+      delay: 0.25,
     },
   },
   exit: {
@@ -77,19 +85,24 @@ const Chatbot: React.FC<Props> = ({
   hideChat,
   setHideChat,
 }) => {
-  const [userMessages, setUserMessages] = useState([] as string[]);
+  const [chatMessages, updateMessages] = useReducer(chatReducer, initialState);
   const [chatValue, setChatValue] = useState('');
 
   const submitMessage = (e: any) => {
     const { value } = e.currentTarget;
 
     if (e.key === 'Enter') {
-      setUserMessages([...userMessages, value]);
+      updateMessages({ type: ADD_MESSAGE, payload: value });
       setChatValue('');
     }
   };
 
-  if (hideChat) return null;
+  const onClose = () => {
+    updateMessages({ type: MOVE_NEW_TO_SAVED });
+    closeChat();
+  };
+
+  if (hideChat) return <div />;
   return (
     <AnimatePresence>
       {isOpen
@@ -99,11 +112,13 @@ const Chatbot: React.FC<Props> = ({
             positionTransition
             {...animation}
           >
-            <ChatHeader closeChat={closeChat} />
+            <ChatHeader closeChat={onClose} />
             <ChatSection
-              closeChat={closeChat}
+              closeChat={onClose}
               hideChat={setHideChat}
-              userMessages={userMessages}
+              savedMessages={chatMessages.savedMessages}
+              newMessages={chatMessages.newMessages}
+              updateMessages={updateMessages}
             />
             <ChatFooter
               chatValue={chatValue}
