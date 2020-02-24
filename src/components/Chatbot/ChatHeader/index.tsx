@@ -59,12 +59,15 @@ const CloseButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transition: transform 500ms ease-in-out;
   height: 1rem;
   width: 1rem;
   position: absolute;
   right: 0.75rem;
   padding: 1rem;
+  border-radius: 50%;
+  transition:
+    transform 500ms ease-in-out,
+    background-color 250ms ease-in-out;
 
   svg {
     height: 1rem;
@@ -74,9 +77,8 @@ const CloseButton = styled.button`
   &:focus,
   &:hover {
     transform: rotate(180deg);
-    background-color: black;
-    opacity: 0.3;
-    border-radius: 50%;
+    /** black 30% */
+    background-color: rgba(0,0,0,0.3);
   }
 `;
 
