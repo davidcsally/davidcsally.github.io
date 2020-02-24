@@ -41,6 +41,7 @@ const InvertedP = styled(P)`
   width: 100%;
   font-size: 1.25rem;
   margin-left: 1rem;
+  font-weight: 600;
 `;
 
 const IconContainer = styled.div`
