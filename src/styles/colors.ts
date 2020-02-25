@@ -10,5 +10,6 @@ export const palette = css`
 
     --white: #ffffff;
     --grey: #eeeeee;
+    --supremely-red: #D02120;
   }
 `;
