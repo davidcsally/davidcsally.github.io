@@ -67,7 +67,7 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "fork-ts-checker-webpack-plugin": "^4.0.5",
-    "react-docgen-typescript-loader": "^3.6.0",
+    "react-docgen-typescript-loader": "^3.7.0",
     "react-snap": "^1.23.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.8.2",
