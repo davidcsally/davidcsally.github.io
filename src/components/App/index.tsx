@@ -4,6 +4,7 @@ import GlobalStyles from 'styles/global';
 
 import HeroBlock from '../HeroBlock';
 import Chatbot from '../Chatbot';
+import { CookieBar } from '../CookieBar';
 import { SupremeBlock } from '../SupremeBlock';
 
 interface State {
@@ -34,6 +35,7 @@ class App extends Component<{}, State> {
         <GlobalStyles />
         <HeroBlock />
         <SupremeBlock />
+        <CookieBar />
         <Chatbot
           isOpen={isChatOpen}
           closeChat={closeChat}
