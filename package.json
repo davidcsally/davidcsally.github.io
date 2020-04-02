@@ -4,6 +4,7 @@
   "description": "www.davidcsally.com",
   "private": true,
   "scripts": {
+    "dev": "yarn start",
     "lint": "eslint src/**/*{.ts,.tsx}",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
