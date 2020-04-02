@@ -30,13 +30,11 @@ const Description = styled.p`
 
 const H1 = styled.h1`
   color: white;
-  font-weight: normal;
   background-color: var(--supremely-red);
   padding: 1rem;
   margin: 1rem 0;
   font-size: 2rem;
-  font-family: 'Futura-Medium';
-  font-style: italic;
+  font-family: 'Futura-Heavy-Oblique';
 
   transition: all 200ms linear;
 
