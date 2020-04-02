@@ -6,14 +6,14 @@
     "runtime-main.js": "/static/js/runtime-main.f7069b67.js",
     "runtime-main.js.map": "/static/js/runtime-main.f7069b67.js.map",
     "static/css/2.414a9703.chunk.css": "/static/css/2.414a9703.chunk.css",
-    "static/js/2.412e489e.chunk.js": "/static/js/2.412e489e.chunk.js",
-    "static/js/2.412e489e.chunk.js.map": "/static/js/2.412e489e.chunk.js.map",
+    "static/js/2.6a850790.chunk.js": "/static/js/2.6a850790.chunk.js",
+    "static/js/2.6a850790.chunk.js.map": "/static/js/2.6a850790.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.66d8769e314b5677a8c547a175380684.js": "/precache-manifest.66d8769e314b5677a8c547a175380684.js",
+    "precache-manifest.a17a91e29e60f3c7d171397037269f40.js": "/precache-manifest.a17a91e29e60f3c7d171397037269f40.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.414a9703.chunk.css.map": "/static/css/2.414a9703.chunk.css.map",
     "static/css/main.6398148e.chunk.css.map": "/static/css/main.6398148e.chunk.css.map",
-    "static/js/2.412e489e.chunk.js.LICENSE.txt": "/static/js/2.412e489e.chunk.js.LICENSE.txt",
+    "static/js/2.6a850790.chunk.js.LICENSE.txt": "/static/js/2.6a850790.chunk.js.LICENSE.txt",
     "static/media/fonts.css": "/static/media/Inter.var.feca908d.woff2",
     "static/media/david-linkedin.png": "/static/media/david-linkedin.9d79b2b4.png",
     "static/media/yosemite.jpg": "/static/media/yosemite.b34c1ade.jpg"
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.f7069b67.js",
     "static/css/2.414a9703.chunk.css",
-    "static/js/2.412e489e.chunk.js",
+    "static/js/2.6a850790.chunk.js",
     "static/css/main.6398148e.chunk.css",
     "static/js/main.96a2f4db.chunk.js"
   ]
