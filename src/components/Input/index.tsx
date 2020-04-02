@@ -50,7 +50,6 @@ const StyledInput = styled.input`
     transform: translate(0, -0.75rem);
     font-size: 0.75rem;
     font-weight: normal;
-    font-style: italic;
   }
 `;
 

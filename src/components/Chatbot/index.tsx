@@ -39,17 +39,18 @@ const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-height: 32rem;
+  height: 100%;
   border-radius: 10px;
   overflow: hidden;
   background-color: rgb(255, 255, 255);
   transform: translateZ(0);
 
-  ${media.tablet`
+  ${media.small`
     bottom: 1rem;
     left: auto;
     right: 1rem;
     width: 100%;
+    max-height: 32rem;
     max-width: 400px;
   `}
 `;
