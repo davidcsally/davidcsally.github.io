@@ -3,6 +3,7 @@ import { css } from 'styled-components';
 
 // values in px
 const breakpoints = {
+  small: 480,
   medium: 768,
   large: 1024,
 };
@@ -12,6 +13,12 @@ const breakpoints = {
  * Based on https://github.com/styled-components/styled-components/blob/master/packages/styled-components/docs/tips-and-tricks.md
  */
 export const media = {
+  small: (content: TemplateStringsArray) => css`
+    @media (min-width: ${breakpoints.small}px) {
+      ${css(content)};
+    }
+  `,
+
   tablet: (content: TemplateStringsArray) => css`
     @media (min-width: ${breakpoints.medium}px) {
       ${css(content)};
