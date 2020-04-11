@@ -6,11 +6,20 @@ import HeroBlock from '../HeroBlock';
 import Chatbot from '../Chatbot';
 import { CookieBar } from '../CookieBar';
 import { SupremeBlock } from '../SupremeBlock';
+import { AboutMe } from '../AboutMe';
 
 interface State {
   isChatOpen: boolean;
   isCookieBarOpen: boolean;
 }
+
+const COOKIE = 'acceptedCookies=true';
+
+const cookieExpiration = () => {
+  const now = new Date();
+  now.setMinutes(now.getMinutes() + 30);
+  return `expires=${now.toUTCString()}`;
+};
 
 class App extends Component<{}, State> {
   constructor(props: any) {
@@ -23,8 +32,10 @@ class App extends Component<{}, State> {
   }
 
   componentDidMount() {
+    cookieExpiration();
     setTimeout(() => {
-      this.openCookieBar();
+      if (document.cookie.includes('acceptedCookies')) this.openChat();
+      else this.openCookieBar();
     }, 1000);
   }
 
@@ -36,6 +47,7 @@ class App extends Component<{}, State> {
       <div>
         <GlobalStyles />
         <HeroBlock />
+        <AboutMe />
         <SupremeBlock />
         <CookieBar
           isCookieBarOpen={isCookieBarOpen}
@@ -58,7 +70,10 @@ class App extends Component<{}, State> {
 
   openCookieBar = () => this.setState({ isCookieBarOpen: true });
 
-  closeCookieBar = () => this.setState({ isCookieBarOpen: false });
+  closeCookieBar = () => {
+    document.cookie = `${COOKIE}; ${cookieExpiration()}; path=/ SameSite=Strict`;
+    this.setState({ isCookieBarOpen: false });
+  }
 
   closeCookieBarAndOpenChat = () => {
     this.closeCookieBar();
