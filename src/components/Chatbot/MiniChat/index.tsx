@@ -4,15 +4,15 @@ import { motion } from 'framer-motion';
 
 import Chat from 'components/icons/Chat';
 
-const StyledChat = styled(Chat)`
-  height: 85%;
-  width: 85%;
-`;
-
 interface Props {
   className?: string;
   onClick: any;
 }
+
+const StyledChat = styled(Chat)`
+  height: 85%;
+  width: 85%;
+`;
 
 const Button = styled(motion.button)`
   display: flex;

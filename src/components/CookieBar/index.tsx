@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { AnimatePresence, motion, MotionProps } from 'framer-motion';
+import React from 'react';
+import styled, { css } from 'styled-components/macro';
+import { AnimatePresence, motion } from 'framer-motion';
 
-const Container = styled<any>(motion.div)`
+interface Props {
+  isCookieBarOpen: boolean;
+  closeCookieBar: () => void;
+}
+
+const Container = styled(motion.div)`
   position: fixed;
   bottom: 0;
   min-height: 5rem;
@@ -15,6 +20,7 @@ const Container = styled<any>(motion.div)`
   border: 2px solid black;
   font-size: 1.5rem;
   padding: 1rem;
+  z-index: 10;
 
   p {
     margin-right: 1.5rem;
@@ -45,24 +51,21 @@ const animation = {
   },
 };
 
-export const CookieBar = () => {
-  const [isOpen, setIsOpen] = useState(true);
-
-  return (
-    <AnimatePresence>
-      {isOpen ?
-        (
-          <Container key="cookie-bar" {...animation}>
-            <p>This site uses cookies. Or does it?</p>
-            <button
-              type="button"
-              onClick={() => setIsOpen(false)}
-            >
-              Accept
-            </button>
-          </Container>
-        )
-        : null}
-    </AnimatePresence>
-  );
-};
+export const CookieBar: React.FC<Props> = ({ isCookieBarOpen, closeCookieBar }) => (
+  <AnimatePresence>
+    {isCookieBarOpen
+      ? (
+        <Container key="cookie-bar" {...animation}>
+          <p>This site uses cookies. Or does it?</p>
+          <button
+            type="button"
+            onClick={() => closeCookieBar()}
+            css={css`padding: 1rem 1rem;`}
+          >
+            Ok
+          </button>
+        </Container>
+      )
+      : null}
+  </AnimatePresence>
+);

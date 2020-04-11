@@ -9,6 +9,7 @@ import { SupremeBlock } from '../SupremeBlock';
 
 interface State {
   isChatOpen: boolean;
+  isCookieBarOpen: boolean;
 }
 
 class App extends Component<{}, State> {
@@ -17,25 +18,29 @@ class App extends Component<{}, State> {
 
     this.state = {
       isChatOpen: false,
+      isCookieBarOpen: false,
     };
   }
 
   componentDidMount() {
     setTimeout(() => {
-      this.openChat();
-    }, 5000);
+      this.openCookieBar();
+    }, 1000);
   }
 
   render() {
-    const { closeChat, openChat } = this;
-    const { isChatOpen } = this.state;
+    const { closeChat, openChat, closeCookieBarAndOpenChat } = this;
+    const { isChatOpen, isCookieBarOpen } = this.state;
 
     return (
       <div>
         <GlobalStyles />
         <HeroBlock />
         <SupremeBlock />
-        <CookieBar />
+        <CookieBar
+          isCookieBarOpen={isCookieBarOpen}
+          closeCookieBar={closeCookieBarAndOpenChat}
+        />
         <Chatbot
           isOpen={isChatOpen}
           closeChat={closeChat}
@@ -45,7 +50,20 @@ class App extends Component<{}, State> {
     );
   }
 
-  openChat = () => this.setState({ isChatOpen: true })
+  openChat = () => {
+    const { isChatOpen } = this.state;
+    if (isChatOpen) return;
+    this.setState({ isChatOpen: true });
+  }
+
+  openCookieBar = () => this.setState({ isCookieBarOpen: true });
+
+  closeCookieBar = () => this.setState({ isCookieBarOpen: false });
+
+  closeCookieBarAndOpenChat = () => {
+    this.closeCookieBar();
+    setTimeout(() => this.openChat(), 5000);
+  }
 
   closeChat = () => this.setState({ isChatOpen: false })
 }
