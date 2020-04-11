@@ -1,23 +1,25 @@
 import React from 'react';
-import styled, { css } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 
-import PicOfMe from '../../assets/coding.jpg';
+import PicOfMe from 'assets/coding.jpg';
 
-import { flex } from '../../styles/mixins';
+import { flex } from 'styles/mixins';
+import { media } from 'styles/media';
 
-const Container = css`
-  ${flex({ direction: 'column', alignItems: 'flex-start' })}
-  background-color: white;
-  border: 5px dashed black;
-  padding: 2rem;
-  background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); 
+const MaxWidth = styled.div`
+  ${flex({ direction: 'column' })}
+  max-width: 90rem;
+  margin: 0 auto;
 `;
 
-const H2 = css`
+const H2 = styled.h2`
+  font-size: 2rem;
   margin: 0;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px white;
 `;
 
-const Img = css`
+const Img = styled.img`
   height: 100%;
   width: 100%;
   transform: scale(1);
@@ -29,8 +31,12 @@ const Img = css`
   }
 `;
 
-const Row = css`
-  ${flex()}
+const Row = styled.div`
+  ${flex({ direction: 'column' })}
+
+  ${media.tablet`
+    flex-direction: row;
+  `}
 `;
 
 const CopyContainer = styled.div`
@@ -47,6 +53,10 @@ const CopyContainer = styled.div`
       background: var(--supremely-red);
     }
   }
+
+  ${media.tablet`
+    margin-right: 2rem;
+ `}
 `;
 
 const ImageContainer = styled.div`
@@ -54,30 +64,43 @@ const ImageContainer = styled.div`
   overflow: hidden;
   max-height: 500px;
   margin: 1rem;
+
+  ${media.tablet`
+    margin-left: 2rem;
+ `}
+`;
+
+const Container = styled.div`
+  background-color: white;
+  border: 5px dashed black;
+  padding: 2rem;
+  background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 `;
 
 /** Just a lil section about me */
 export const AboutMe: React.FC = () => (
-  <div css={Container}>
-    <h2 css={H2}>About Me</h2>
-    <div css={Row}>
-      <CopyContainer>
-        <p>
-          Hello! I&apos;m David Sally, a full stack engineer based out of Oakland, California.
-          I&apos;m a highly opinionated software engineer with 5+ years experience in software,
-          robotics, and biotechnology. I enjoy building fast, responsive web apps using React,
-          Redux, and Typescript.
-        </p>
-        <p>
-          I specialize in Front End Development, and enjoy pointing out elements on a page that I
-          built. Outside of Javascript, I‘m fascinated by the biotech world and constant innovations
-          in microfluidics and CRISPR. In my free time, you can find me attempting to fix the latest
-          thing to break on my Pontiac firebird.
-        </p>
-      </CopyContainer>
-      <ImageContainer>
-        <img css={Img} src={PicOfMe} alt="David hard at work" title="Who's that handsome guy?" />
-      </ImageContainer>
-    </div>
-  </div>
+  <Container>
+    <MaxWidth>
+      <H2>About Me</H2>
+      <Row>
+        <CopyContainer>
+          <p>
+            Hello! I&apos;m David Sally, a full stack engineer based out of Oakland, California.
+            I&apos;m a highly opinionated software engineer with 5+ years experience in software,
+            robotics, and biotechnology. I enjoy building fast, responsive web apps using React,
+            Redux, and Typescript.
+          </p>
+          <p>
+            I specialize in Front End Development, and enjoy pointing out elements on a page that
+            I built. Outside of Javascript, I‘m fascinated by the biotech world and constant
+            innovations in microfluidics and CRISPR. In my free time, you can find me attempting
+            to fix the latest thing to break on my Pontiac firebird.
+          </p>
+        </CopyContainer>
+        <ImageContainer>
+          <Img src={PicOfMe} alt="David hard at work" title="Who's that handsome guy?" />
+        </ImageContainer>
+      </Row>
+    </MaxWidth>
+  </Container>
 );

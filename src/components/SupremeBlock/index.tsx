@@ -21,6 +21,14 @@ const Column = styled.div`
   background-color: yellow;
   background-color: var(--supremely-red);
   overflow: hidden;
+  max-width: 90rem;
+  margin: 0 auto;
+`;
+
+const Mask = styled.div`
+  overflow: hidden;
+  padding: 0 2rem;
+  background-color: var(--supremely-red);
 `;
 
 const Overflow = styled(motion.div)`
@@ -65,19 +73,21 @@ export const SupremeBlock: React.FC = () => {
   }
 
   return (
-    <Column>
-      <Overflow style={{ x: x1 }}>
-        {nodes}
-      </Overflow>
-      <Overflow style={{ x: x2 }}>
-        {nodes}
-      </Overflow>
-      <Overflow style={{ x: x1 }}>
-        {nodes}
-      </Overflow>
-      <Overflow style={{ x: x2 }}>
-        {nodes}
-      </Overflow>
-    </Column>
+    <Mask>
+      <Column>
+        <Overflow style={{ x: x1 }}>
+          {nodes}
+        </Overflow>
+        <Overflow style={{ x: x2 }}>
+          {nodes}
+        </Overflow>
+        <Overflow style={{ x: x1 }}>
+          {nodes}
+        </Overflow>
+        <Overflow style={{ x: x2 }}>
+          {nodes}
+        </Overflow>
+      </Column>
+    </Mask>
   );
 };
