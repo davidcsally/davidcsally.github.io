@@ -49,7 +49,6 @@ export const SupremeBlock: React.FC = () => {
 
   const x1 = useTransform(scrollYProgress, [0, 1], ['0%', '-65%']);
   const x2 = useTransform(scrollYProgress, [0, 1], ['-65%', '0%']);
-  const x3 = useTransform(scrollYProgress, [0, 1], ['0%', '-65%']);
 
   // Attach resize listener on mount
   useEffect(() => {
@@ -73,7 +72,10 @@ export const SupremeBlock: React.FC = () => {
       <Overflow style={{ x: x2 }}>
         {nodes}
       </Overflow>
-      <Overflow style={{ x: x3 }}>
+      <Overflow style={{ x: x1 }}>
+        {nodes}
+      </Overflow>
+      <Overflow style={{ x: x2 }}>
         {nodes}
       </Overflow>
     </Column>
