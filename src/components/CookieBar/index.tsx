@@ -2,20 +2,28 @@ import React from 'react';
 import styled, { css } from 'styled-components/macro';
 import { AnimatePresence, motion } from 'framer-motion';
 
+import { flex } from 'styles/mixins';
+
 interface Props {
   isCookieBarOpen: boolean;
   closeCookieBar: () => void;
 }
 
+const Column = styled.div`
+  ${flex({ direction: 'column' })}
+`;
+
+const Row = styled.div`
+  ${flex()}
+`;
+
 const Container = styled(motion.div)`
+  ${flex()}
   position: fixed;
   bottom: 0;
   min-height: 5rem;
   background-color: white;
   color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   border: 2px solid black;
   font-size: 1.5rem;
@@ -51,19 +59,28 @@ const animation = {
   },
 };
 
+const TinyText = styled.p`
+  font-size: 12px;
+`;
+
 export const CookieBar: React.FC<Props> = ({ isCookieBarOpen, closeCookieBar }) => (
   <AnimatePresence>
     {isCookieBarOpen
       ? (
         <Container key="cookie-bar" {...animation}>
-          <p>This site uses cookies. Or does it?</p>
-          <button
-            type="button"
-            onClick={() => closeCookieBar()}
-            css={css`padding: 1rem 1rem;`}
-          >
-            Ok
-          </button>
+          <Column>
+            <Row>
+              <p>This site uses cookies. Or does it?</p>
+              <button
+                type="button"
+                onClick={() => closeCookieBar()}
+                css={css`padding: 1rem 1rem;`}
+              >
+                Who Cares
+              </button>
+            </Row>
+            <TinyText>(but actually it uses a cookie to remember if you clicked this)</TinyText>
+          </Column>
         </Container>
       )
       : null}
