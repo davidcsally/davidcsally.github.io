@@ -71,7 +71,7 @@ class App extends Component<{}, State> {
   openCookieBar = () => this.setState({ isCookieBarOpen: true });
 
   closeCookieBar = () => {
-    document.cookie = `${COOKIE}; ${cookieExpiration()}; path=/ SameSite=Strict`;
+    document.cookie = `${COOKIE}; ${cookieExpiration()}; path=/; SameSite=Strict`;
     this.setState({ isCookieBarOpen: false });
   }
 
