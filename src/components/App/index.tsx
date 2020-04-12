@@ -7,6 +7,7 @@ import Chatbot from '../Chatbot';
 import { CookieBar } from '../CookieBar';
 import { SupremeBlock } from '../SupremeBlock';
 import { AboutMe } from '../AboutMe';
+import { PortfolioBlock } from '../PortfolioBlock';
 
 interface State {
   isChatOpen: boolean;
@@ -48,6 +49,7 @@ class App extends Component<{}, State> {
         <HeroBlock />
         <AboutMe />
         <SupremeBlock />
+        <PortfolioBlock />
         <CookieBar
           isCookieBarOpen={isCookieBarOpen}
           closeCookieBar={closeCookieBarAndOpenChat}
