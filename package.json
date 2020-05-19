@@ -38,7 +38,7 @@
   "dependencies": {
     "border-box.css": "^1.0.0",
     "eslint-config-airbnb": "^18.1.0",
-    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react": "^7.20.0",
     "framer-motion": "^1.11.0",
     "gh-pages": "^2.2.0",
     "lodash.throttle": "^4.1.1",
