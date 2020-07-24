@@ -40,17 +40,12 @@ const Img = styled.img`
   }
 `;
 
-const Row = styled.div`
+const Column = styled.div`
   ${flex({ direction: 'column' })}
-
-  ${media.tablet`
-    flex-direction: row;
-  `}
 `;
 
 const CopyContainer = styled.div`
   ${flex({ direction: 'column' })}
-  flex: 1;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.63);
   color: white;
@@ -84,7 +79,6 @@ const CopyContainer = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  flex: 1;
   overflow: hidden;
   max-height: 500px;
   margin: 1rem;
@@ -118,7 +112,7 @@ export const AboutMe: React.FC = () => (
   <Container>
     <MaxWidth>
       <H2>About Me</H2>
-      <Row>
+      <Column>
         <CopyContainer>
           <p>
             {splitter(copy1)}
@@ -168,7 +162,7 @@ export const AboutMe: React.FC = () => (
             />
           </picture>
         </ImageContainer>
-      </Row>
+      </Column>
     </MaxWidth>
   </Container>
 );
