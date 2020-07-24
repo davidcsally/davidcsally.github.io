@@ -50,7 +50,7 @@ const Row = styled.div`
 
 const CopyContainer = styled.div`
   ${flex({ direction: 'column' })}
-  width: 50%;
+  flex: 1;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.63);
   color: white;
@@ -61,6 +61,21 @@ const CopyContainer = styled.div`
     &::selection {
       background: var(--supremely-red);
     }
+
+    span {
+
+      &::selection {
+        background: var(--supremely-red);
+      }
+
+      font-variation-settings: 'wght' 400;
+      transition: font-variation-settings 150ms linear;
+
+      &:hover {
+        font-variation-settings: 'wght' 600;
+      }
+    }
+
   }
 
   ${media.tablet`
@@ -69,7 +84,7 @@ const CopyContainer = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 50%;
+  flex: 1;
   overflow: hidden;
   max-height: 500px;
   margin: 1rem;
@@ -79,11 +94,23 @@ const ImageContainer = styled.div`
  `}
 `;
 
+const splitter = (text: string) => {
+  const words = text.split(' ');
+  return words.map((w) => <span>{w} </span>);
+};
+
 const Container = styled.section`
   background-color: white;
   border: 5px dashed black;
   padding: 2rem;
   background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+`;
+
+const copy1 = `
+Hello! I'm David Sally, a full stack engineer based out of Oakland, California.
+I'm a highly opinionated software engineer with 5+ years experience in software,
+robotics, and biotechnology. I enjoy building fast, responsive web apps using React,
+Redux, and Typescript.
 `;
 
 /** Just a lil section about me */
@@ -94,10 +121,7 @@ export const AboutMe: React.FC = () => (
       <Row>
         <CopyContainer>
           <p>
-            Hello! I&apos;m David Sally, a full stack engineer based out of Oakland, California.
-            I&apos;m a highly opinionated software engineer with 5+ years experience in software,
-            robotics, and biotechnology. I enjoy building fast, responsive web apps using React,
-            Redux, and Typescript.
+            {splitter(copy1)}
           </p>
           <p>
             I specialize in Front End Development, and enjoy pointing out elements on a page that
