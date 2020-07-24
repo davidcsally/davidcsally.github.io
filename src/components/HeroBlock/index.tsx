@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 import heroImage from '../../assets/yosemite.jpg';
 import LinkedIn from '../icons/LinkedIn';
