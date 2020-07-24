@@ -32,7 +32,6 @@ class App extends Component<{}, State> {
   }
 
   componentDidMount() {
-    cookieExpiration();
     setTimeout(() => {
       if (document.cookie.includes('acceptedCookies')) this.openChat();
       else this.openCookieBar();
