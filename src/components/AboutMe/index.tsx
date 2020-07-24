@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import PicOfMe from 'assets/coding.jpg';
+import codingJpg from 'assets/coding.jpg';
+import codingWebp from 'assets/coding.webp';
 
 import { flex } from 'styles/mixins';
 import { media } from 'styles/media';
@@ -25,6 +26,10 @@ const Img = styled.img`
   transform: scale(1);
   transform-origin: center;
   transition: transform 150ms linear;
+
+  img {
+    height: 100%;
+  }
 
   &:hover {
     transform: scale(1.1);
@@ -98,7 +103,11 @@ export const AboutMe: React.FC = () => (
           </p>
         </CopyContainer>
         <ImageContainer>
-          <Img src={PicOfMe} alt="David hard at work" title="Who's that handsome guy?" />
+          <picture>
+            <source srcSet={codingWebp} type="image/webp" />
+            <source srcSet={codingJpg} type="image/jpeg" />
+            <Img src={codingJpg} alt="David hard at work" title="Who's that handsome guy?" />
+          </picture>
         </ImageContainer>
       </Row>
     </MaxWidth>
