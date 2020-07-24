@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: ['plugin:jsx-a11y/strict'],
+  extends: ['airbnb', 'airbnb/hooks', 'plugin:jsx-a11y/strict'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
