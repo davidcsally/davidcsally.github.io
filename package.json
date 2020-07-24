@@ -24,12 +24,6 @@
     "url": "https://github.com/davidcsally/davidcsally.github.io/issues"
   },
   "homepage": "https://www.davidcsally.com",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "dependencies": {
     "@storybook/addon-knobs": "^5.3.18",
     "border-box.css": "^1.0.0",
