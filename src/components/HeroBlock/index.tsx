@@ -80,10 +80,10 @@ const HeroBlock: React.FC<Props> = () => (
       <Description>Software Engineer | Oakland, CA</Description>
     </TextContainer>
     <ButtonContainer>
-      <LinkedIn href="https://www.linkedin.com/in/davidcsally" />
-      <Github href="https://github.com/davidcsally" />
-      <Angellist href="https://angel.co/david-sally" />
-      <Medium href="https://medium.com/@davidchristophersally" />
+      <LinkedIn href="https://www.linkedin.com/in/davidcsally" aria-label="David's LinkedIn profile" />
+      <Github href="https://github.com/davidcsally" aria-label="David's GitHub profile" />
+      <Angellist href="https://angel.co/david-sally" aria-label="David's AngelList profile" />
+      <Medium href="https://medium.com/@davidchristophersally" aria-label="David's Medium profile" />
     </ButtonContainer>
   </Container>
 );
