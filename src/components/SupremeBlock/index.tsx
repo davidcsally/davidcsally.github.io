@@ -10,7 +10,7 @@ const Text = styled.p`
   color: white;
 `;
 
-const Column = styled.div`
+const Column = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
