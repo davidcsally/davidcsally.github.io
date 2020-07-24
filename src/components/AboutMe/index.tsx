@@ -75,7 +75,7 @@ const ImageContainer = styled.div`
  `}
 `;
 
-const Container = styled.div`
+const Container = styled.section`
   background-color: white;
   border: 5px dashed black;
   padding: 2rem;
