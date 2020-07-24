@@ -18,7 +18,7 @@ Deployment:
 
 ## Pipeline
 - Pull requests run a test build script and previews are automatically deployed to netflify
-- Merges into `prod` automatically build and deploy to `master`
+- Merges into `main` automatically build and deploy to `master`
 
 ## Available Scripts
 
