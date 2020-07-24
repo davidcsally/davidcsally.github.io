@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import { AnimatePresence, motion, MotionProps } from 'framer-motion';
 
 import P from 'components/Text';

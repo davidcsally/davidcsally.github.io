@@ -1,5 +1,5 @@
 // style-utils.js
-import { css } from 'styled-components/macro';
+import { css } from 'styled-components';
 
 // values in px
 const breakpoints = {

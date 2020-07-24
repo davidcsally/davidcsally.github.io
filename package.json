@@ -25,18 +25,18 @@
   },
   "homepage": "https://www.davidcsally.com",
   "dependencies": {
-    "@storybook/addon-knobs": "^5.3.18",
     "border-box.css": "^1.0.0",
     "framer-motion": "^2.1.2",
     "next": "9.4.0",
     "normalize.css": "^8.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-typescript": "^3.0.0",

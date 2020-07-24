@@ -1,4 +1,4 @@
-import { CSSProp } from 'styled-components/macro';
+import { CSSProp } from 'styled-components';
 
 declare global {
   interface Window {
