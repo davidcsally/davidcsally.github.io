@@ -1,29 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.6398148e.chunk.css",
-    "main.js": "/static/js/main.6504fdaa.chunk.js",
-    "main.js.map": "/static/js/main.6504fdaa.chunk.js.map",
+    "main.css": "/static/css/main.67d0d75f.chunk.css",
+    "main.js": "/static/js/main.e0d85a48.chunk.js",
+    "main.js.map": "/static/js/main.e0d85a48.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f7069b67.js",
     "runtime-main.js.map": "/static/js/runtime-main.f7069b67.js.map",
     "static/css/2.414a9703.chunk.css": "/static/css/2.414a9703.chunk.css",
-    "static/js/2.d566e11e.chunk.js": "/static/js/2.d566e11e.chunk.js",
-    "static/js/2.d566e11e.chunk.js.map": "/static/js/2.d566e11e.chunk.js.map",
+    "static/js/2.a5b4c203.chunk.js": "/static/js/2.a5b4c203.chunk.js",
+    "static/js/2.a5b4c203.chunk.js.map": "/static/js/2.a5b4c203.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c3660576c9c40cbb271ff4421f55ed84.js": "/precache-manifest.c3660576c9c40cbb271ff4421f55ed84.js",
+    "precache-manifest.9c369d1988464a0a190537db2bb6d0bb.js": "/precache-manifest.9c369d1988464a0a190537db2bb6d0bb.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.414a9703.chunk.css.map": "/static/css/2.414a9703.chunk.css.map",
-    "static/css/main.6398148e.chunk.css.map": "/static/css/main.6398148e.chunk.css.map",
-    "static/js/2.d566e11e.chunk.js.LICENSE.txt": "/static/js/2.d566e11e.chunk.js.LICENSE.txt",
+    "static/css/main.67d0d75f.chunk.css.map": "/static/css/main.67d0d75f.chunk.css.map",
+    "static/js/2.a5b4c203.chunk.js.LICENSE.txt": "/static/js/2.a5b4c203.chunk.js.LICENSE.txt",
     "static/media/fonts.css": "/static/media/Inter.var.feca908d.woff2",
+    "static/media/coding.webp": "/static/media/coding.6c6fb1b1.webp",
     "static/media/coding.jpg": "/static/media/coding.cb869d1e.jpg",
     "static/media/david-linkedin.png": "/static/media/david-linkedin.9d79b2b4.png",
+    "static/media/cursor.css": "/static/media/pixel.6fe888f2.cur",
     "static/media/yosemite.jpg": "/static/media/yosemite.b34c1ade.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f7069b67.js",
     "static/css/2.414a9703.chunk.css",
-    "static/js/2.d566e11e.chunk.js",
-    "static/css/main.6398148e.chunk.css",
-    "static/js/main.6504fdaa.chunk.js"
+    "static/js/2.a5b4c203.chunk.js",
+    "static/css/main.67d0d75f.chunk.css",
+    "static/js/main.e0d85a48.chunk.js"
   ]
 }
