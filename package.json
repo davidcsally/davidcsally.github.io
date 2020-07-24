@@ -12,7 +12,7 @@
     "deploy": "gh-pages -b master -d build",
     "test": "node scripts/test.js",
     "storybook": "start-storybook -p 9009 -s public",
-    "serve-build": "serve -s build",
+    "serve-build": "serve -s out",
     "build-storybook": "build-storybook -s public"
   },
   "repository": {
@@ -49,10 +49,11 @@
     "babel-plugin-styled-components": "^1.10.7",
     "eslint": "^7.5.0",
     "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "serve": "^11.3.2",
     "typescript": "^3.9.2"
   }
 }
