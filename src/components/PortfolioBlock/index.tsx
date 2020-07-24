@@ -13,7 +13,8 @@ import { Biorad } from '../icons/Biorad';
 import { ReactSight } from '../icons/ReactSight';
 
 const H2 = styled.h2`
-  color: black;
+  font-size: 2rem;
+  margin: 0;
 `;
 
 const H3 = styled.h3`
@@ -72,11 +73,10 @@ const Container = styled.div`
 
 const LogoContainer = styled.div<{ backgroundColor: string }>`
   ${flex()}
-  flex: 1;
-  height: 100%;
+  height: 12rem;
 
   background-color: ${({ backgroundColor }) => backgroundColor};
-  border: 1px solid #b7b7b7;
+  /* border: 1px solid #b7b7b7; */
   border-right-width: 0;
 `;
 
@@ -85,18 +85,16 @@ const StyledColumn = styled(Column)`
   padding: 1rem;
   align-items: flex-start;
   background-color: white;
-  border: 1px solid #b7b7b7;
+  /* border: 1px solid #b7b7b7; */
+  border-top: 2px solid black;
 `;
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-rows: 2fr 3fr;
-
-  ${media.tablet`
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: auto;
-  `}
+  display: flex;
+  flex-direction: column;
   margin-bottom: 1.5rem;
+  box-shadow: 10px 10px 5px 0px rgba(207,207,207,1);
+
 `;
 
 const MaxWidth = styled.div`
