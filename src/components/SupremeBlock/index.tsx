@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useViewportScroll, useTransform, motion } from 'framer-motion';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 
 const Text = styled.p`
   display: inline-flex;

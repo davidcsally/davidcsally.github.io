@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import heroImage from '../../assets/yosemite.jpg';
 import LinkedIn from '../icons/LinkedIn';
 import Github from '../icons/Github';
 import Angellist from '../icons/Angellist';
@@ -66,7 +65,7 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background-image: url('${heroImage}');
+  background-image: url('./yosemite.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

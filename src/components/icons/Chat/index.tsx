@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from 'styled-components/macro';
+import { css } from 'styled-components';
 
 interface Props {
   className?: string;

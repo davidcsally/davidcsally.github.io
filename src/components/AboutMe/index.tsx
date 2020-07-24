@@ -1,8 +1,5 @@
 import React from 'react';
-import styled from 'styled-components/macro';
-
-import codingJpg from 'assets/coding.jpg';
-import codingWebp from 'assets/coding.webp';
+import styled from 'styled-components';
 
 import { flex } from 'styles/mixins';
 import { media } from 'styles/media';
@@ -103,11 +100,7 @@ export const AboutMe: React.FC = () => (
           </p>
         </CopyContainer>
         <ImageContainer>
-          <picture>
-            <source srcSet={codingWebp} type="image/webp" />
-            <source srcSet={codingJpg} type="image/jpeg" />
-            <Img src={codingJpg} alt="David hard at work" title="Who's that handsome guy?" />
-          </picture>
+          <Img src='/coding.jpg' alt="David hard at work" title="Who's that handsome guy?" />
         </ImageContainer>
       </Row>
     </MaxWidth>

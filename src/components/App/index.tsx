@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import GlobalStyles from 'styles/global';
-
 import HeroBlock from '../HeroBlock';
 import Chatbot from '../Chatbot';
 import { CookieBar } from '../CookieBar';
@@ -44,7 +42,6 @@ class App extends Component<{}, State> {
 
     return (
       <div>
-        <GlobalStyles />
         <HeroBlock />
         <AboutMe />
         <SupremeBlock />

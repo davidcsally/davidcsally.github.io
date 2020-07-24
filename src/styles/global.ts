@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components/macro';
 
 import { palette } from './colors';
-import '../fonts.css';
-import '../cursor.css';
 
 
 export default createGlobalStyle`
@@ -14,6 +12,7 @@ export default createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    cursor: url(./pixel.cur), auto;
     height: 100%;
     width: 100%;
   }
