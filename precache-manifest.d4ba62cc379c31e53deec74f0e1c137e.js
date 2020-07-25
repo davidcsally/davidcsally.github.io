@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "44e7249d09922cb806733c1ba9bf27c5",
+    "revision": "e1144d2bc32912016d54d3383536c807",
     "url": "/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.414a9703.chunk.css"
   },
   {
-    "revision": "17a9a441ab22697a2e31",
-    "url": "/static/css/main.67d0d75f.chunk.css"
+    "revision": "ad619d5ee967cd475698",
+    "url": "/static/css/main.a2d0f24c.chunk.css"
   },
   {
     "revision": "deb722bd5dd5fc57350b",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.c5224e14.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "17a9a441ab22697a2e31",
+    "revision": "ad619d5ee967cd475698",
     "url": "/static/js/main.e5c0e65c.chunk.js"
   },
   {
@@ -30,10 +30,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1e1852b53bfb4e7c89a16cec828e9a8d",
     "url": "/static/media/Futura-Bold.1e1852b5.woff"
-  },
-  {
-    "revision": "038cce7b400a94325f0721bb7b603929",
-    "url": "/static/media/Futura-Heavy-Oblique.038cce7b.otf"
   },
   {
     "revision": "b556299d84ccef97308de5bea0aa4502",
