@@ -1,6 +1,5 @@
 import React from 'react';
 
-import withAnalytics from '../../../hocs/withAnalytics';
 import * as S from '../shared';
 
 interface Props {
@@ -18,4 +17,4 @@ const Angellist: React.FC<Props> = ({ href }) => (
   </S.Container>
 );
 
-export default withAnalytics<Props>(Angellist, 'angelist');
+export default Angellist;
