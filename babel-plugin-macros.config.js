@@ -1,6 +1,7 @@
 module.exports = {
   styledComponents: {
     pure: true,
-    ssr: false,
+    fileName: process.env.NODE_ENV !== 'production',
+    displayName: process.env.NODE_ENV !== 'production',
   },
 };
