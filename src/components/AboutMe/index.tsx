@@ -136,7 +136,12 @@ export const AboutMe: React.FC = () => (
               type="image/jpg"
               media="(min-width: 1024px)"
             />
-            <Img src={codingJpg} alt="David hard at work" title="Who's that handsome guy?" />
+            <Img
+              src={codingJpg}
+              alt="David hard at work"
+              title="Who's that handsome guy?"
+              loading="lazy"
+            />
           </picture>
         </ImageContainer>
       </Row>
