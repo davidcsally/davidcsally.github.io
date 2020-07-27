@@ -1,31 +1,34 @@
 {
   "files": {
     "main.css": "/static/css/main.a2d0f24c.chunk.css",
-    "main.js": "/static/js/main.e5c0e65c.chunk.js",
-    "main.js.map": "/static/js/main.e5c0e65c.chunk.js.map",
+    "main.js": "/static/js/main.0ff28b32.chunk.js",
+    "main.js.map": "/static/js/main.0ff28b32.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f7069b67.js",
     "runtime-main.js.map": "/static/js/runtime-main.f7069b67.js.map",
     "static/css/2.414a9703.chunk.css": "/static/css/2.414a9703.chunk.css",
-    "static/js/2.c5224e14.chunk.js": "/static/js/2.c5224e14.chunk.js",
-    "static/js/2.c5224e14.chunk.js.map": "/static/js/2.c5224e14.chunk.js.map",
+    "static/js/2.7d6f818a.chunk.js": "/static/js/2.7d6f818a.chunk.js",
+    "static/js/2.7d6f818a.chunk.js.map": "/static/js/2.7d6f818a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d4ba62cc379c31e53deec74f0e1c137e.js": "/precache-manifest.d4ba62cc379c31e53deec74f0e1c137e.js",
+    "precache-manifest.7101b737835834d73e4c76a92deadee2.js": "/precache-manifest.7101b737835834d73e4c76a92deadee2.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.414a9703.chunk.css.map": "/static/css/2.414a9703.chunk.css.map",
     "static/css/main.a2d0f24c.chunk.css.map": "/static/css/main.a2d0f24c.chunk.css.map",
-    "static/js/2.c5224e14.chunk.js.LICENSE.txt": "/static/js/2.c5224e14.chunk.js.LICENSE.txt",
+    "static/js/2.7d6f818a.chunk.js.LICENSE.txt": "/static/js/2.7d6f818a.chunk.js.LICENSE.txt",
     "static/media/fonts.css": "/static/media/Inter.var.feca908d.woff2",
     "static/media/coding.webp": "/static/media/coding.6c6fb1b1.webp",
     "static/media/coding.jpg": "/static/media/coding.cb869d1e.jpg",
     "static/media/david-linkedin.png": "/static/media/david-linkedin.9d79b2b4.png",
     "static/media/cursor.css": "/static/media/pixel.6fe888f2.cur",
-    "static/media/yosemite.jpg": "/static/media/yosemite.b34c1ade.jpg"
+    "static/media/yosemite.jpg": "/static/media/yosemite.b34c1ade.jpg",
+    "static/media/yosemite_60.webp": "/static/media/yosemite_60.3106d550.webp",
+    "static/media/yosemite_small.jpg": "/static/media/yosemite_small.2e070a5b.jpg",
+    "static/media/yosemite_small.webp": "/static/media/yosemite_small.4d34fced.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.f7069b67.js",
     "static/css/2.414a9703.chunk.css",
-    "static/js/2.c5224e14.chunk.js",
+    "static/js/2.7d6f818a.chunk.js",
     "static/css/main.a2d0f24c.chunk.css",
-    "static/js/main.e5c0e65c.chunk.js"
+    "static/js/main.0ff28b32.chunk.js"
   ]
 }
