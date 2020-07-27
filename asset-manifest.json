@@ -1,22 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.a2d0f24c.chunk.css",
-    "main.js": "/static/js/main.416c1dc0.chunk.js",
-    "main.js.map": "/static/js/main.416c1dc0.chunk.js.map",
+    "main.js": "/static/js/main.7e57f672.chunk.js",
+    "main.js.map": "/static/js/main.7e57f672.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f7069b67.js",
     "runtime-main.js.map": "/static/js/runtime-main.f7069b67.js.map",
     "static/css/2.414a9703.chunk.css": "/static/css/2.414a9703.chunk.css",
-    "static/js/2.7d6f818a.chunk.js": "/static/js/2.7d6f818a.chunk.js",
-    "static/js/2.7d6f818a.chunk.js.map": "/static/js/2.7d6f818a.chunk.js.map",
+    "static/js/2.faf68de7.chunk.js": "/static/js/2.faf68de7.chunk.js",
+    "static/js/2.faf68de7.chunk.js.map": "/static/js/2.faf68de7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.dda58123ba6c25b401f4d193e1c81c62.js": "/precache-manifest.dda58123ba6c25b401f4d193e1c81c62.js",
+    "precache-manifest.c4d678eff7f3143506776dceeeb572b9.js": "/precache-manifest.c4d678eff7f3143506776dceeeb572b9.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.414a9703.chunk.css.map": "/static/css/2.414a9703.chunk.css.map",
     "static/css/main.a2d0f24c.chunk.css.map": "/static/css/main.a2d0f24c.chunk.css.map",
-    "static/js/2.7d6f818a.chunk.js.LICENSE.txt": "/static/js/2.7d6f818a.chunk.js.LICENSE.txt",
+    "static/js/2.faf68de7.chunk.js.LICENSE.txt": "/static/js/2.faf68de7.chunk.js.LICENSE.txt",
     "static/media/fonts.css": "/static/media/Inter.var.feca908d.woff2",
     "static/media/coding.webp": "/static/media/coding.6c6fb1b1.webp",
     "static/media/coding.jpg": "/static/media/coding.cb869d1e.jpg",
+    "static/media/coding_mobile.jpg": "/static/media/coding_mobile.08a22d5c.jpg",
+    "static/media/coding_mobile.webp": "/static/media/coding_mobile.bfeb535d.webp",
     "static/media/david-linkedin.png": "/static/media/david-linkedin.9d79b2b4.png",
     "static/media/cursor.css": "/static/media/pixel.6fe888f2.cur",
     "static/media/yosemite.jpg": "/static/media/yosemite.b34c1ade.jpg",
@@ -27,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.f7069b67.js",
     "static/css/2.414a9703.chunk.css",
-    "static/js/2.7d6f818a.chunk.js",
+    "static/js/2.faf68de7.chunk.js",
     "static/css/main.a2d0f24c.chunk.css",
-    "static/js/main.416c1dc0.chunk.js"
+    "static/js/main.7e57f672.chunk.js"
   ]
 }
