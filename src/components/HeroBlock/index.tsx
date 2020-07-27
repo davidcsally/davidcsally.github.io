@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import heroImage from '../../assets/yosemite.jpg';
+import ySmallWebP from '../../assets/yosemite/yosemite_small.webp';
+import ySmallJpg from '../../assets/yosemite/yosemite_small.jpg';
+import yFullWebP from '../../assets/yosemite/yosemite_60.webp';
+import yFullJpg from '../../assets/yosemite/yosemite.jpg';
+
 import LinkedIn from '../icons/LinkedIn';
 import Github from '../icons/Github';
 import Angellist from '../icons/Angellist';
@@ -59,6 +63,7 @@ const TextContainer = styled.div<Props>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 `;
 
 const Container = styled.section`
@@ -66,14 +71,50 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background-image: url('${heroImage}');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: relative;
+  background-color: black;
+`;
+
+const Picture = styled.picture`
+  width: 100%;
+`;
+
+const Img = styled.img`
+  background-color: black;
+  object-fit: cover;
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
 `;
 
 const HeroBlock: React.FC<Props> = () => (
   <Container>
+    <Picture>
+      <source
+        media="(min-width: 0px)"
+        srcSet={ySmallWebP}
+        type="image/webp"
+      />
+      <source
+        media="(min-width: 0px)"
+        srcSet={ySmallJpg}
+        type="image/jpg"
+      />
+      <source
+        media="(min-width: 769px)"
+        srcSet={yFullWebP}
+        type="image/webp"
+      />
+      <source
+        media="(min-width: 769px)"
+        srcSet={yFullJpg}
+        type="image/jpg"
+      />
+      <Img
+        src={yFullJpg}
+        alt="yosemite at night"
+      />
+    </Picture>
     <TextContainer paddingTop="100px">
       <P>hello, world!</P>
       <H1>David Sally</H1>
