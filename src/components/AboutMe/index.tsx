@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import codingMobileJpg from 'assets/coding_mobile.jpg';
-import codingMobileWebp from 'assets/coding_mobile.webp';
-import codingJpg from 'assets/coding.jpg';
-import codingWebp from 'assets/coding.webp';
+import codingMobileJpg from 'assets/coding/coding_mobile.jpg';
+import codingMobileWebp from 'assets/coding/coding_mobile.webp';
+import codingTabletJpg from 'assets/coding/coding_tablet.jpg';
+import codingTabletWebp from 'assets/coding/coding_tablet.webp';
+import codingJpg from 'assets/coding/coding.jpg';
+import codingWebp from 'assets/coding/coding.webp';
 
 import { flex } from 'styles/mixins';
 import { media } from 'styles/media';
@@ -115,14 +117,24 @@ export const AboutMe: React.FC = () => (
               type="image/jpg"
             />
             <source
-              srcSet={codingWebp}
+              srcSet={codingTabletWebp}
               type="image/webp"
               media="(min-width: 769px)"
             />
             <source
-              srcSet={codingJpg}
+              srcSet={codingTabletJpg}
               type="image/jpg"
               media="(min-width: 769px)"
+            />
+            <source
+              srcSet={codingWebp}
+              type="image/webp"
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcSet={codingJpg}
+              type="image/jpg"
+              media="(min-width: 1024px)"
             />
             <Img src={codingJpg} alt="David hard at work" title="Who's that handsome guy?" />
           </picture>
