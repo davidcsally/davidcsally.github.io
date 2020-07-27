@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
+import codingMobileJpg from 'assets/coding_mobile.jpg';
+import codingMobileWebp from 'assets/coding_mobile.webp';
 import codingJpg from 'assets/coding.jpg';
 import codingWebp from 'assets/coding.webp';
 
@@ -104,8 +106,24 @@ export const AboutMe: React.FC = () => (
         </CopyContainer>
         <ImageContainer>
           <picture>
-            <source srcSet={codingWebp} type="image/webp" />
-            <source srcSet={codingJpg} type="image/jpeg" />
+            <source
+              srcSet={codingMobileWebp}
+              type="image/webp"
+            />
+            <source
+              srcSet={codingMobileJpg}
+              type="image/jpg"
+            />
+            <source
+              srcSet={codingWebp}
+              type="image/webp"
+              media="(min-width: 769px)"
+            />
+            <source
+              srcSet={codingJpg}
+              type="image/jpg"
+              media="(min-width: 769px)"
+            />
             <Img src={codingJpg} alt="David hard at work" title="Who's that handsome guy?" />
           </picture>
         </ImageContainer>
