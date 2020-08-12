@@ -81,14 +81,14 @@ const Picture = styled.picture`
   width: 100%;
 `;
 
-const Img = styled.img`
-  background-color: black;
-  object-fit: cover;
-  position: absolute;
-  min-height: 100vh;
-  width: 100%;
-  height: 100%;
-`;
+// const Img = styled.img`
+//   background-color: black;
+//   object-fit: cover;
+//   position: absolute;
+//   min-height: 100vh;
+//   width: 100%;
+//   height: 100%;
+// `;
 
 const HeroBlock: React.FC<Props> = () => (
   <Container>
