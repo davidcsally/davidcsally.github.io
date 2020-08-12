@@ -93,7 +93,7 @@ const Img = styled.img`
 const HeroBlock: React.FC<Props> = () => (
   <Container>
     <Picture>
-      <source
+      {/* <source
         media="(max-width: 768px)"
         srcSet={yCropped}
         type="image/webp"
@@ -116,7 +116,7 @@ const HeroBlock: React.FC<Props> = () => (
       <Img
         src={yFullJpg}
         alt="yosemite at night"
-      />
+      /> */}
     </Picture>
     <TextContainer paddingTop="100px">
       <P>hello, world!</P>
