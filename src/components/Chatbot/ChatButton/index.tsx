@@ -10,7 +10,6 @@ interface Props extends MotionProps {
   justify?: 'flex-start' | 'flex-end';
 }
 
-
 const Button = styled(motion.button)`
   border-radius: 20px;
   border: 2px solid var(--system-red);

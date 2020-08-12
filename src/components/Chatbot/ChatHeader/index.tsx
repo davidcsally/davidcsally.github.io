@@ -9,7 +9,6 @@ interface Props {
   closeChat: () => void;
 }
 
-
 const TopSection = styled.div`
   padding: 0 0.5rem;
   justify-content: flex-start;
@@ -19,7 +18,6 @@ const TopSection = styled.div`
   align-items: center;
   width: 100%;
 `;
-
 
 const Block = styled.div`
   display: block;
