@@ -36,6 +36,12 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "reactSnap": {
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
+  },
   "dependencies": {
     "border-box.css": "^1.0.0",
     "eslint-config-airbnb": "^18.2.0",
