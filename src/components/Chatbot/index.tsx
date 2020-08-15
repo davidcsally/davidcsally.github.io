@@ -105,7 +105,7 @@ const Chatbot: React.FC<Props> = ({
         ? (
           <Container
             key="chat"
-            positionTransition
+            layout
             {...animation}
           >
             <ChatHeader closeChat={onClose} />
