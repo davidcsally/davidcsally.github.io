@@ -32,8 +32,9 @@ class App extends Component<{}, State> {
   }
 
   componentDidMount() {
-    if (document.cookie.includes('acceptedCookies')) this.openChat();
-    else this.openCookieBar();
+    // if (document.cookie.includes('acceptedCookies')) this.openChat();
+    // else 
+    document.addEventListener('scroll', this.openOnScroll);
   }
 
   render() {
@@ -57,6 +58,13 @@ class App extends Component<{}, State> {
         />
       </div>
     );
+  }
+
+  openOnScroll = () => {
+    setTimeout(() => {
+      this.openCookieBar();
+    }, 1000);
+    document.removeEventListener('scroll', this.openOnScroll);
   }
 
   openChat = () => {
