@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/static/js/main.bfed3109.chunk.js",
-    "main.js.map": "/static/js/main.bfed3109.chunk.js.map",
+    "main.js": "/static/js/main.c5609b12.chunk.js",
+    "main.js.map": "/static/js/main.c5609b12.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9c9c41ef.js",
     "runtime-main.js.map": "/static/js/runtime-main.9c9c41ef.js.map",
     "static/css/2.414a9703.chunk.css": "/static/css/2.414a9703.chunk.css",
-    "static/js/2.8c197ea4.chunk.js": "/static/js/2.8c197ea4.chunk.js",
-    "static/js/2.8c197ea4.chunk.js.map": "/static/js/2.8c197ea4.chunk.js.map",
+    "static/js/2.0c8a6b5b.chunk.js": "/static/js/2.0c8a6b5b.chunk.js",
+    "static/js/2.0c8a6b5b.chunk.js.map": "/static/js/2.0c8a6b5b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.6bd40e0fa43f016045befe2d18fcd9f1.js": "/precache-manifest.6bd40e0fa43f016045befe2d18fcd9f1.js",
+    "precache-manifest.7317d1efaf72a9ff49e298ba6f9e7e89.js": "/precache-manifest.7317d1efaf72a9ff49e298ba6f9e7e89.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.414a9703.chunk.css.map": "/static/css/2.414a9703.chunk.css.map",
-    "static/js/2.8c197ea4.chunk.js.LICENSE.txt": "/static/js/2.8c197ea4.chunk.js.LICENSE.txt",
+    "static/js/2.0c8a6b5b.chunk.js.LICENSE.txt": "/static/js/2.0c8a6b5b.chunk.js.LICENSE.txt",
     "static/media/coding.webp": "/static/media/coding.6c6fb1b1.webp",
     "static/media/coding.jpg": "/static/media/coding.cb869d1e.jpg",
     "static/media/coding_mobile.webp": "/static/media/coding_mobile.a4b9193c.webp",
@@ -20,14 +20,13 @@
     "static/media/coding_tablet.webp": "/static/media/coding_tablet.bfeb535d.webp",
     "static/media/david-linkedin.png": "/static/media/david-linkedin.9d79b2b4.png",
     "static/media/yosemite.jpg": "/static/media/yosemite.b34c1ade.jpg",
-    "static/media/yosemite_60.webp": "/static/media/yosemite_60.3106d550.webp",
-    "static/media/yosemite_small.jpg": "/static/media/yosemite_small.2e070a5b.jpg",
-    "static/media/yosemite_small.webp": "/static/media/yosemite_small.4d34fced.webp"
+    "static/media/yosemite_compressed.webp": "/static/media/yosemite_compressed.7629c07b.webp",
+    "static/media/yosemite_small.jpg": "/static/media/yosemite_small.2e070a5b.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9c9c41ef.js",
     "static/css/2.414a9703.chunk.css",
-    "static/js/2.8c197ea4.chunk.js",
-    "static/js/main.bfed3109.chunk.js"
+    "static/js/2.0c8a6b5b.chunk.js",
+    "static/js/main.c5609b12.chunk.js"
   ]
 }
