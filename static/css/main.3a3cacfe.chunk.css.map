@@ -1,1 +1,0 @@
-{"version":3,"sources":["cursor.css"],"names":[],"mappings":"AAAA,KACE,iDACF","file":"main.3a3cacfe.chunk.css","sourcesContent":["body {\n  cursor: url(assets/pixel.cur), auto;\n}\n"]}

@@ -1,15 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "80c171c061d1712d7043fc37632526d1",
+    "revision": "53da41f79ea869a6d8549c669978b9f6",
     "url": "/index.html"
   },
   {
     "revision": "49a4361ec292cf01bb4d",
     "url": "/static/css/2.414a9703.chunk.css"
-  },
-  {
-    "revision": "62bacf4cbba44a7e95fc",
-    "url": "/static/css/main.3a3cacfe.chunk.css"
   },
   {
     "revision": "49a4361ec292cf01bb4d",
@@ -20,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.8c197ea4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "62bacf4cbba44a7e95fc",
-    "url": "/static/js/main.4668753f.chunk.js"
+    "revision": "0ed78ac2634ba1c2837e",
+    "url": "/static/js/main.bfed3109.chunk.js"
   },
   {
     "revision": "766df7dbb5392e1314ed",
@@ -54,10 +50,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9d79b2b4f57bec1ebf4079d97a60918d",
     "url": "/static/media/david-linkedin.9d79b2b4.png"
-  },
-  {
-    "revision": "6fe888f21ceaf0b3c8ec4d06a4445f23",
-    "url": "/static/media/pixel.6fe888f2.cur"
   },
   {
     "revision": "b34c1adefdbb33c9ccf61e770636af7a",
