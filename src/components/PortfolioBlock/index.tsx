@@ -2,9 +2,12 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import { flex } from 'styles/mixins';
-import { media } from 'styles/media';
+// // import { media } from 'styles/media';
 
-import { ResponsiveCol, Column } from '../Blocks';
+import {
+  // ResponsiveCol,
+  Column,
+} from '../Blocks';
 
 import { MeLogo } from '../icons/MeLogo';
 import { Disney } from '../icons/Disney';
@@ -40,26 +43,26 @@ const List = styled.ul`
   transition: all 200ms linear;
 `;
 
-const Box = styled.li`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+// const Box = styled.li`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: center;
 
-  padding: 1rem;
+//   padding: 1rem;
 
-  width: 100%;
-  min-height: 400px;
-  border: 2px solid black;
+//   width: 100%;
+//   min-height: 400px;
+//   border: 2px solid black;
 
-  background-color: #484848;
+//   background-color: #484848;
 
-  transition: all 200ms linear;
+//   transition: all 200ms linear;
 
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+// `;
 
 const Container = styled.div`
   min-height: 500px;
