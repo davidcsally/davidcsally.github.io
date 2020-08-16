@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import ySmallWebP from '../../assets/yosemite/yosemite_small.webp';
+// import ySmallWebP from '../../assets/yosemite/yosemite_small.webp';
 import ySmallJpg from '../../assets/yosemite/yosemite_small.jpg';
-import yFullWebP from '../../assets/yosemite/yosemite_60.webp';
+// import yFullWebP from '../../assets/yosemite/yosemite_60.webp';
 import yFullJpg from '../../assets/yosemite/yosemite.jpg';
+import yOptimized from '../../assets/yosemite/yosemite_compressed.webp';
 
 import LinkedIn from '../icons/LinkedIn';
 import Github from '../icons/Github';
@@ -92,18 +93,18 @@ const HeroBlock: React.FC<Props> = () => (
   <Container>
     <Picture>
       <source
-        media="(min-width: 0px)"
-        srcSet={ySmallWebP}
+        media="(max-width: 768px)"
+        srcSet={yOptimized}
         type="image/webp"
       />
       <source
-        media="(min-width: 0px)"
+        media="(max-width: 768px)"
         srcSet={ySmallJpg}
         type="image/jpg"
       />
       <source
         media="(min-width: 769px)"
-        srcSet={yFullWebP}
+        srcSet={yFullJpg}
         type="image/webp"
       />
       <source
