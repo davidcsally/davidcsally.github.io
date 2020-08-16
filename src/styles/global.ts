@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components/macro';
 
 import { palette } from './colors';
-import '../cursor.css';
 
 export default createGlobalStyle`
   ${palette}
