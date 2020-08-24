@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import logo from './logo.png';
 
 const Img = styled.img`
-  width: 70%;
-  height: auto;
+  width: auto;
+  height: 70%;
 
   transition: transform 200ms linear;
 
