@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import logo from './logo.png';
 
 const Img = styled.img`
-  width: auto;
-  height: 70%;
-
+  width: 80%;
+  height: auto;
+  max-width: 10rem;
   transition: transform 200ms linear;
 
   &:hover {
