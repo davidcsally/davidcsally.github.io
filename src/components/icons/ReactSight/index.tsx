@@ -16,8 +16,9 @@ const Img = styled.img`
     }
   }
 
-  width: auto;
-  height: 100%;
+  width: 80%;
+  max-width: 10rem;
+  height: auto;
   animation: 1500ms bounce infinite;
   animation-play-state: paused;
 
