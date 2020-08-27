@@ -14,6 +14,7 @@ import { Disney } from '../icons/Disney';
 import { MedCircle } from '../icons/MedCircle';
 import { Biorad } from '../icons/Biorad';
 import { ReactSight } from '../icons/ReactSight';
+import { Dictionary } from '../icons/Dictionary';
 
 const H2 = styled.h2`
   font-size: 2rem;
@@ -105,6 +106,16 @@ export const PortfolioBlock = () => (
     <MaxWidth>
       <H2>Stuff I&apos;ve done</H2>
       <List>
+        <Grid>
+          <LogoContainer backgroundColor="blue">
+            <Dictionary height="auto" width="80%" />
+          </LogoContainer>
+          <StyledColumn>
+            <H3>Dictionary.com</H3>
+            <P>Senior Software Engineer</P>
+            <Code>React, Web Vitals</Code>
+          </StyledColumn>
+        </Grid>
         <Grid>
           <LogoContainer backgroundColor="#7023f0">
             <MeLogo height="60%" width="60%" />
