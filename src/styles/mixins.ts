@@ -1,4 +1,4 @@
-import { css } from 'styled-components/macro';
+import { css } from 'styled-components/macro'
 
 interface Flex {
   direction?: 'column' | 'row';
@@ -16,4 +16,4 @@ export const flex = ({
   flex-direction: ${direction};
   justify-content: ${justifyContent};
   align-items: ${alignItems};
-`;
+`

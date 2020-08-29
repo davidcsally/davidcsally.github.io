@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from 'react'
+import styled from 'styled-components/macro'
 
-import ClippyImg from '../../../assets/clippy-chat.png';
+import ClippyImg from '../../../assets/clippy-chat.png'
 
 interface Props {
   onClick: () => void;
@@ -16,10 +16,10 @@ const Container = styled.button`
   background-size: contain;
   background-color: transparent;
   border-width: 0;
-`;
+`
 
 const Clippy: React.FC<Props> = ({ className, onClick }) => (
   <Container className={className} onClick={onClick} />
-);
+)
 
-export default Clippy;
+export default Clippy

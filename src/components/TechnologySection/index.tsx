@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from 'react'
+import styled from 'styled-components/macro'
 
 const tech = [
   'JavaScript',
@@ -22,12 +22,12 @@ const tech = [
   'SQL',
   'MongoDB',
   'Neo4j',
-];
+]
 
 const H2 = styled.h2`
   color: #ffffff;
   margin: 2rem 0;
-`;
+`
 
 const Subtitle = styled.p`
   font-size: 1.5rem;
@@ -35,7 +35,7 @@ const Subtitle = styled.p`
   font-style: italic;
   font-family: 'Comic Sans MS';
   margin: 0 0 2rem 0;
-`;
+`
 
 const Column = styled.div`
   display: flex;
@@ -46,7 +46,7 @@ const Column = styled.div`
   min-height: 400px;
   background-color: blue;
   padding: 1rem;
-`;
+`
 
 const Row = styled.div`
   display: flex;
@@ -55,7 +55,7 @@ const Row = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-`;
+`
 
 const TechLabels = styled.div`
   font-size: 1rem;
@@ -69,7 +69,7 @@ const TechLabels = styled.div`
   &:hover {
 
   }
-`;
+`
 
 const TechnologySection = () => (
   <Column>
@@ -79,6 +79,6 @@ const TechnologySection = () => (
       {tech.map((t) => <TechLabels key="t">{t}</TechLabels>)}
     </Row>
   </Column>
-);
+)
 
-export default TechnologySection;
+export default TechnologySection

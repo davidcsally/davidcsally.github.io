@@ -1,28 +1,28 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from 'react'
+import styled from 'styled-components/macro'
 
-import codingMobileJpg from 'assets/coding/coding_mobile.jpg';
-import codingMobileWebp from 'assets/coding/coding_mobile.webp';
-import codingTabletJpg from 'assets/coding/coding_tablet.jpg';
-import codingTabletWebp from 'assets/coding/coding_tablet.webp';
-import codingJpg from 'assets/coding/coding.jpg';
-import codingWebp from 'assets/coding/coding.webp';
+import codingMobileJpg from 'assets/coding/coding_mobile.jpg'
+import codingMobileWebp from 'assets/coding/coding_mobile.webp'
+import codingTabletJpg from 'assets/coding/coding_tablet.jpg'
+import codingTabletWebp from 'assets/coding/coding_tablet.webp'
+import codingJpg from 'assets/coding/coding.jpg'
+import codingWebp from 'assets/coding/coding.webp'
 
-import { flex } from 'styles/mixins';
-import { media } from 'styles/media';
+import { flex } from 'styles/mixins'
+import { media } from 'styles/media'
 
 const MaxWidth = styled.div`
   ${flex({ direction: 'column' })}
   max-width: 90rem;
   margin: 0 auto;
-`;
+`
 
 const H2 = styled.h2`
   font-size: 2rem;
   margin: 0;
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px white;
-`;
+`
 
 const Img = styled.img`
   height: 100%;
@@ -38,11 +38,11 @@ const Img = styled.img`
   &:hover {
     transform: scale(1.1);
   }
-`;
+`
 
 const Column = styled.div`
   ${flex({ direction: 'column' })}
-`;
+`
 
 const CopyContainer = styled.div`
   ${flex({ direction: 'column' })}
@@ -76,7 +76,7 @@ const CopyContainer = styled.div`
   ${media.tablet`
     margin-right: 2rem;
  `}
-`;
+`
 
 const ImageContainer = styled.div`
   overflow: hidden;
@@ -86,26 +86,26 @@ const ImageContainer = styled.div`
   ${media.tablet`
     margin-left: 2rem;
  `}
-`;
+`
 
 const splitter = (text: string) => {
-  const words = text.split(' ');
-  return words.map((w) => <span>{w} </span>);
-};
+  const words = text.split(' ')
+  return words.map((w) => <span>{w} </span>)
+}
 
 const Container = styled.section`
   background-color: white;
   border: 5px dashed black;
   padding: 2rem;
   background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-`;
+`
 
 const copy1 = `
 Hello! I'm David Sally, a full stack engineer based out of Oakland, California.
 I'm a highly opinionated software engineer with 5+ years experience in software,
 robotics, and biotechnology. I enjoy building fast, responsive web apps using React,
 Redux, and Typescript.
-`;
+`
 
 /** Just a lil section about me */
 export const AboutMe: React.FC = () => (
@@ -165,4 +165,4 @@ export const AboutMe: React.FC = () => (
       </Column>
     </MaxWidth>
   </Container>
-);
+)

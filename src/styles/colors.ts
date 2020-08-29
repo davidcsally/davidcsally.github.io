@@ -1,4 +1,4 @@
-import { css } from 'styled-components/macro';
+import { css } from 'styled-components/macro'
 
 export const palette = css`
   :root {
@@ -12,4 +12,4 @@ export const palette = css`
     --grey: #eeeeee;
     --supremely-red: #D02120;
   }
-`;
+`

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { Container, SVG, Path } from '../IconBase';
+import { Container, SVG, Path } from '../IconBase'
 
 interface Props {
   href: string;
@@ -15,6 +15,6 @@ const Medium: React.FC<Props> = ({ href }) => (
       />
     </SVG>
   </Container>
-);
+)
 
-export default Medium;
+export default Medium

@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import Input from '.';
+import Input from '.'
 
 export default {
   title: 'Input',
   component: Input,
-};
+}
 
 const Container = () => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState('')
 
-  const onChange = (e: any) => setValue(e.target.value);
+  const onChange = (e: any) => setValue(e.target.value)
 
   return (
     <Input
@@ -20,7 +20,7 @@ const Container = () => {
       placeholder="Leave a message for David"
       onKeyDown={() => { }}
     />
-  );
-};
+  )
+}
 
-export const normal = () => <Container />;
+export const normal = () => <Container />

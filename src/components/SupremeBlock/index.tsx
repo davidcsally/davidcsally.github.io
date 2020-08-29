@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useViewportScroll, useTransform, motion } from 'framer-motion';
-import styled from 'styled-components/macro';
+import React, { useState, useRef, useEffect } from 'react'
+import { useViewportScroll, useTransform, motion } from 'framer-motion'
+import styled from 'styled-components/macro'
 
 const Text = styled.p`
   display: inline-flex;
@@ -8,7 +8,7 @@ const Text = styled.p`
   font-size: 2rem;
   font-family: 'Futura-Heavy-Oblique', Arial, Helvetica, sans-serif;
   color: white;
-`;
+`
 
 const Column = styled.section`
   display: flex;
@@ -23,53 +23,53 @@ const Column = styled.section`
   overflow: hidden;
   max-width: 90rem;
   margin: 0 auto;
-`;
+`
 
 const Mask = styled.div`
   overflow: hidden;
   padding: 0 2rem;
   background-color: var(--supremely-red);
-`;
+`
 
 const Overflow = styled(motion.div)`
   width: 100%;
   display: block;
   white-space: nowrap;
-`;
+`
 
 const calculateNodes = (ref: React.RefObject<any>) => {
-  const node = ref.current;
-  const body = document.querySelector('body');
+  const node = ref.current
+  const body = document.querySelector('body')
 
   if (node && node.offsetWidth) {
-    return Math.round(body!.offsetWidth / node.offsetWidth + 1);
+    return Math.round(body!.offsetWidth / node.offsetWidth + 1)
   }
-  return 1;
-};
+  return 1
+}
 
 /**
  * This block says has text that scrolls with the viewport
  */
 export const SupremeBlock: React.FC = () => {
-  const [numToShow, setNumToShow] = useState(1);
-  const { scrollYProgress } = useViewportScroll();
-  const myRef = useRef<HTMLParagraphElement>(null);
+  const [numToShow, setNumToShow] = useState(1)
+  const { scrollYProgress } = useViewportScroll()
+  const myRef = useRef<HTMLParagraphElement>(null)
 
-  const x1 = useTransform(scrollYProgress, [0, 1], ['0%', '-65%']);
-  const x2 = useTransform(scrollYProgress, [0, 1], ['-65%', '0%']);
+  const x1 = useTransform(scrollYProgress, [0, 1], ['0%', '-65%'])
+  const x2 = useTransform(scrollYProgress, [0, 1], ['-65%', '0%'])
 
   // Attach resize listener on mount
   useEffect(() => {
-    setNumToShow(calculateNodes(myRef));
-    const handleResize = () => setNumToShow(calculateNodes(myRef));
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [setNumToShow]);
+    setNumToShow(calculateNodes(myRef))
+    const handleResize = () => setNumToShow(calculateNodes(myRef))
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [setNumToShow])
 
-  const nodes = [];
-  nodes.push(<Text ref={myRef} key="-1">Full Stack Engineer</Text>);
+  const nodes = []
+  nodes.push(<Text ref={myRef} key="-1">Full Stack Engineer</Text>)
   for (let i = 0; i < numToShow * 2; i += 1) {
-    nodes.push(<Text key={i}>Full Stack Engineer</Text>);
+    nodes.push(<Text key={i}>Full Stack Engineer</Text>)
   }
 
   return (
@@ -89,5 +89,5 @@ export const SupremeBlock: React.FC = () => {
         </Overflow>
       </Column>
     </Mask>
-  );
-};
+  )
+}

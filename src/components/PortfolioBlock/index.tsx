@@ -1,41 +1,41 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from 'react'
+import styled from 'styled-components/macro'
 
-import { flex } from 'styles/mixins';
+import { flex } from 'styles/mixins'
 // // import { media } from 'styles/media';
 
 import {
   // ResponsiveCol,
   Column,
-} from '../Blocks';
+} from '../Blocks'
 
-import { MeLogo } from '../icons/MeLogo';
-import { Disney } from '../icons/Disney';
-import { MedCircle } from '../icons/MedCircle';
-import { Biorad } from '../icons/Biorad';
-import { ReactSight } from '../icons/ReactSight';
-import { Dictionary } from '../icons/Dictionary';
+import { MeLogo } from '../icons/MeLogo'
+import { Disney } from '../icons/Disney'
+import { MedCircle } from '../icons/MedCircle'
+import { Biorad } from '../icons/Biorad'
+import { ReactSight } from '../icons/ReactSight'
+import { Dictionary } from '../icons/Dictionary'
 
 const H2 = styled.h2`
   font-size: 2rem;
   margin: 0;
   margin-bottom: 2rem;
   font-family: "Inter", Helvetica, sans-serif;
-`;
+`
 
 const H3 = styled.h3`
   color: black;
   margin: 0;
   text-align: center;
   font-family: "Inter", Helvetica, sans-serif;
-`;
+`
 
 const P = styled.p`
   line-height: 1.5rem;
   color: #ffffff;
   color: black;
   font-family: "Inter", Helvetica, sans-serif;
-`;
+`
 
 const List = styled.ul`
   list-style: none;
@@ -48,7 +48,7 @@ const List = styled.ul`
   justify-content: center;
   align-items: center;
   transition: all 200ms linear;
-`;
+`
 
 const Container = styled.div`
   min-height: 500px;
@@ -58,7 +58,7 @@ const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
   background-color: #f2f2f2;
-`;
+`
 
 const LogoContainer = styled.div<{ backgroundColor: string }>`
   ${flex()}
@@ -66,7 +66,7 @@ const LogoContainer = styled.div<{ backgroundColor: string }>`
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   background-color: ${({ backgroundColor }) => backgroundColor};
-`;
+`
 
 const StyledColumn = styled(Column)`
   flex: 1;
@@ -75,7 +75,7 @@ const StyledColumn = styled(Column)`
   background-color: white;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-`;
+`
 
 const Grid = styled.li`
   display: flex;
@@ -88,18 +88,18 @@ const Grid = styled.li`
   &:hover {
     box-shadow: 10px 10px 8px 3px rgba(0, 0, 0, 0.596);
   }
-`;
+`
 
 const MaxWidth = styled.div`
   ${flex({ direction: 'column' })}
   max-width: 90rem;
   width: 100%;
   margin: 0 auto;
-`;
+`
 
 const Code = styled.code`
   text-align: center;
-`;
+`
 
 export const PortfolioBlock = () => (
   <Container>
@@ -169,4 +169,4 @@ export const PortfolioBlock = () => (
       </List>
     </MaxWidth>
   </Container>
-);
+)

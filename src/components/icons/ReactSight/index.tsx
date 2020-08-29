@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
-import logo from './logo.png';
+import logo from './logo.png'
 
 const Img = styled.img`
   @keyframes bounce {
@@ -25,8 +25,8 @@ const Img = styled.img`
   &:hover {
     animation-play-state: running;
   }
-`;
+`
 
 export const ReactSight: React.FC<any> = ({ className }) => (
   <Img className={className} src={logo} alt="Bio-Rad Laboratories" />
-);
+)

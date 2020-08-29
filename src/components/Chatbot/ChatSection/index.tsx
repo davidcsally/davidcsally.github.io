@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components/macro';
-import { useAnimation } from 'framer-motion';
+import React, { useEffect } from 'react'
+import styled from 'styled-components/macro'
+import { useAnimation } from 'framer-motion'
 
-import ChatBubble from '../ChatBubble';
-import ChatButton from '../ChatButton';
+import ChatBubble from '../ChatBubble'
+import ChatButton from '../ChatButton'
 
-import { ChatMessage } from '../types';
+import { ChatMessage } from '../types'
 
 interface Props {
   closeChat: () => void;
@@ -20,32 +20,32 @@ const Container = styled.div`
   flex-grow: 1;
   padding: 1.5rem;
   overflow-y: auto;
-`;
+`
 
 const Placeholder = styled(ChatBubble)`
   p {
     background-color: transparent
   }
-`;
+`
 
 const ChatSection: React.FC<Props> = ({
   closeChat,
   savedMessages,
   newMessages,
 }) => {
-  const controls = useAnimation();
+  const controls = useAnimation()
 
   useEffect(() => {
     controls.start((i) => ({
       opacity: 0,
       x: 100,
       transition: { delay: i * 0.3 },
-    }));
+    }))
 
     // scroll after mount in case there are saved messages
-    const el = document.getElementById('messages-container');
-    if (el) el.scrollBy(1000, 1000);
-  });
+    const el = document.getElementById('messages-container')
+    if (el) el.scrollBy(1000, 1000)
+  })
 
   return (
     <Container id="messages-container">
@@ -56,7 +56,7 @@ const ChatSection: React.FC<Props> = ({
           type,
           action,
           isSender,
-        } = m;
+        } = m
 
         if (type === 'button') {
           return (
@@ -67,13 +67,13 @@ const ChatSection: React.FC<Props> = ({
               justify={isSender ? 'flex-end' : 'flex-start'}
               onClick={action === 'close' ? closeChat : () => { }}
               onAnimationComplete={() => {
-                const el = document.getElementById('messages-container');
-                el!.scrollBy(1000, 1000);
+                const el = document.getElementById('messages-container')
+                el!.scrollBy(1000, 1000)
               }}
             >
               {message}
             </ChatButton>
-          );
+          )
         }
 
         return (
@@ -83,13 +83,13 @@ const ChatSection: React.FC<Props> = ({
             delay={index}
             justify={isSender ? 'flex-end' : 'flex-start'}
             onAnimationComplete={() => {
-              const el = document.getElementById('messages-container');
-              el!.scrollBy(1000, 1000);
+              const el = document.getElementById('messages-container')
+              el!.scrollBy(1000, 1000)
             }}
           >
             {message}
           </ChatBubble>
-        );
+        )
       })}
 
       {
@@ -98,7 +98,7 @@ const ChatSection: React.FC<Props> = ({
             message,
             initial,
             isSender,
-          } = m;
+          } = m
 
           return (
             <ChatBubble
@@ -107,18 +107,18 @@ const ChatSection: React.FC<Props> = ({
               justify={isSender ? 'flex-end' : 'flex-start'}
               delay={0}
               onAnimationStart={() => {
-                const el = document.getElementById('messages-container');
-                el!.scrollBy(1000, 1000);
+                const el = document.getElementById('messages-container')
+                el!.scrollBy(1000, 1000)
               }}
             >
               {message}
             </ChatBubble>
-          );
+          )
         })
       }
       <Placeholder delay={0}> </Placeholder>
     </Container>
-  );
-};
+  )
+}
 
-export default ChatSection;
+export default ChatSection

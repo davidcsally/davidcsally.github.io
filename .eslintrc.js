@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true
+    es6: true,
   },
   extends: [
     'airbnb',
@@ -10,20 +10,17 @@ module.exports = {
   ],
   globals: {
     Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
+    SharedArrayBuffer: 'readonly',
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [
-    '@typescript-eslint',
-    'react'
-  ],
+  plugins: ['@typescript-eslint', 'react'],
   rules: {
     // doesnt work with typescript / airbnb
     'import/extensions': 0,
@@ -39,5 +36,6 @@ module.exports = {
     'react/no-array-index-key': 0,
     'react/sort-comp': 0,
     'react/jsx-one-expression-per-line': 0,
-  }
+    semi: ['error', 'never'],
+  },
 };

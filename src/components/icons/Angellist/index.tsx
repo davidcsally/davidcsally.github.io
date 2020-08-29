@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { Container, SVG, Path } from '../IconBase';
+import { Container, SVG, Path } from '../IconBase'
 
 interface Props {
   href: string;
@@ -15,6 +15,6 @@ const Angellist: React.FC<Props> = ({ href }) => (
       />
     </SVG>
   </Container>
-);
+)
 
-export default Angellist;
+export default Angellist

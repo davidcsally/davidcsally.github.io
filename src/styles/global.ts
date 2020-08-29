@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components/macro';
+import { createGlobalStyle } from 'styled-components/macro'
 
-import { palette } from './colors';
+import { palette } from './colors'
 
 export default createGlobalStyle`
   ${palette}
@@ -27,4 +27,4 @@ export default createGlobalStyle`
       outline-color: var(--outline-color);
     }
   }
-`;
+`
