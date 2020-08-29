@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from 'react'
+import styled from 'styled-components/macro'
 
-import P from 'components/Text';
-import CloseIcon from 'components/icons/CloseIcon';
-import ChatProfileImage from '../ChatProfileImage';
+import P from 'components/Text'
+import CloseIcon from 'components/icons/CloseIcon'
+import ChatProfileImage from '../ChatProfileImage'
 
 interface Props {
   closeChat: () => void;
@@ -17,19 +17,19 @@ const TopSection = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-`;
+`
 
 const Block = styled.div`
   display: block;
   margin: auto 0;
-`;
+`
 
 const Flex = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-`;
+`
 
 const InvertedP = styled(P)`
   color: white;
@@ -40,7 +40,7 @@ const InvertedP = styled(P)`
   font-size: 1.25rem;
   margin-left: 1rem;
   font-weight: 600;
-`;
+`
 
 const IconContainer = styled.div`
   display: flex;
@@ -51,7 +51,7 @@ const IconContainer = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-`;
+`
 
 const CloseButton = styled.button`
   background-color: transparent;
@@ -78,7 +78,7 @@ const CloseButton = styled.button`
     /** black 30% */
     background-color: rgba(0,0,0,0.3);
   }
-`;
+`
 
 const ChatHeader: React.FC<Props> = ({ closeChat }) => (
   <TopSection>
@@ -94,6 +94,6 @@ const ChatHeader: React.FC<Props> = ({ closeChat }) => (
       </Flex>
     </Block>
   </TopSection>
-);
+)
 
-export default ChatHeader;
+export default ChatHeader

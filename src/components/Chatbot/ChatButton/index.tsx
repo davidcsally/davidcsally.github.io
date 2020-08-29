@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-import { motion, MotionProps, AnimatePresence } from 'framer-motion';
+import React from 'react'
+import styled from 'styled-components/macro'
+import { motion, MotionProps, AnimatePresence } from 'framer-motion'
 
 interface Props extends MotionProps {
   delay: number;
@@ -24,13 +24,13 @@ const Button = styled(motion.button)`
     color: white;
     background-color: var(--system-red);
   }
-`;
+`
 
 const Container = styled.div<any>`
   display: flex;
   margin-bottom: 1rem;
   justify-content: ${({ justify }) => justify};
-`;
+`
 
 const animation = (delay: number) => ({
   initial: {
@@ -45,7 +45,7 @@ const animation = (delay: number) => ({
     },
   },
   exit: {},
-});
+})
 
 const ChatButton: React.FC<Props> = ({
   delay = 0,
@@ -66,6 +66,6 @@ const ChatButton: React.FC<Props> = ({
       </Button>
     </Container>
   </AnimatePresence>
-);
+)
 
-export default ChatButton;
+export default ChatButton

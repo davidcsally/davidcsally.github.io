@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { Container, SVG, Path } from '../IconBase';
+import { Container, SVG, Path } from '../IconBase'
 
 interface Props {
   href: string;
@@ -15,6 +15,6 @@ const Github: React.FC<Props> = ({ href }) => (
       />
     </SVG>
   </Container>
-);
+)
 
-export default Github;
+export default Github

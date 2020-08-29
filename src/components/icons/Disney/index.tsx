@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 const Svg = styled.svg`
   transition: transform 200ms linear;
@@ -7,7 +7,7 @@ const Svg = styled.svg`
   &:hover {
     transform: scale(1.1);
   }
-`;
+`
 
 export const Disney: React.FC<any> = ({ fill = 'white', height, width }) => (
   <Svg id="icon-logo" width={width} height={height} viewBox="0 0 319.96 93.04">
@@ -68,4 +68,4 @@ export const Disney: React.FC<any> = ({ fill = 'white', height, width }) => (
       transform="translate(-91.6 -146.2)"
     />
   </Svg>
-);
+)

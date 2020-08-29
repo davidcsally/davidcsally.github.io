@@ -1,17 +1,17 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from 'react'
+import styled from 'styled-components/macro'
 
 // import ySmallWebP from '../../assets/yosemite/yosemite_small.webp';
 // import ySmallJpg from '../../assets/yosemite/yosemite_small.jpg';
-import yCropped from '../../assets/yosemite/yosemite_cropped.jpg';
+import yCropped from '../../assets/yosemite/yosemite_cropped.jpg'
 // import yFullWebP from '../../assets/yosemite/yosemite_60.webp';
-import yFullJpg from '../../assets/yosemite/yosemite.jpg';
+import yFullJpg from '../../assets/yosemite/yosemite.jpg'
 // import yOptimized from '../../assets/yosemite/yosemite_compressed.webp';
 
-import LinkedIn from '../icons/LinkedIn';
-import Github from '../icons/Github';
-import Angellist from '../icons/Angellist';
-import Medium from '../icons/Medium';
+import LinkedIn from '../icons/LinkedIn'
+import Github from '../icons/Github'
+import Angellist from '../icons/Angellist'
+import Medium from '../icons/Medium'
 
 interface Props {
   backgroundImage?: string;
@@ -24,7 +24,7 @@ const P = styled.p`
   font-size: 1rem;
   margin: 0;
   color: white;
-`;
+`
 
 const Description = styled.p`
   color: white;
@@ -32,7 +32,7 @@ const Description = styled.p`
   font-weight: 400;
   line-height: 1.8;
   font-family: 'Inter', "Helvetica Neue", Helvetica, Arial, sans-serif;
-`;
+`
 
 const H1 = styled.h1`
   color: white;
@@ -48,7 +48,7 @@ const H1 = styled.h1`
     transform: translateX(1px);
     box-shadow: 2px 3px 16px 7px rgba(0, 0, 0, 0.5);
   }
-`;
+`
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -57,7 +57,7 @@ const ButtonContainer = styled.div`
   max-width: 200px;
   width: 100%;
   font-size: 1.5em;
-`;
+`
 
 const TextContainer = styled.div<Props>`
   padding-top: ${({ paddingTop }) => paddingTop};
@@ -66,7 +66,7 @@ const TextContainer = styled.div<Props>`
   justify-content: center;
   align-items: center;
   z-index: 1;
-`;
+`
 
 const Container = styled.section`
   display: flex;
@@ -75,11 +75,11 @@ const Container = styled.section`
   min-height: 100vh;
   position: relative;
   background-color: black;
-`;
+`
 
 const Picture = styled.picture`
   width: 100%;
-`;
+`
 
 const Img = styled.img`
   background-color: black;
@@ -88,7 +88,7 @@ const Img = styled.img`
   min-height: 100vh;
   width: 100%;
   height: 100%;
-`;
+`
 
 const HeroBlock: React.FC<Props> = () => (
   <Container>
@@ -130,6 +130,6 @@ const HeroBlock: React.FC<Props> = () => (
       <Medium href="https://medium.com/@davidchristophersally" />
     </ButtonContainer>
   </Container>
-);
+)
 
-export default HeroBlock;
+export default HeroBlock

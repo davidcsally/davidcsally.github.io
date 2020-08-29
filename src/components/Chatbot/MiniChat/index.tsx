@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-import { motion } from 'framer-motion';
+import React from 'react'
+import styled from 'styled-components/macro'
+import { motion } from 'framer-motion'
 
-import Chat from 'components/icons/Chat';
+import Chat from 'components/icons/Chat'
 
 interface Props {
   className?: string;
@@ -12,7 +12,7 @@ interface Props {
 const StyledChat = styled(Chat)`
   height: 85%;
   width: 85%;
-`;
+`
 
 const Button = styled(motion.button)`
   display: flex;
@@ -23,7 +23,7 @@ const Button = styled(motion.button)`
   border-radius: 6px;
   border-width: 0;
   background-color: var(--chat-primary);
-`;
+`
 
 const animation = {
   initial: {
@@ -42,7 +42,7 @@ const animation = {
     opacity: 0,
     y: 10,
   },
-};
+}
 
 const MiniChat: React.FC<Props> = ({ className, onClick }) => (
   <Button
@@ -55,6 +55,6 @@ const MiniChat: React.FC<Props> = ({ className, onClick }) => (
   >
     <StyledChat />
   </Button>
-);
+)
 
-export default MiniChat;
+export default MiniChat

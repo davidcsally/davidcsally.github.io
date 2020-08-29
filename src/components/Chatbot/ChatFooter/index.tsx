@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from 'react'
+import styled from 'styled-components/macro'
 
-import Input from 'components/Input';
-import P from 'components/Text';
+import Input from 'components/Input'
+import P from 'components/Text'
 
 interface Props {
   chatValue: string;
@@ -16,7 +16,7 @@ const Disclaimer = styled(P)`
   line-height: normal;
   text-align: center;
   margin-top: auto;
-`;
+`
 
 const Container = styled.div`
   display: flex;
@@ -24,7 +24,7 @@ const Container = styled.div`
   box-shadow: 0 4px 23px 0 rgba(0,0,0,.15);
   height: 8.25rem;
   padding: 0.75rem;
-`;
+`
 
 const ChatFooter: React.FC<Props> = ({ chatValue, submitMessage, setChatValue }) => (
   <Container>
@@ -37,6 +37,6 @@ const ChatFooter: React.FC<Props> = ({ chatValue, submitMessage, setChatValue })
     />
     <Disclaimer>This does not collect or send any information</Disclaimer>
   </Container>
-);
+)
 
-export default ChatFooter;
+export default ChatFooter

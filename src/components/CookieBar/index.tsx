@@ -1,8 +1,8 @@
-import React from 'react';
-import styled, { css } from 'styled-components/macro';
-import { AnimatePresence, motion } from 'framer-motion';
+import React from 'react'
+import styled, { css } from 'styled-components/macro'
+import { AnimatePresence, motion } from 'framer-motion'
 
-import { flex } from 'styles/mixins';
+import { flex } from 'styles/mixins'
 
 interface Props {
   isCookieBarOpen: boolean;
@@ -11,11 +11,11 @@ interface Props {
 
 const Column = styled.div`
   ${flex({ direction: 'column' })}
-`;
+`
 
 const Row = styled.div`
   ${flex()}
-`;
+`
 
 const Container = styled(motion.div)`
   ${flex()}
@@ -42,7 +42,7 @@ const Container = styled(motion.div)`
     border-radius: 4px;
     cursor: pointer;
   }
-`;
+`
 
 const animation = {
   initial: {
@@ -57,11 +57,11 @@ const animation = {
     opacity: 0,
     y: 10,
   },
-};
+}
 
 const TinyText = styled.p`
   font-size: 12px;
-`;
+`
 
 export const CookieBar: React.FC<Props> = ({ isCookieBarOpen, closeCookieBar }) => (
   <AnimatePresence>
@@ -85,4 +85,4 @@ export const CookieBar: React.FC<Props> = ({ isCookieBarOpen, closeCookieBar }) 
       )
       : null}
   </AnimatePresence>
-);
+)

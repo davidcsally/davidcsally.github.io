@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 const Svg = styled.svg`
   transition: transform 200ms linear;
@@ -7,7 +7,7 @@ const Svg = styled.svg`
   &:hover {
     transform: scale(1.1);
   }
-`;
+`
 
 export const MedCircle: React.FC<any> = ({
   fill = '#001119',
@@ -71,4 +71,4 @@ export const MedCircle: React.FC<any> = ({
       </g>
     </g>
   </Svg>
-);
+)

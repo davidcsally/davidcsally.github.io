@@ -1,13 +1,13 @@
-import React from 'react';
-import { hydrate, render } from 'react-dom';
-import 'normalize.css';
-import 'border-box.css';
+import React from 'react'
+import { hydrate, render } from 'react-dom'
+import 'normalize.css'
+import 'border-box.css'
 
-import App from './components/App';
-import { printAscii } from './utils';
+import App from './components/App'
+import { printAscii } from './utils'
 
-printAscii();
+printAscii()
 
-const rootElement = document.getElementById('groot')!;
-if (rootElement.hasChildNodes()) hydrate(<App />, rootElement);
-else render(<App />, rootElement);
+const rootElement = document.getElementById('groot')!
+if (rootElement.hasChildNodes()) hydrate(<App />, rootElement)
+else render(<App />, rootElement)

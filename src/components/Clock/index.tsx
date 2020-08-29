@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import styled, { keyframes } from 'styled-components/macro';
+import React, { useState, useEffect } from 'react'
+import styled, { keyframes } from 'styled-components/macro'
 
-import gradient from './gradient';
+import gradient from './gradient'
 
 interface Props {
   initialTime: number;
 }
 
-const handColor = '#d8c700';
+const handColor = '#d8c700'
 
 const tick = (initial: number, offset = '-2.75rem') => keyframes`
   0% {
@@ -17,7 +17,7 @@ const tick = (initial: number, offset = '-2.75rem') => keyframes`
   100% {
     transform: rotate(${initial + 360}deg) translateY(${offset});
   }
-`;
+`
 
 const Circle = styled.div`
   width: 16rem;
@@ -41,7 +41,7 @@ const Circle = styled.div`
     background-color: black;
     clip-path: circle(50%);
   }
-`;
+`
 
 const Minutes = styled.div<Props>`
   height: 7rem;
@@ -76,7 +76,7 @@ const Minutes = styled.div<Props>`
     transform: translateY(4px);
     bottom: 0;
   }
-`;
+`
 
 const Hours = styled.div<Props>`
   height: 4.5rem;
@@ -112,27 +112,27 @@ const Hours = styled.div<Props>`
     transform: translateY(4px);
     bottom: 0;
   }
-`;
+`
 
 const Clock = () => {
-  const [minute, setMinute] = useState(0);
-  const [hour, setHour] = useState(0);
+  const [minute, setMinute] = useState(0)
+  const [hour, setHour] = useState(0)
 
   useEffect(() => {
-    const currentTime = new Date();
-    const currentMinute = currentTime.getMinutes();
-    let currentHour = currentTime.getHours();
-    if (currentHour > 12) currentHour -= 12;
-    setMinute(currentMinute);
-    setHour(currentHour);
-  });
+    const currentTime = new Date()
+    const currentMinute = currentTime.getMinutes()
+    let currentHour = currentTime.getHours()
+    if (currentHour > 12) currentHour -= 12
+    setMinute(currentMinute)
+    setHour(currentHour)
+  }, [setMinute, setHour])
 
   return (
     <Circle>
       <Hours initialTime={(hour / 12) * 360} />
       <Minutes initialTime={(minute / 60) * 360} />
     </Circle>
-  );
-};
+  )
+}
 
-export default Clock;
+export default Clock

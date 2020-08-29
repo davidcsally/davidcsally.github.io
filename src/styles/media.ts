@@ -1,12 +1,12 @@
 // style-utils.js
-import { css } from 'styled-components/macro';
+import { css } from 'styled-components/macro'
 
 // values in px
 const breakpoints = {
   small: 480,
   medium: 768,
   large: 1024,
-};
+}
 
 /**
  * Media query helpers for tablet+ and desktop+ screen sizes.
@@ -30,4 +30,4 @@ export const media = {
       ${css(content)};
     }
   `,
-};
+}

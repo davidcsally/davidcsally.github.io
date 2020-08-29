@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from 'react'
+import styled from 'styled-components/macro'
 
 interface LabelProps {
   htmlFor: string;
@@ -24,7 +24,7 @@ const Label = styled.label<LabelProps>`
   transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1);
   will-change: transform;
   border: 1px solid transparent;
-`;
+`
 
 const StyledInput = styled.input`
   height: 3.5rem;
@@ -51,11 +51,11 @@ const StyledInput = styled.input`
     font-size: 0.75rem;
     font-weight: normal;
   }
-`;
+`
 
 const InputContainer = styled.div`
   position: relative;
-`;
+`
 
 const Input: React.FC<Props> = ({
   id,
@@ -77,6 +77,6 @@ const Input: React.FC<Props> = ({
     />
     <Label htmlFor={id}>{placeholder}</Label>
   </InputContainer>
-);
+)
 
-export default Input;
+export default Input

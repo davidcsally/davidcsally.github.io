@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-import { AnimatePresence, motion, MotionProps } from 'framer-motion';
+import React from 'react'
+import styled from 'styled-components/macro'
+import { AnimatePresence, motion, MotionProps } from 'framer-motion'
 
-import P from 'components/Text';
+import P from 'components/Text'
 
 interface ContainerProps {
   justify?: 'flex-start' | 'flex-end';
@@ -21,14 +21,14 @@ const StyledP = styled(P)`
   border-radius: 20px;
   padding: 0.5rem 1rem;
   display: inline-block;
-`;
+`
 
 const Container = styled<any>(motion.div)`
   display: flex;
   width: 100%;
   margin-bottom: 1rem;
   justify-content: ${({ justify }) => justify};
-`;
+`
 
 const animation = (delay: number) => ({
   initial: {
@@ -43,7 +43,7 @@ const animation = (delay: number) => ({
     },
   },
   exit: {},
-});
+})
 
 const ChatBubble: React.FC<Props> = ({
   children,
@@ -63,6 +63,6 @@ const ChatBubble: React.FC<Props> = ({
       <StyledP>{children}</StyledP>
     </Container>
   </AnimatePresence>
-);
+)
 
-export default ChatBubble;
+export default ChatBubble
