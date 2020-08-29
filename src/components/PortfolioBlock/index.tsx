@@ -108,7 +108,7 @@ export const PortfolioBlock = () => (
       <List>
         <Grid>
           <LogoContainer backgroundColor="blue">
-            <Dictionary height="auto" width="80%" />
+            <Dictionary width="80%" />
           </LogoContainer>
           <StyledColumn>
             <H3>Dictionary.com</H3>

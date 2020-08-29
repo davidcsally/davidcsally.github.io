@@ -90,7 +90,7 @@ const ImageContainer = styled.div`
 
 const splitter = (text: string) => {
   const words = text.split(' ')
-  return words.map((w) => <span>{w} </span>)
+  return words.map((word, index) => <span key={index}>{word} </span>)
 }
 
 const Container = styled.section`
