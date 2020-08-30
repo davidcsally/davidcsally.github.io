@@ -1,15 +1,15 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components/macro'
 
 export const Path = styled.path`
   transition: fill 150ms linear;
   fill: white;
-`;
+`
 
 export const SVG = styled.svg`
   height: 1.5rem;
   width: 1.5rem;
   cursor: pointer;
-`;
+`
 
 export const Container = styled.a`
   background-color: transparent;
@@ -19,4 +19,4 @@ export const Container = styled.a`
       fill: black;
     }
   }
-`;
+`
