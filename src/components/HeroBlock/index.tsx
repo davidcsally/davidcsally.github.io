@@ -31,7 +31,7 @@ const Description = styled.p`
   margin-top: 10px;
   font-weight: 400;
   line-height: 1.8;
-  font-family: 'Inter', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 `
 
 const H1 = styled.h1`
@@ -57,6 +57,7 @@ const ButtonContainer = styled.div`
   max-width: 200px;
   width: 100%;
   font-size: 1.5em;
+  z-index: 1;
 `
 
 const TextContainer = styled.div<Props>`
