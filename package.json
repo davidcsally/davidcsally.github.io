@@ -76,7 +76,7 @@
     "react-docgen-typescript-loader": "^3.7.2",
     "react-snap": "^1.23.0",
     "serve": "^11.3.2",
-    "ts-loader": "^8.0.3",
+    "ts-loader": "^8.0.5",
     "typescript": "^3.9.7",
     "typescript-eslint": "^0.0.1-alpha.0"
   }
