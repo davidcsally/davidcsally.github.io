@@ -13,8 +13,7 @@ export default [
     skills: ['React', 'Web Vitals'],
     logo: {
       component: Dictionary,
-      backgroundColor: '#00248B;
-',
+      backgroundColor: '#00248B',
       width: '80%',
       height: undefined,
     },
