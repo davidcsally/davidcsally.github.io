@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * big font from http://patorjk.com/software/taag/#p=display&f=Big&t=Sally
  */
@@ -11,7 +12,7 @@ export const printAscii = () => {
  |_____/ \\__,_| \\_/ |_|\\__,_|
                                
                                
-`);
+`)
   console.log(`
      _____       _ _       
     / ____|     | | |      
@@ -23,5 +24,5 @@ export const printAscii = () => {
                      |___/ 
                                
                                
-`);
-};
+`)
+}

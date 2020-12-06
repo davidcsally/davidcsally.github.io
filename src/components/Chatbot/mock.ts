@@ -1,4 +1,4 @@
-import { ChatMessage } from './types';
+import { ChatMessage } from './types'
 
 export const messages: ChatMessage[] = [
   {
@@ -23,11 +23,11 @@ export const messages: ChatMessage[] = [
     type: 'button',
     action: 'close',
   },
-];
+]
 
-const newMessages: ChatMessage[] = [];
+const newMessages: ChatMessage[] = []
 
 export const initialState = {
   savedMessages: messages,
   newMessages,
-};
+}
