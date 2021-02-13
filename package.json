@@ -8,7 +8,7 @@
     "lint": "eslint src/**/*{.ts,.tsx}",
     "predeploy": "npm run build",
     "start": "next start",
-    "build": "next build && next export",
+    "build": "next build",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
