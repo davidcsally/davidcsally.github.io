@@ -1,10 +1,12 @@
 import React from 'react'
+import Image from 'next/image'
 import styled from 'styled-components'
 
-const Img = styled.img`
+const Positioning = styled.div`
   width: 80%;
-  height: auto;
+  height: 100%;
   max-width: 10rem;
+  position: relative;
   transition: transform 200ms linear;
 
   &:hover {
@@ -12,6 +14,14 @@ const Img = styled.img`
   }
 `
 
-export const Biorad: React.FC<any> = ({ className }) => (
-  <Img className={className} src="/images/biorad.png" alt="Bio-Rad Laboratories" />
+export const Biorad = () => (
+  <Positioning>
+    <Image
+      src="/images/biorad.png"
+      alt="Bio-Rad Laboratories"
+      layout="fill"
+      objectFit="contain"
+      loading="lazy"
+    />
+  </Positioning>
 )
