@@ -1,12 +1,6 @@
 import React from 'react'
-import styled from 'styled-components/macro'
-
-import codingMobileJpg from 'assets/coding/coding_mobile.jpg'
-import codingMobileWebp from 'assets/coding/coding_mobile.webp'
-import codingTabletJpg from 'assets/coding/coding_tablet.jpg'
-import codingTabletWebp from 'assets/coding/coding_tablet.webp'
-import codingJpg from 'assets/coding/coding.jpg'
-import codingWebp from 'assets/coding/coding.webp'
+import styled from 'styled-components'
+import Image from 'next/image'
 
 import { flex } from 'styles/mixins'
 import { media } from 'styles/media'
@@ -125,42 +119,13 @@ export const AboutMe: React.FC = () => (
           </p>
         </CopyContainer>
         <ImageContainer>
-          <picture>
-            <source
-              srcSet={codingMobileWebp}
-              type="image/webp"
-            />
-            <source
-              srcSet={codingMobileJpg}
-              type="image/jpg"
-            />
-            <source
-              srcSet={codingTabletWebp}
-              type="image/webp"
-              media="(min-width: 769px)"
-            />
-            <source
-              srcSet={codingTabletJpg}
-              type="image/jpg"
-              media="(min-width: 769px)"
-            />
-            <source
-              srcSet={codingWebp}
-              type="image/webp"
-              media="(min-width: 1024px)"
-            />
-            <source
-              srcSet={codingJpg}
-              type="image/jpg"
-              media="(min-width: 1024px)"
-            />
-            <Img
-              src={codingJpg}
-              alt="David hard at work"
-              title="Who's that handsome guy?"
-              loading="lazy"
-            />
-          </picture>
+          <Image
+            src="/images/coding.jpg"
+            width={500}
+            height={500}
+            alt="David hard at work"
+            title="Who's that handsome guy?"
+          />
         </ImageContainer>
       </Column>
     </MaxWidth>

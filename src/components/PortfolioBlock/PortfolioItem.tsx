@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 import { flex } from 'styles/mixins'
 import { Column } from '../Blocks'

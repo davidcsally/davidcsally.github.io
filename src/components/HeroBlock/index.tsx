@@ -1,12 +1,7 @@
 import React from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
-// import ySmallWebP from '../../assets/yosemite/yosemite_small.webp';
-// import ySmallJpg from '../../assets/yosemite/yosemite_small.jpg';
-import yCropped from '../../assets/yosemite/yosemite_cropped.jpg'
-// import yFullWebP from '../../assets/yosemite/yosemite_60.webp';
-import yFullJpg from '../../assets/yosemite/yosemite.jpg'
-// import yOptimized from '../../assets/yosemite/yosemite_compressed.webp';
+import Image from 'next/image'
 
 import LinkedIn from '../icons/LinkedIn'
 import Github from '../icons/Github'
@@ -78,47 +73,26 @@ const Container = styled.section`
   background-color: black;
 `
 
-const Picture = styled.picture`
-  width: 100%;
-`
-
-const Img = styled.img`
+const Position = styled.div`
   background-color: black;
-  object-fit: cover;
   position: absolute;
   min-height: 100vh;
-  width: 100%;
   height: 100%;
+  width: 100%;
 `
 
 const HeroBlock: React.FC<Props> = () => (
   <Container>
-    <Picture>
-      <source
-        media="(max-width: 768px)"
-        srcSet={yCropped}
-        type="image/webp"
+    <Position>
+      <Image
+        src="/images/yosemite.jpg"
+        alt="Picture of the author"
+        layout="fill"
+        objectFit="cover"
+        priority
       />
-      <source
-        media="(max-width: 768px)"
-        srcSet={yCropped}
-        type="image/jpg"
-      />
-      <source
-        media="(min-width: 769px)"
-        srcSet={yFullJpg}
-        type="image/webp"
-      />
-      <source
-        media="(min-width: 769px)"
-        srcSet={yFullJpg}
-        type="image/jpg"
-      />
-      <Img
-        src={yFullJpg}
-        alt="yosemite at night"
-      />
-    </Picture>
+
+    </Position>
     <TextContainer paddingTop="100px">
       <P>hello, world!</P>
       <H1>David Sally</H1>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styled, { keyframes } from 'styled-components/macro'
+import styled, { keyframes } from 'styled-components'
 
 import gradient from './gradient'
 
@@ -28,7 +28,7 @@ const Circle = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 3px 1px 11px 1px rgba(0,0,0,0.75);
-  background-image: url('/marble.jpg');
+  background-image: url('/images/marble.jpg');
   background-size: cover;
   background-position: center;
 
