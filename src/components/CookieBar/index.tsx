@@ -17,7 +17,7 @@ const Row = styled.div`
   ${flex()}
 `
 
-const Container = styled(motion.div)`
+const Container = styled(motion.aside)`
   ${flex()}
   position: fixed;
   bottom: 0;
