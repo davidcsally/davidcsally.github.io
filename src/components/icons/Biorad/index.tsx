@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import logo from './logo.png'
 
 const Img = styled.img`
   width: 80%;
@@ -15,5 +14,5 @@ const Img = styled.img`
 `
 
 export const Biorad: React.FC<any> = ({ className }) => (
-  <Img className={className} src={logo} alt="Bio-Rad Laboratories" />
+  <Img className={className} src="/images/biorad.png" alt="Bio-Rad Laboratories" />
 )

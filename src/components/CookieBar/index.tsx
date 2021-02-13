@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'styled-components/macro'
+import styled from 'styled-components'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import { flex } from 'styles/mixins'
@@ -33,15 +33,6 @@ const Container = styled(motion.div)`
   p {
     margin-right: 1.5rem;
   }
-
-  button {
-    border: 2px solid black;
-    background-color: black;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-  }
 `
 
 const animation = {
@@ -63,6 +54,15 @@ const TinyText = styled.p`
   font-size: 12px;
 `
 
+const Button = styled.button`
+  padding: 1rem 1rem;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+`
+
 export const CookieBar: React.FC<Props> = ({ isCookieBarOpen, closeCookieBar }) => (
   <AnimatePresence>
     {isCookieBarOpen
@@ -71,13 +71,12 @@ export const CookieBar: React.FC<Props> = ({ isCookieBarOpen, closeCookieBar }) 
           <Column>
             <Row>
               <p>This site uses cookies. Or does it?</p>
-              <button
+              <Button
                 type="button"
                 onClick={() => closeCookieBar()}
-                css={css`padding: 1rem 1rem;`}
               >
                 Who Cares
-              </button>
+              </Button>
             </Row>
             <TinyText>(but actually it uses a cookie to remember if you clicked this)</TinyText>
           </Column>

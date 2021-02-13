@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import logo from './logo.png'
-
 const Img = styled.img`
   @keyframes bounce {
     0% {
@@ -28,5 +26,5 @@ const Img = styled.img`
 `
 
 export const ReactSight: React.FC<any> = ({ className }) => (
-  <Img className={className} src={logo} alt="Bio-Rad Laboratories" />
+  <Img className={className} src="/images/reactsight.png" alt="React-Sight" />
 )

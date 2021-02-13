@@ -1,7 +1,5 @@
 import React from 'react'
-import styled from 'styled-components/macro'
-
-import ClippyImg from '../../../assets/clippy-chat.png'
+import styled from 'styled-components'
 
 interface Props {
   onClick: () => void;
@@ -11,7 +9,7 @@ interface Props {
 const Container = styled.button`
   width: 5rem;
   height: 5rem;
-  background-image: url(${ClippyImg});
+  background-image: url("/images/clippy-chat.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;

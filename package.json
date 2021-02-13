@@ -4,17 +4,13 @@
   "description": "www.davidcsally.com",
   "private": true,
   "scripts": {
-    "dev": "yarn start",
+    "dev": "next dev",
     "lint": "eslint src/**/*{.ts,.tsx}",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "postbuild": "react-snap",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "next start",
+    "build": "next build",
     "storybook": "start-storybook -p 9009 -s public",
-    "serve-build": "serve -s build",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
@@ -36,48 +32,37 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "reactSnap": {
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ]
-  },
   "dependencies": {
     "border-box.css": "^1.0.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-react": "^7.21.5",
     "framer-motion": "^2.9.5",
     "gh-pages": "^3.1.0",
+    "next": "^10.0.6",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-modal": "^3.12.1",
-    "react-scripts": "^4.0.1",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.1.10",
-    "@storybook/addon-links": "^6.1.10",
-    "@storybook/addons": "^6.1.10",
+    "@storybook/addon-actions": "^6.1.17",
+    "@storybook/addon-links": "^6.1.17",
+    "@storybook/addons": "^6.1.17",
     "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "^6.1.10",
-    "@types/jest": "^26.0.16",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@types/react-modal": "^3.10.6",
-    "@types/styled-components": "^5.1.4",
+    "@storybook/react": "^6.1.17",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.1",
+    "@types/react-dom": "^17.0.1",
+    "@types/react-modal": "^3.12.0",
+    "@types/styled-components": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "babel-plugin-styled-components": "^1.12.0",
-    "eslint": "^7.15.0",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "fork-ts-checker-webpack-plugin": "^6.0.5",
-    "react-docgen-typescript-loader": "^3.7.2",
-    "react-snap": "^1.23.0",
-    "serve": "^11.3.2",
-    "ts-loader": "^8.0.10",
-    "typescript": "^3.9.7",
+    "eslint-plugin-react": "^7.22.0",
+    "typescript": "^4.1.5",
     "typescript-eslint": "^0.0.1-alpha.0"
   }
 }
