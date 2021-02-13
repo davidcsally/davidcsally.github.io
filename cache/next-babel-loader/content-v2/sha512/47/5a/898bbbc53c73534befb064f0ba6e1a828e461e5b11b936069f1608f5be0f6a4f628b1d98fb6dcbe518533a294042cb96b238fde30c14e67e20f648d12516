@@ -1,0 +1,1 @@
+{"ast":null,"code":"const GA = `\n  window.dataLayer = window.dataLayer || [];\n  function gtag() {\n    dataLayer.push(arguments);\n  }\n  gtag('js', new Date());\n\n  gtag('config', 'UA-116662867-1');\n`;\nexport default GA;","map":null,"metadata":{},"sourceType":"module"}

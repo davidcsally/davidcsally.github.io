@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { css } from 'styled-components';\nexport const palette = css([\":root{--outline-color:#3500D3;--chat-primary:#0A5BFF;--system-red:#bc0f0b;--white:#ffffff;--grey:#eeeeee;--supremely-red:#D02120;}\"]);","map":null,"metadata":{},"sourceType":"module"}
