@@ -1,20 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
+import Image from 'next/image'
 
-interface Props {
-  className?: string;
-}
-
-const Img = styled.img`
-  height: 36px;
-  width: 36px;
-`
-
-const ChatProfileImage: React.FC<Props> = ({ className }) => (
-  <Img
+const ChatProfileImage = () => (
+  <Image
     src="/images/david-linkedin.png"
-    className={className}
     alt="Chat profile"
+    height={36}
+    width={36}
+    loading="lazy"
   />
 )
 

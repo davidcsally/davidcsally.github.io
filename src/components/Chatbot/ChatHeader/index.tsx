@@ -19,24 +19,20 @@ const TopSection = styled.div`
   width: 100%;
 `
 
-const Block = styled.div`
-  display: block;
-  margin: auto 0;
-`
-
 const Flex = styled.div`
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
 `
 
 const InvertedP = styled(P)`
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  flex: 1;
   font-size: 1.25rem;
   margin-left: 1rem;
   font-weight: 600;
@@ -82,17 +78,15 @@ const CloseButton = styled.button`
 
 const ChatHeader: React.FC<Props> = ({ closeChat }) => (
   <TopSection>
-    <Block>
-      <Flex>
-        <ChatProfileImage />
-        <InvertedP fontSize="1rem">David Sally</InvertedP>
-        <CloseButton onClick={closeChat}>
-          <IconContainer>
-            <CloseIcon fill="white" />
-          </IconContainer>
-        </CloseButton>
-      </Flex>
-    </Block>
+    <Flex>
+      <ChatProfileImage />
+      <InvertedP fontSize="1rem">David Sally</InvertedP>
+      <CloseButton onClick={closeChat}>
+        <IconContainer>
+          <CloseIcon fill="white" />
+        </IconContainer>
+      </CloseButton>
+    </Flex>
   </TopSection>
 )
 
