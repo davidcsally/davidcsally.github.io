@@ -13,18 +13,19 @@ This was built using:
 That's about it!
 
 Deployment:
-- Github pages
+- Vercel
 - Netlify deploy previews
 
 ## Pipeline
-- Pull requests run a test build script and previews are automatically deployed to netflify
-- Merges into `main` automatically build and deploy to `master`
+- Pull requests run a test build script and previews are automatically deployed to Vercel
+- Merges into `main` automatically build and deploy to Vercel
+- A storybook instance is built to netlify
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn dev`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -39,9 +40,4 @@ haha just kidding, there's no tests.
 
 ### `yarn run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
+Build the thing. Nextjs goes brrrr

@@ -1,20 +1,16 @@
 {
   "name": "personal-site",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "www.davidcsally.com",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "lint": "eslint src/**/*{.ts,.tsx}",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
     "start": "next start",
-    "build": "next build",
+    "build": "next build && next export",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "repository": {
     "type": "git",
@@ -26,12 +22,6 @@
     "url": "https://github.com/davidcsally/davidcsally.github.io/issues"
   },
   "homepage": "https://www.davidcsally.com",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "dependencies": {
     "border-box.css": "^1.0.0",
     "framer-motion": "^2.9.5",
@@ -61,7 +51,6 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "gh-pages": "^3.1.0",
     "typescript": "^4.1.5",
     "typescript-eslint": "^0.0.1-alpha.0"
   }
