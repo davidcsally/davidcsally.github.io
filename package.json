@@ -7,7 +7,7 @@
     "dev": "next dev",
     "lint": "eslint src/**/*{.ts,.tsx}",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -b main -d build",
     "start": "next start",
     "build": "next build",
     "storybook": "start-storybook -p 9009 -s public",
