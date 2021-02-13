@@ -1,7 +1,8 @@
 import React from 'react'
+import Image from 'next/image'
 import styled from 'styled-components'
 
-const Img = styled.img`
+const Positioning = styled.div`
   @keyframes bounce {
     0% {
       transform: translateY(0px);
@@ -16,7 +17,7 @@ const Img = styled.img`
 
   width: 80%;
   max-width: 10rem;
-  height: auto;
+  height: 100%;
   animation: 1500ms bounce infinite;
   animation-play-state: paused;
 
@@ -25,6 +26,14 @@ const Img = styled.img`
   }
 `
 
-export const ReactSight: React.FC<any> = ({ className }) => (
-  <Img className={className} src="/images/reactsight.png" alt="React-Sight" />
+export const ReactSight = () => (
+  <Positioning>
+    <Image
+      src="/images/reactsight.png"
+      alt="React-Sight"
+      layout="fill"
+      objectFit="contain"
+      loading="lazy"
+    />
+  </Positioning>
 )
