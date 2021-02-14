@@ -86,7 +86,7 @@ const HeroBlock: React.FC<Props> = () => (
     <Position>
       <Image
         src="/images/yosemite.jpg"
-        alt="Picture of the author"
+        alt="Yosemite at night"
         layout="fill"
         objectFit="cover"
         priority
