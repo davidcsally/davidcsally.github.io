@@ -7,7 +7,7 @@ const fonts = `
 
   @font-face {
     font-family: 'Inter';
-    src: url(/fonts/Inter.var.woff2) format('woff2');
+    src: url(/fonts/Inter-roman.var.woff2) format('woff2');
     font-display: swap;
   }
 
