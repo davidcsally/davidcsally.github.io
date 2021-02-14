@@ -17,10 +17,9 @@ const Row = styled.div`
   ${flex()}
 `
 
-const Container = styled(motion.section)`
+const Container = styled(motion.aside)`
   ${flex()}
   position: fixed;
-  display: inline-block;
   bottom: 0;
   min-height: 5rem;
   background-color: white;
@@ -64,10 +63,6 @@ const Button = styled.button`
   cursor: pointer;
 `
 
-const InlineBlock = styled.p`
-  display: inline-block;
-`
-
 export const CookieBar: React.FC<Props> = ({ isCookieBarOpen, closeCookieBar }) => (
   <AnimatePresence>
     {isCookieBarOpen
@@ -75,7 +70,7 @@ export const CookieBar: React.FC<Props> = ({ isCookieBarOpen, closeCookieBar }) 
         <Container key="cookie-bar" {...animation}>
           <Column>
             <Row>
-              <InlineBlock>This site uses cookies. Or does it?</InlineBlock>
+              <p>This site uses cookies. Or does it?</p>
               <Button
                 type="button"
                 onClick={() => closeCookieBar()}
