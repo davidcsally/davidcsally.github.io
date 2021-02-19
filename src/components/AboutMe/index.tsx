@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Image from 'next/image'
 
 import { flex } from 'styles/mixins'
@@ -18,17 +18,9 @@ const H2 = styled.h2`
   text-shadow: 2px 2px white;
 `
 
-const Img = styled.img`
-  height: 100%;
-  width: 100%;
+const imgCss = css`
   position: absolute;
-  /* transform: scale(1); */
-  /* transform-origin: center; */
-  /* transition: transform 150ms linear; */
   backface-visibility: hidden;
-  &:hover {
-    /* transform: scale(1.1); */
-  }
 `
 
 const Column = styled.div`
@@ -73,10 +65,8 @@ const ImageContainer = styled.div<{ isFlipped: boolean }>`
   max-height: 500px;
   margin: 1rem;
   position: relative;
-
-
-  height: 500px;
-  width: 500px;
+  padding-bottom: 100%;
+  width: 100%;
 
   ${media.tablet`
     margin-left: 2rem;
@@ -157,12 +147,12 @@ export const AboutMe = () => {
             isFlipped={isFlipped}
             onClick={() => { setIsFlipped(!isFlipped) }}
           >
-            <Img
+            <Image
+              className={imgCss}
               src="/images/coding.jpg"
-              width={500}
-              height={500}
               alt="David hard at work"
               title="Who's that handsome guy?"
+              layout="fill"
             />
             <Back>
               <ImgTitle>David Sally</ImgTitle>
