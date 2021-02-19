@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const Svg = styled.svg`
@@ -9,11 +8,11 @@ const Svg = styled.svg`
   }
 `
 
-export const Dictionary: React.FC<any> = ({
+export const Dictionary = ({
   className,
   height,
   width,
-}) => (
+}: any) => (
   <Svg
     version="1.1"
     id="Layer_1"

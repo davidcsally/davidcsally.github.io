@@ -1,6 +1,4 @@
-import React from 'react'
 import styled from 'styled-components'
-
 import Image from 'next/image'
 
 import LinkedIn from '../icons/LinkedIn'
@@ -81,7 +79,7 @@ const Position = styled.div`
   width: 100%;
 `
 
-const HeroBlock: React.FC<Props> = () => (
+const HeroBlock = () => (
   <Container>
     <Position>
       <Image

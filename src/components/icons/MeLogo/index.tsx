@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const Svg = styled.svg`
@@ -9,12 +8,12 @@ const Svg = styled.svg`
   }
 `
 
-export const MeLogo: React.FC<any> = ({
+export const MeLogo = ({
   fill = 'white',
   className,
   height = 40,
   width = 75,
-}) => (
+}: any) => (
   <Svg viewBox="0 0 75 40" className={className} height={height} width={width}>
     <path
       fill={fill}

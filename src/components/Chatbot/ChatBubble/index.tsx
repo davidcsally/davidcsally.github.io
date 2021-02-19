@@ -1,4 +1,4 @@
-import React from 'react'
+import type { ReactNode } from 'react'
 import styled from 'styled-components'
 import { AnimatePresence, motion, MotionProps } from 'framer-motion'
 
@@ -10,7 +10,7 @@ interface ContainerProps {
 
 interface ComponentProps extends ContainerProps {
   delay: number;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }
 
@@ -45,14 +45,14 @@ const animation = (delay: number) => ({
   exit: {},
 })
 
-const ChatBubble: React.FC<Props> = ({
+const ChatBubble = ({
   children,
   className,
   initial,
   delay = 0,
   justify = 'flex-start',
   ...rest
-}) => (
+}: Props) => (
   <AnimatePresence initial={!!initial}>
     <Container
       className={className}

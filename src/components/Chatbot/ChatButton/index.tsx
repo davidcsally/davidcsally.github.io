@@ -1,11 +1,11 @@
-import React from 'react'
+import type { ReactNode } from 'react'
 import styled from 'styled-components'
 import { motion, MotionProps, AnimatePresence } from 'framer-motion'
 
 interface Props extends MotionProps {
   delay: number;
   onClick: () => void;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   justify?: 'flex-start' | 'flex-end';
 }
@@ -47,7 +47,7 @@ const animation = (delay: number) => ({
   exit: {},
 })
 
-const ChatButton: React.FC<Props> = ({
+const ChatButton = ({
   delay = 0,
   className,
   children,
@@ -55,7 +55,7 @@ const ChatButton: React.FC<Props> = ({
   justify = 'flex-start',
   initial,
   ...rest
-}) => (
+}: Props) => (
   <AnimatePresence initial={!!initial}>
     <Container
       className={className}

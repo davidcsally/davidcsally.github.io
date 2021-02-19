@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Container, SVG, Path } from '../IconBase'
 
 interface Props {
@@ -7,7 +5,7 @@ interface Props {
 }
 
 // linkedin-in from font-awesome
-const LinkedIn: React.FC<Props> = ({ href }) => (
+const LinkedIn = ({ href }: Props) => (
   <Container href={href} aria-label="David's LinkedIn profile">
     <SVG viewBox="0 0 448 512">
       <Path

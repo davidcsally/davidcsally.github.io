@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 import P from 'components/Text'
@@ -76,7 +75,7 @@ const CloseButton = styled.button`
   }
 `
 
-const ChatHeader: React.FC<Props> = ({ closeChat }) => (
+const ChatHeader = ({ closeChat }: Props) => (
   <TopSection>
     <Flex>
       <ChatProfileImage />

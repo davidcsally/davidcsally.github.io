@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const Svg = styled.svg`
@@ -9,12 +8,12 @@ const Svg = styled.svg`
   }
 `
 
-export const MedCircle: React.FC<any> = ({
+export const MedCircle = ({
   fill = '#001119',
   className,
   height = 40,
   width = 75,
-}) => (
+}: any) => (
   <Svg
     viewBox="0 0 108 108"
     className={className}
