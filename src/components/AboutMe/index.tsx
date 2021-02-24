@@ -141,17 +141,19 @@ export const AboutMe = () => {
               I built. Outside of Javascript, I‘m fascinated by the biotech world and constant
               innovations in microfluidics and CRISPR. In my free time, you can find me attempting
               to fix the latest thing to break on my Pontiac firebird.
-          </p>
+            </p>
           </CopyContainer>
           <ImageContainer
             isFlipped={isFlipped}
             onClick={() => { setIsFlipped(!isFlipped) }}
           >
             <Image
+              // @ts-ignore
               className={imgCss}
               src="/images/coding.jpg"
               alt="David hard at work"
               title="Who's that handsome guy?"
+              // @ts-ignore
               layout="fill"
             />
             <Back>
