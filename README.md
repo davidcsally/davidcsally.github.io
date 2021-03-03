@@ -10,20 +10,20 @@
 # Welcome to my website
 
 This was built using:
-- Create React App
+- NextJS
 - Styled Components (TODO investigate linaria)
 - Typescript
 
 That's about it!
 
 Deployment:
-- Vercel
-- Netlify deploy previews
+- Vercel (website)
+- Netlify (storybook)
 
 ## Pipeline
 - Pull requests run a test build script and previews are automatically deployed to Vercel
 - Merges into `main` automatically build and deploy to Vercel
-- A storybook instance is built to netlify
+- A storybook instance is automagically deployed to netlify
 
 ## Available Scripts
 
@@ -45,3 +45,7 @@ haha just kidding, there's no tests.
 ### `yarn run build`
 
 Build the thing. Nextjs goes brrrr
+
+### `yarn run storybook`
+
+Open the storybook development sandbox.
