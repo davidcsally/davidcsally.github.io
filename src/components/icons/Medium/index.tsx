@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Container, SVG, Path } from '../IconBase'
 
 interface Props {
@@ -7,7 +5,7 @@ interface Props {
 }
 
 // medium-m from font-awesome
-const Medium: React.FC<Props> = ({ href }) => (
+const Medium: React.FC<Props> = ({ href }: Props) => (
   <Container href={href} aria-label="David's Medium profile">
     <SVG viewBox="0 0 512 512">
       <Path

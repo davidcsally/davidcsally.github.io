@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react'
+import { useState, useReducer } from 'react'
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -77,11 +77,11 @@ const animation = {
   },
 }
 
-const Chatbot: React.FC<Props> = ({
+const Chatbot = ({
   isOpen,
   closeChat,
   openChat,
-}) => {
+}: Props) => {
   const [chatMessages, updateMessages] = useReducer(chatReducer, initialState)
   const [chatValue, setChatValue] = useState('')
 
