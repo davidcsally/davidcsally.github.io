@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Container, SVG, Path } from '../IconBase'
 
 interface Props {
@@ -7,7 +5,7 @@ interface Props {
 }
 
 // github from font-awesome
-const Github: React.FC<Props> = ({ href }) => (
+const Github = ({ href }: Props) => (
   <Container href={href} aria-label="David's GitHub profile">
     <SVG viewBox="0 0 496 512">
       <Path

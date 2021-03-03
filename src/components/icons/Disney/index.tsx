@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const Svg = styled.svg`
@@ -9,7 +8,13 @@ const Svg = styled.svg`
   }
 `
 
-export const Disney: React.FC<any> = ({ fill = 'white', height, width }) => (
+interface Props {
+  fill?: string;
+  height: number;
+  width: number;
+}
+
+export const Disney = ({ fill = 'white', height, width }: Props) => (
   <Svg id="icon-logo" width={width} height={height} viewBox="0 0 319.96 93.04">
     <title>shopDisney Logo</title>
     <path

@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 import Input from 'components/Input'
@@ -26,7 +25,7 @@ const Container = styled.div`
   padding: 0.75rem;
 `
 
-const ChatFooter: React.FC<Props> = ({ chatValue, submitMessage, setChatValue }) => (
+const ChatFooter = ({ chatValue, submitMessage, setChatValue }: Props) => (
   <Container>
     <Input
       value={chatValue}

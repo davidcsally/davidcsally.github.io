@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 interface Props {
@@ -10,7 +9,7 @@ const Svg = styled.svg`
   width: 100%;
 `
 
-const Chat: React.FC<Props> = ({ className }) => (
+const Chat = ({ className }: Props) => (
   <Svg
     className={className}
     xmlns="http://www.w3.org/2000/svg"

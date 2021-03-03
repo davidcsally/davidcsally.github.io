@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 interface Props {
@@ -10,7 +9,7 @@ const Svg = styled.svg`
   width: auto;
 `
 
-const CloseIcon = ({ fill = 'black' }) => (
+const CloseIcon = ({ fill = 'black' }: Props) => (
   <Svg
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"

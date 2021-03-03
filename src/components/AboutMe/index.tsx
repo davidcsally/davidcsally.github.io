@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 
@@ -102,7 +101,7 @@ Redux, and Typescript.
 `
 
 /** Just a lil section about me */
-export const AboutMe: React.FC = () => (
+export const AboutMe = () => (
   <Container>
     <MaxWidth>
       <H2>About Me</H2>
