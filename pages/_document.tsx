@@ -38,12 +38,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-
-          {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-116662867-1"
-          />
           <script
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: GA }}
