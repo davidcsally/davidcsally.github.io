@@ -1,5 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
+
+import type { InputHTMLAttributes } from 'react'
 
 interface LabelProps {
   htmlFor: string;
@@ -8,10 +9,10 @@ interface LabelProps {
 interface ComponentProps {
   id: string;
   onChange: (e: any) => any;
-  onKeyDown: (e: any) => void;
+  onKeyDown?: (e: any) => void;
 }
 
-type Props = React.InputHTMLAttributes<HTMLInputElement> & ComponentProps;
+type Props = InputHTMLAttributes<HTMLInputElement> & ComponentProps;
 
 const Label = styled.label<LabelProps>`
   font-family: "Inter", Helvetica, sans-serif;
@@ -57,7 +58,7 @@ const InputContainer = styled.div`
   position: relative;
 `
 
-const Input: React.FC<Props> = ({
+const Input = ({
   id,
   autoFocus = false,
   className,
@@ -65,7 +66,7 @@ const Input: React.FC<Props> = ({
   onKeyDown,
   placeholder = '',
   value,
-}) => (
+}: Props) => (
   <InputContainer className={className}>
     <StyledInput
       id={id}
