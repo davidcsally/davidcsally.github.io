@@ -113,7 +113,6 @@ const Chatbot: React.FC<Props> = ({
               closeChat={onClose}
               savedMessages={chatMessages.savedMessages}
               newMessages={chatMessages.newMessages}
-              updateMessages={updateMessages}
             />
             <ChatFooter
               chatValue={chatValue}

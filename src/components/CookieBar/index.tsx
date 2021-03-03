@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { AnimatePresence, motion } from 'framer-motion'
 
@@ -63,7 +62,7 @@ const Button = styled.button`
   cursor: pointer;
 `
 
-export const CookieBar: React.FC<Props> = ({ isCookieBarOpen, closeCookieBar }) => (
+export const CookieBar = ({ isCookieBarOpen, closeCookieBar }: Props) => (
   <AnimatePresence>
     {isCookieBarOpen
       ? (

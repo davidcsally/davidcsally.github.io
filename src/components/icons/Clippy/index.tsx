@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 interface Props {
@@ -16,7 +15,7 @@ const Container = styled.button`
   border-width: 0;
 `
 
-const Clippy: React.FC<Props> = ({ className, onClick }) => (
+const Clippy = ({ className, onClick }: Props) => (
   <Container className={className} onClick={onClick} />
 )
 

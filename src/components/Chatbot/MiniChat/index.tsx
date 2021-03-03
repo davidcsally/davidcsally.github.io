@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
@@ -44,7 +43,7 @@ const animation = {
   },
 }
 
-const MiniChat: React.FC<Props> = ({ className, onClick }) => (
+const MiniChat = ({ className, onClick }: Props) => (
   <Button
     className={className}
     onClick={onClick}

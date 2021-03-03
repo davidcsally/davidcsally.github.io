@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import styled from 'styled-components'
 import { useAnimation } from 'framer-motion'
 
@@ -11,7 +11,6 @@ interface Props {
   closeChat: () => void;
   savedMessages: ChatMessage[];
   newMessages: ChatMessage[];
-  updateMessages: any;
 }
 
 const Container = styled.div`
@@ -28,11 +27,11 @@ const Placeholder = styled(ChatBubble)`
   }
 `
 
-const ChatSection: React.FC<Props> = ({
+const ChatSection = ({
   closeChat,
   savedMessages,
   newMessages,
-}) => {
+}: Props) => {
   const controls = useAnimation()
 
   useEffect(() => {
