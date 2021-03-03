@@ -17,22 +17,6 @@ const H2 = styled.h2`
   text-shadow: 2px 2px white;
 `
 
-const Img = styled.img`
-  height: 100%;
-  width: 100%;
-  transform: scale(1);
-  transform-origin: center;
-  transition: transform 150ms linear;
-
-  img {
-    height: 100%;
-  }
-
-  &:hover {
-    transform: scale(1.1);
-  }
-`
-
 const Column = styled.div`
   ${flex({ direction: 'column' })}
 `
