@@ -24,7 +24,7 @@
   "homepage": "https://www.davidcsally.com",
   "dependencies": {
     "border-box.css": "^1.0.0",
-    "framer-motion": "^2.9.5",
+    "framer-motion": "^3.9.1",
     "next": "^10.0.7",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
