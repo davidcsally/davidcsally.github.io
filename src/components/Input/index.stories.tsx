@@ -18,7 +18,6 @@ const Container = () => {
       onChange={onChange}
       value={value}
       placeholder="Leave a message for David"
-      onKeyDown={() => { }}
     />
   )
 }
