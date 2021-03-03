@@ -5,7 +5,7 @@ export const ADD_MESSAGE = 'ADD_MESSAGE'
 export const SET_ANIMATION = 'SET_ANIMATION'
 export const MOVE_NEW_TO_SAVED = 'MOVE_NEW_TO_SAVED'
 
-export const moveNewToSaved = (payload: any) => ({
+export const moveNewToSaved = () => ({
   action: MOVE_NEW_TO_SAVED,
 })
 

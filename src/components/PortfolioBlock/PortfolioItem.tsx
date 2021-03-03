@@ -18,7 +18,7 @@ export interface PortfolioItemProps {
     height?: string;
     width?: string;
     backgroundColor: string;
-  },
+  };
 }
 
 const Grid = styled.li`
