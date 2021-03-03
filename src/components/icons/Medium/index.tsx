@@ -5,7 +5,7 @@ interface Props {
 }
 
 // medium-m from font-awesome
-const Medium: React.FC<Props> = ({ href }: Props) => (
+const Medium = ({ href }: Props) => (
   <Container href={href} aria-label="David's Medium profile">
     <SVG viewBox="0 0 512 512">
       <Path
