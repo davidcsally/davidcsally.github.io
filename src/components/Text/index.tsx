@@ -1,8 +1,9 @@
-import React from 'react'
 import styled from 'styled-components'
 
+import type { ReactNode } from 'react'
+
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   fontSize?: string;
 }
@@ -13,6 +14,6 @@ const Text = styled.p<Props>`
   margin: 0;
 `
 
-const P: React.FC<Props> = ({ children, ...rest }) => <Text {...rest}>{children}</Text>
+const P = ({ children, ...rest }: Props) => <Text {...rest}>{children}</Text>
 
 export default P

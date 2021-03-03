@@ -1,6 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useViewportScroll, useTransform, motion } from 'framer-motion'
 import styled from 'styled-components'
+
+import type { RefObject } from 'react'
 
 const Text = styled.p`
   display: inline-flex;
@@ -37,7 +39,7 @@ const Overflow = styled(motion.div)`
   white-space: nowrap;
 `
 
-const calculateNodes = (ref: React.RefObject<any>) => {
+const calculateNodes = (ref: RefObject<any>) => {
   const node = ref.current
   const body = document.querySelector('body')
 
@@ -50,7 +52,7 @@ const calculateNodes = (ref: React.RefObject<any>) => {
 /**
  * This block says has text that scrolls with the viewport
  */
-export const SupremeBlock: React.FC = () => {
+export const SupremeBlock = () => {
   const [numToShow, setNumToShow] = useState(1)
   const { scrollYProgress } = useViewportScroll()
   const myRef = useRef<HTMLParagraphElement>(null)

@@ -1,5 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
+
+import type { FC } from 'react'
 
 import { flex } from 'styles/mixins'
 import { Column } from '../Blocks'
@@ -14,7 +15,7 @@ export interface PortfolioItemProps {
   role: string;
   skills: string[];
   logo: {
-    component: React.FC<LogoComponent>;
+    component: FC<LogoComponent>;
     height?: string;
     width?: string;
     backgroundColor: string;
@@ -69,12 +70,12 @@ const Code = styled.code`
   text-align: center;
 `
 
-export const PortfolioItem: React.FC<PortfolioItemProps> = ({
+export const PortfolioItem = ({
   title,
   role,
   skills,
   logo,
-}) => (
+}: PortfolioItemProps) => (
   <Grid>
     <LogoContainer backgroundColor={logo.backgroundColor}>
       <logo.component
