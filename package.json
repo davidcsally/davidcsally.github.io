@@ -33,10 +33,10 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.1.20",
-    "@storybook/addon-links": "^6.1.20",
-    "@storybook/addons": "^6.3.6",
-    "@storybook/react": "^6.1.20",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/addons": "^6.3.7",
+    "@storybook/react": "^6.3.7",
     "@types/jest": "^26.0.20",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.1",
