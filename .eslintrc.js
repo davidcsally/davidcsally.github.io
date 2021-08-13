@@ -25,6 +25,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
+    'import/no-extraneous-dependencies': 0,
     // doesnt work with typescript / airbnb
     'import/extensions': 0,
     'import/no-unresolved': 0,
