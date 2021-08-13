@@ -8,7 +8,7 @@ module.exports = {
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
-    'next',
+    'plugin:@next/next/recommended',
   ],
   globals: {
     Atomics: 'readonly',
@@ -39,6 +39,12 @@ module.exports = {
     'react/no-array-index-key': 0,
     'react/sort-comp': 0,
     'react/jsx-one-expression-per-line': 0,
+
+    //
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+    'react/require-default-props': 0,
+    'react-hooks/exhaustive-deps': 0,
+
     semi: ['error', 'never'],
   },
 }
