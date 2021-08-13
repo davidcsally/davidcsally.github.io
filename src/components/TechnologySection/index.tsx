@@ -61,12 +61,11 @@ const TechLabels = styled.div`
   background-color: lightgray;
   color: black;
   border-radius: 10px;
-  padding: .25rem 1rem;
-  margin: 1rem .25rem;
+  padding: 0.25rem 1rem;
+  margin: 1rem 0.25rem;
   width: auto;
 
   &:hover {
-
   }
 `
 
@@ -75,7 +74,9 @@ const TechnologySection = () => (
     <H2>Skills</H2>
     <Subtitle>The jargon section</Subtitle>
     <Row>
-      {tech.map((t) => <TechLabels key="t">{t}</TechLabels>)}
+      {tech.map((t) => (
+        <TechLabels key="t">{t}</TechLabels>
+      ))}
     </Row>
   </Column>
 )

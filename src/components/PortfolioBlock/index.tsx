@@ -9,7 +9,7 @@ const H2 = styled.h2`
   font-size: 2rem;
   margin: 0;
   margin-bottom: 2rem;
-  font-family: "Inter", Helvetica, sans-serif;
+  font-family: 'Inter', Helvetica, sans-serif;
 `
 
 const List = styled.ul`
@@ -17,7 +17,7 @@ const List = styled.ul`
   width: 100%;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(10.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
   grid-gap: 1rem;
   flex-direction: column;
   justify-content: center;

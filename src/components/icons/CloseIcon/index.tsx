@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 interface Props {
-  fill?: string;
+  fill?: string
 }
 
 const Svg = styled.svg`

@@ -71,7 +71,11 @@ export const SupremeBlock = () => {
   }, [setNumToShow])
 
   const nodes = []
-  nodes.push(<Text ref={myRef} key="-1">Full Stack Engineer</Text>)
+  nodes.push(
+    <Text ref={myRef} key="-1">
+      Full Stack Engineer
+    </Text>
+  )
   for (let i = 0; i < numToShow * 2; i += 1) {
     nodes.push(<Text key={i}>Full Stack Engineer</Text>)
   }
@@ -79,18 +83,10 @@ export const SupremeBlock = () => {
   return (
     <Mask>
       <Column>
-        <Overflow style={{ x: x1 }}>
-          {nodes}
-        </Overflow>
-        <Overflow style={{ x: x2 }}>
-          {nodes}
-        </Overflow>
-        <Overflow style={{ x: x1 }}>
-          {nodes}
-        </Overflow>
-        <Overflow style={{ x: x2 }}>
-          {nodes}
-        </Overflow>
+        <Overflow style={{ x: x1 }}>{nodes}</Overflow>
+        <Overflow style={{ x: x2 }}>{nodes}</Overflow>
+        <Overflow style={{ x: x1 }}>{nodes}</Overflow>
+        <Overflow style={{ x: x2 }}>{nodes}</Overflow>
       </Column>
     </Mask>
   )

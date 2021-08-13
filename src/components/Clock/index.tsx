@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components'
 import gradient from './gradient'
 
 interface Props {
-  initialTime: number;
+  initialTime: number
 }
 
 const handColor = '#d8c700'
@@ -27,7 +27,7 @@ const Circle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 3px 1px 11px 1px rgba(0,0,0,0.75);
+  box-shadow: 3px 1px 11px 1px rgba(0, 0, 0, 0.75);
   background-image: url('/images/marble.jpg');
   background-size: cover;
   background-position: center;
@@ -85,7 +85,8 @@ const Hours = styled.div<Props>`
   position: absolute;
   transform-origin: center;
   transform: translateY(-1.5rem);
-  animation: ${({ initialTime }) => tick(initialTime, '20px')} 86400s infinite steps(60);
+  animation: ${({ initialTime }) => tick(initialTime, '20px')} 86400s infinite
+    steps(60);
   background-image: url(${gradient});
   filter: drop-shadow(6px 4px 4px black);
 

@@ -5,7 +5,7 @@ import CloseIcon from 'components/icons/CloseIcon'
 import ChatProfileImage from '../ChatProfileImage'
 
 interface Props {
-  closeChat: () => void;
+  closeChat: () => void
 }
 
 const TopSection = styled.div`
@@ -58,9 +58,7 @@ const CloseButton = styled.button`
   right: 0.75rem;
   padding: 1rem;
   border-radius: 50%;
-  transition:
-    transform 500ms ease-in-out,
-    background-color 250ms ease-in-out;
+  transition: transform 500ms ease-in-out, background-color 250ms ease-in-out;
 
   svg {
     height: 1rem;
@@ -71,7 +69,7 @@ const CloseButton = styled.button`
   &:hover {
     transform: rotate(180deg);
     /** black 30% */
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 `
 

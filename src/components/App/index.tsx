@@ -58,11 +58,7 @@ const App = () => {
         isCookieBarOpen={isCookieBarOpen}
         closeCookieBar={closeCookieBarAndOpenChat}
       />
-      <Chatbot
-        isOpen={isChatOpen}
-        closeChat={closeChat}
-        openChat={openChat}
-      />
+      <Chatbot isOpen={isChatOpen} closeChat={closeChat} openChat={openChat} />
     </div>
   )
 }
