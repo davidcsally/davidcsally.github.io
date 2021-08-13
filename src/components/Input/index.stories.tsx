@@ -10,6 +10,7 @@ export default {
 const Container = () => {
   const [value, setValue] = useState('')
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onChange = (e: any) => setValue(e.target.value)
 
   return (

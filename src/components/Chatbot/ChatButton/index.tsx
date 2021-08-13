@@ -28,7 +28,7 @@ const Button = styled(motion.button)`
   }
 `
 
-const Container = styled.div<any>`
+const Container = styled.div<{ justify: string }>`
   display: flex;
   margin-bottom: 1rem;
   justify-content: ${({ justify }) => justify};

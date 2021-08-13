@@ -39,11 +39,13 @@ const Overflow = styled(motion.div)`
   white-space: nowrap;
 `
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const calculateNodes = (ref: RefObject<any>) => {
   const node = ref.current
   const body = document.querySelector('body')
 
   if (node && node.offsetWidth) {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     return Math.round(body!.offsetWidth / node.offsetWidth + 1)
   }
   return 1

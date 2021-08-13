@@ -8,7 +8,9 @@ interface LabelProps {
 
 interface ComponentProps {
   id: string;
-  onChange: (e: any) => any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onChange: (e: any) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onKeyDown?: (e: any) => void;
 }
 
