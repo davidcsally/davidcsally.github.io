@@ -63,10 +63,8 @@ const ImageContainer = styled.div`
  `}
 `
 
-const splitter = (text: string) => {
-  const words = text.split(' ')
-  return words.map((word, index) => <span key={index}>{word} </span>)
-}
+const splitter = (text: string) =>
+  text.split(' ').map((word, index) => <span key={index}>{word} </span>)
 
 const Container = styled.section`
   background-color: white;
@@ -80,15 +78,15 @@ const Container = styled.section`
 `
 
 const copy1 = `
-Hello! I'm David Sally, a full stack engineer based out of Oakland, California.
-I'm a highly opinionated software engineer with 5+ years experience in software,
-robotics, and biotechnology. I enjoy building fast, responsive web apps using React,
-Redux, and Typescript.
+  Hello! I'm David Sally, a full stack engineer based out of Oakland, California.
+  I'm a highly opinionated software engineer with 5+ years experience in software,
+  robotics, and biotechnology. I enjoy building fast, responsive web apps using React,
+  Redux, and Typescript.
 `
 
 /** Just a lil section about me */
 export const AboutMe = () => (
-  <Container>
+  <Container data-testid="about-me">
     <MaxWidth>
       <H2>About Me</H2>
       <Column>
