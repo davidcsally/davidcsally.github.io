@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { useEffect, useState } from 'react'
 
 import GlobalStyles from 'styles/global'
 
@@ -9,11 +9,6 @@ import { SupremeBlock } from '../SupremeBlock'
 import { AboutMe } from '../AboutMe'
 import { PortfolioBlock } from '../PortfolioBlock'
 
-interface State {
-  isChatOpen: boolean;
-  isCookieBarOpen: boolean;
-}
-
 const COOKIE = 'acceptedCookies=true'
 
 const cookieExpiration = () => {
@@ -22,66 +17,54 @@ const cookieExpiration = () => {
   return `expires=${now.toUTCString()}`
 }
 
-class App extends Component<{}, State> {
-  constructor(props: any) {
-    super(props)
+const App = () => {
+  const [isChatOpen, setIsChatOpen] = useState(false)
+  const [isCookieBarOpen, setIsCookieBarOpen] = useState(false)
 
-    this.state = {
-      isChatOpen: false,
-      isCookieBarOpen: false,
-    }
-  }
-
-  componentDidMount() {
-    setTimeout(() => {
-      if (document.cookie.includes('acceptedCookies')) this.openChat()
-      else this.openCookieBar()
-    }, 1000)
-  }
-
-  render() {
-    const { closeChat, openChat, closeCookieBarAndOpenChat } = this
-    const { isChatOpen, isCookieBarOpen } = this.state
-
-    return (
-      <div>
-        <GlobalStyles />
-        <HeroBlock />
-        <AboutMe />
-        <SupremeBlock />
-        <PortfolioBlock />
-        <CookieBar
-          isCookieBarOpen={isCookieBarOpen}
-          closeCookieBar={closeCookieBarAndOpenChat}
-        />
-        <Chatbot
-          isOpen={isChatOpen}
-          closeChat={closeChat}
-          openChat={openChat}
-        />
-      </div>
-    )
-  }
-
-  openChat = () => {
-    const { isChatOpen } = this.state
+  const openChat = () => {
     if (isChatOpen) return
-    this.setState({ isChatOpen: true })
+    setIsChatOpen(true)
   }
 
-  openCookieBar = () => this.setState({ isCookieBarOpen: true });
+  const closeChat = () => setIsChatOpen(false)
 
-  closeCookieBar = () => {
+  const openCookieBar = () => setIsCookieBarOpen(true)
+
+  const closeCookieBar = () => {
     document.cookie = `${COOKIE}; ${cookieExpiration()}; path=/; SameSite=Strict`
-    this.setState({ isCookieBarOpen: false })
+    setIsCookieBarOpen(false)
   }
 
-  closeCookieBarAndOpenChat = () => {
-    this.closeCookieBar()
-    setTimeout(() => this.openChat(), 5000)
+  const closeCookieBarAndOpenChat = () => {
+    closeCookieBar()
+    setTimeout(() => openChat(), 5000)
   }
 
-  closeChat = () => this.setState({ isChatOpen: false })
+  useEffect(() => {
+    setTimeout(() => {
+      if (document.cookie.includes('acceptedCookies')) openChat()
+      else openCookieBar()
+    }, 1000)
+  }, [])
+
+  return (
+    <div>
+      <GlobalStyles />
+      <HeroBlock />
+      <AboutMe />
+      <SupremeBlock />
+      <PortfolioBlock />
+      <CookieBar
+        isCookieBarOpen={isCookieBarOpen}
+        closeCookieBar={closeCookieBarAndOpenChat}
+      />
+      <Chatbot
+        isOpen={isChatOpen}
+        closeChat={closeChat}
+        openChat={openChat}
+      />
+    </div>
+  )
 }
 
 export default App
