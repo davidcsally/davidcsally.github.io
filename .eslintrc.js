@@ -8,6 +8,7 @@ module.exports = {
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
+    'next',
   ],
   globals: {
     Atomics: 'readonly',
