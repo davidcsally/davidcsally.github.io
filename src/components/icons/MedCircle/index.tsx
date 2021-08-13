@@ -9,16 +9,12 @@ const Svg = styled.svg`
 `
 
 interface Props {
-  className?: string;
-  height: number;
-  width: number;
+  className?: string
+  height: number
+  width: number
 }
 
-export const MedCircle = ({
-  className,
-  height = 40,
-  width = 75,
-}: Props) => (
+export const MedCircle = ({ className, height = 40, width = 75 }: Props) => (
   <Svg
     viewBox="0 0 108 108"
     className={className}
@@ -26,7 +22,13 @@ export const MedCircle = ({
     width={width}
   >
     <defs>
-      <linearGradient x1="50%" y1="71.4799361%" x2="37.5665905%" y2="37.1385596%" id="linearGradient-1">
+      <linearGradient
+        x1="50%"
+        y1="71.4799361%"
+        x2="37.5665905%"
+        y2="37.1385596%"
+        id="linearGradient-1"
+      >
         <stop stopColor="#0288D1" offset="0%" />
         <stop stopColor="#095B87" stopOpacity="0.883689991" offset="100%" />
       </linearGradient>
@@ -43,7 +45,13 @@ export const MedCircle = ({
         <stop stopColor="#0288D1" offset="100%" />
       </radialGradient>
     </defs>
-    <g id="Style-Guide" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+    <g
+      id="Style-Guide"
+      stroke="none"
+      strokeWidth="1"
+      fill="none"
+      fillRule="evenodd"
+    >
       <g id="Artboard" transform="translate(-195.000000, -412.000000)">
         <g id="Logo" transform="translate(119.000000, 316.000000)">
           <g id="Group-2" transform="translate(0.000000, 80.000000)">
@@ -67,7 +75,14 @@ export const MedCircle = ({
                   fill="#0288D1"
                   fillRule="nonzero"
                 />
-                <circle id="Circle" stroke="url(#radialGradient-2)" strokeWidth="3" cx="52" cy="52" r="52" />
+                <circle
+                  id="Circle"
+                  stroke="url(#radialGradient-2)"
+                  strokeWidth="3"
+                  cx="52"
+                  cy="52"
+                  r="52"
+                />
               </g>
             </g>
           </g>

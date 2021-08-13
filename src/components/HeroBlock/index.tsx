@@ -8,8 +8,8 @@ import Angellist from '../icons/Angellist'
 import Medium from '../icons/Medium'
 
 interface Props {
-  backgroundImage?: string;
-  paddingTop?: string;
+  backgroundImage?: string
+  paddingTop?: string
 }
 
 const P = styled.p`
@@ -90,7 +90,6 @@ const HeroBlock = () => (
         objectFit="cover"
         priority
       />
-
     </Position>
     <TextContainer paddingTop="100px">
       <P>hello, world!</P>

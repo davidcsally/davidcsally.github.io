@@ -9,9 +9,9 @@ const Svg = styled.svg`
 `
 
 interface Props {
-  fill?: string;
-  height: number;
-  width: number;
+  fill?: string
+  height: number
+  width: number
 }
 
 export const Disney = ({ fill = 'white', height, width }: Props) => (

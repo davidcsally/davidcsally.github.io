@@ -8,6 +8,7 @@ module.exports = {
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
+    'plugin:prettier/recommended',
     'plugin:@next/next/recommended',
   ],
   globals: {
@@ -22,7 +23,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
     // doesnt work with typescript / airbnb
     'import/extensions': 0,

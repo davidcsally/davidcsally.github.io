@@ -4,11 +4,11 @@ import Input from 'components/Input'
 import P from 'components/Text'
 
 interface Props {
-  chatValue: string;
+  chatValue: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  submitMessage: (e: any) => void;
+  submitMessage: (e: any) => void
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  setChatValue: (e: any) => void;
+  setChatValue: (e: any) => void
 }
 
 const Disclaimer = styled(P)`
@@ -22,7 +22,7 @@ const Disclaimer = styled(P)`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 23px 0 rgba(0,0,0,.15);
+  box-shadow: 0 4px 23px 0 rgba(0, 0, 0, 0.15);
   height: 8.25rem;
   padding: 0.75rem;
 `

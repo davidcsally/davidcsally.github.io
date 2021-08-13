@@ -1,9 +1,15 @@
 import { css } from 'styled-components'
 
 interface Flex {
-  direction?: 'column' | 'row';
-  alignItems?: 'center' | 'flex-start' | 'flex-end';
-  justifyContent?: 'center' | 'flex-start' | 'flex-end' | 'space-around' | 'space-between' | 'space-evenly';
+  direction?: 'column' | 'row'
+  alignItems?: 'center' | 'flex-start' | 'flex-end'
+  justifyContent?:
+    | 'center'
+    | 'flex-start'
+    | 'flex-end'
+    | 'space-around'
+    | 'space-between'
+    | 'space-evenly'
 }
 
 /** flex helper with optional config object (with default values) */

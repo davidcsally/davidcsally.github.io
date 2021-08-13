@@ -11,16 +11,12 @@ import ChatHeader from './ChatHeader'
 
 import { initialState } from './mock'
 
-import {
-  chatReducer,
-  MOVE_NEW_TO_SAVED,
-  ADD_MESSAGE,
-} from './reducer'
+import { chatReducer, MOVE_NEW_TO_SAVED, ADD_MESSAGE } from './reducer'
 
 interface Props {
-  isOpen: boolean;
-  closeChat: () => void;
-  openChat: () => void;
+  isOpen: boolean
+  closeChat: () => void
+  openChat: () => void
 }
 
 const StyledMiniChat = styled(MiniChat)`
@@ -77,11 +73,7 @@ const animation = {
   },
 }
 
-const Chatbot = ({
-  isOpen,
-  closeChat,
-  openChat,
-}: Props) => {
+const Chatbot = ({ isOpen, closeChat, openChat }: Props) => {
   const [chatMessages, updateMessages] = useReducer(chatReducer, initialState)
   const [chatValue, setChatValue] = useState('')
 
@@ -102,27 +94,23 @@ const Chatbot = ({
 
   return (
     <AnimatePresence>
-      {isOpen
-        ? (
-          <Container
-            key="chat"
-            layout
-            {...animation}
-          >
-            <ChatHeader closeChat={onClose} />
-            <ChatSection
-              closeChat={onClose}
-              savedMessages={chatMessages.savedMessages}
-              newMessages={chatMessages.newMessages}
-            />
-            <ChatFooter
-              chatValue={chatValue}
-              submitMessage={submitMessage}
-              setChatValue={setChatValue}
-            />
-          </Container>
-        )
-        : <StyledMiniChat onClick={openChat} />}
+      {isOpen ? (
+        <Container key="chat" layout {...animation}>
+          <ChatHeader closeChat={onClose} />
+          <ChatSection
+            closeChat={onClose}
+            savedMessages={chatMessages.savedMessages}
+            newMessages={chatMessages.newMessages}
+          />
+          <ChatFooter
+            chatValue={chatValue}
+            submitMessage={submitMessage}
+            setChatValue={setChatValue}
+          />
+        </Container>
+      ) : (
+        <StyledMiniChat onClick={openChat} />
+      )}
     </AnimatePresence>
   )
 }

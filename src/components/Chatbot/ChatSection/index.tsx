@@ -8,9 +8,9 @@ import ChatButton from '../ChatButton'
 import { ChatMessage } from '../types'
 
 interface Props {
-  closeChat: () => void;
-  savedMessages: ChatMessage[];
-  newMessages: ChatMessage[];
+  closeChat: () => void
+  savedMessages: ChatMessage[]
+  newMessages: ChatMessage[]
 }
 
 const Container = styled.div`
@@ -23,15 +23,11 @@ const Container = styled.div`
 
 const Placeholder = styled(ChatBubble)`
   p {
-    background-color: transparent
+    background-color: transparent;
   }
 `
 
-const ChatSection = ({
-  closeChat,
-  savedMessages,
-  newMessages,
-}: Props) => {
+const ChatSection = ({ closeChat, savedMessages, newMessages }: Props) => {
   const controls = useAnimation()
 
   useEffect(() => {
@@ -49,13 +45,7 @@ const ChatSection = ({
   return (
     <Container id="messages-container">
       {savedMessages.map((m, index) => {
-        const {
-          message,
-          initial,
-          type,
-          action,
-          isSender,
-        } = m
+        const { message, initial, type, action, isSender } = m
 
         if (type === 'button') {
           return (
@@ -65,7 +55,7 @@ const ChatSection = ({
               initial={initial}
               justify={isSender ? 'flex-end' : 'flex-start'}
               // eslint-disable-next-line @typescript-eslint/no-empty-function
-              onClick={action === 'close' ? closeChat : () => { }}
+              onClick={action === 'close' ? closeChat : () => {}}
               onAnimationComplete={() => {
                 const el = document.getElementById('messages-container')
                 el?.scrollBy(1000, 1000)
@@ -92,30 +82,24 @@ const ChatSection = ({
         )
       })}
 
-      {
-        newMessages.map((m, index) => {
-          const {
-            message,
-            initial,
-            isSender,
-          } = m
+      {newMessages.map((m, index) => {
+        const { message, initial, isSender } = m
 
-          return (
-            <ChatBubble
-              key={index}
-              initial={initial}
-              justify={isSender ? 'flex-end' : 'flex-start'}
-              delay={0}
-              onAnimationStart={() => {
-                const el = document.getElementById('messages-container')
-                el?.scrollBy(1000, 1000)
-              }}
-            >
-              {message}
-            </ChatBubble>
-          )
-        })
-      }
+        return (
+          <ChatBubble
+            key={index}
+            initial={initial}
+            justify={isSender ? 'flex-end' : 'flex-start'}
+            delay={0}
+            onAnimationStart={() => {
+              const el = document.getElementById('messages-container')
+              el?.scrollBy(1000, 1000)
+            }}
+          >
+            {message}
+          </ChatBubble>
+        )
+      })}
       <Placeholder delay={0}> </Placeholder>
     </Container>
   )

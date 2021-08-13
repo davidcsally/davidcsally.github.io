@@ -35,7 +35,6 @@ const CopyContainer = styled.div`
     }
 
     span {
-
       &::selection {
         background: var(--supremely-red);
       }
@@ -47,7 +46,6 @@ const CopyContainer = styled.div`
         font-variation-settings: 'wght' 600;
       }
     }
-
   }
 
   ${media.tablet`
@@ -74,7 +72,11 @@ const Container = styled.section`
   background-color: white;
   border: 5px dashed black;
   padding: 2rem;
-  background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
 `
 
 const copy1 = `
@@ -91,14 +93,13 @@ export const AboutMe = () => (
       <H2>About Me</H2>
       <Column>
         <CopyContainer>
+          <p>{splitter(copy1)}</p>
           <p>
-            {splitter(copy1)}
-          </p>
-          <p>
-            I specialize in Front End Development, and enjoy pointing out elements on a page that
-            I built. Outside of Javascript, I‘m fascinated by the biotech world and constant
-            innovations in microfluidics and CRISPR. In my free time, you can find me attempting
-            to fix the latest thing to break on my Pontiac firebird.
+            I specialize in Front End Development, and enjoy pointing out
+            elements on a page that I built. Outside of Javascript, I‘m
+            fascinated by the biotech world and constant innovations in
+            microfluidics and CRISPR. In my free time, you can find me
+            attempting to fix the latest thing to break on my Pontiac firebird.
           </p>
         </CopyContainer>
         <ImageContainer>

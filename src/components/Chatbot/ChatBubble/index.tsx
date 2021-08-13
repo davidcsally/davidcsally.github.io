@@ -7,16 +7,16 @@ import type { MotionProps } from 'framer-motion'
 import P from 'components/Text'
 
 interface ContainerProps {
-  justify?: 'flex-start' | 'flex-end';
+  justify?: 'flex-start' | 'flex-end'
 }
 
 interface ComponentProps extends ContainerProps {
-  delay: number;
-  children: ReactNode;
-  className?: string;
+  delay: number
+  children: ReactNode
+  className?: string
 }
 
-type Props = MotionProps & ComponentProps;
+type Props = MotionProps & ComponentProps
 
 const StyledP = styled(P)`
   background-color: #f8f8f8;

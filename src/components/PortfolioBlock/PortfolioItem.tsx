@@ -6,26 +6,26 @@ import { flex } from 'styles/mixins'
 import { Column } from '../Blocks'
 
 interface LogoComponent {
-  height?: string;
-  width?: string;
+  height?: string
+  width?: string
 }
 
 export interface PortfolioItemProps {
-  title: string;
-  role: string;
-  skills: string[];
+  title: string
+  role: string
+  skills: string[]
   logo: {
-    component: FC<LogoComponent>;
-    height?: string;
-    width?: string;
-    backgroundColor: string;
-  };
+    component: FC<LogoComponent>
+    height?: string
+    width?: string
+    backgroundColor: string
+  }
 }
 
 const Grid = styled.li`
   display: flex;
   flex-direction: column;
-  box-shadow: 10px 10px 5px 0px rgba(207,207,207,1);
+  box-shadow: 10px 10px 5px 0px rgba(207, 207, 207, 1);
   transition: all 100ms linear;
   height: 100%;
   border-radius: 3px;
@@ -56,14 +56,14 @@ const H3 = styled.h3`
   color: black;
   margin: 0;
   text-align: center;
-  font-family: "Inter", Helvetica, sans-serif;
+  font-family: 'Inter', Helvetica, sans-serif;
 `
 
 const P = styled.p`
   line-height: 1.5rem;
   color: #ffffff;
   color: black;
-  font-family: "Inter", Helvetica, sans-serif;
+  font-family: 'Inter', Helvetica, sans-serif;
 `
 
 const Code = styled.code`
@@ -78,10 +78,7 @@ export const PortfolioItem = ({
 }: PortfolioItemProps) => (
   <Grid>
     <LogoContainer backgroundColor={logo.backgroundColor}>
-      <logo.component
-        height={logo.height}
-        width={logo.width}
-      />
+      <logo.component height={logo.height} width={logo.width} />
     </LogoContainer>
     <StyledColumn>
       <H3>{title}</H3>

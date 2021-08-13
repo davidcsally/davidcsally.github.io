@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 import Chat from 'components/icons/Chat'
 
 interface Props {
-  className?: string;
+  className?: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onClick: any;
+  onClick: any
 }
 
 const StyledChat = styled(Chat)`

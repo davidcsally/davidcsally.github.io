@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import type { ReactNode } from 'react'
 
 interface Props {
-  children: ReactNode;
-  className?: string;
-  fontSize?: string;
+  children: ReactNode
+  className?: string
+  fontSize?: string
 }
 
 const Text = styled.p<Props>`

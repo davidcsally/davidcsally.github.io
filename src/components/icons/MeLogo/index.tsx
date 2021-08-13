@@ -9,10 +9,10 @@ const Svg = styled.svg`
 `
 
 interface Props {
-  fill?: string;
-  className?: string;
-  height: number;
-  width: number;
+  fill?: string
+  className?: string
+  height: number
+  width: number
 }
 
 export const MeLogo = ({

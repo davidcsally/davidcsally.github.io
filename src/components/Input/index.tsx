@@ -3,21 +3,21 @@ import styled from 'styled-components'
 import type { InputHTMLAttributes } from 'react'
 
 interface LabelProps {
-  htmlFor: string;
+  htmlFor: string
 }
 
 interface ComponentProps {
-  id: string;
+  id: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onChange: (e: any) => void;
+  onChange: (e: any) => void
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onKeyDown?: (e: any) => void;
+  onKeyDown?: (e: any) => void
 }
 
-type Props = InputHTMLAttributes<HTMLInputElement> & ComponentProps;
+type Props = InputHTMLAttributes<HTMLInputElement> & ComponentProps
 
 const Label = styled.label<LabelProps>`
-  font-family: "Inter", Helvetica, sans-serif;
+  font-family: 'Inter', Helvetica, sans-serif;
   position: absolute;
   z-index: 5;
   font-size: 0.75rem;
@@ -39,7 +39,8 @@ const StyledInput = styled.input`
   width: 100%;
   border: 1px solid var(--grey);
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     border-color: black;
     outline-width: 0;
   }
@@ -48,8 +49,7 @@ const StyledInput = styled.input`
     border-color: black;
   }
 
-  &:focus + ${Label},
-  &:not(:placeholder-shown) + ${Label} {
+  &:focus + ${Label}, &:not(:placeholder-shown) + ${Label} {
     transform: translate(0, -0.75rem);
     font-size: 0.75rem;
     font-weight: normal;

@@ -9,16 +9,12 @@ const Svg = styled.svg`
 `
 
 interface Props {
-  className?: string;
-  height: number;
-  width: number;
+  className?: string
+  height: number
+  width: number
 }
 
-export const Dictionary = ({
-  className,
-  height,
-  width,
-}: Props) => (
+export const Dictionary = ({ className, height, width }: Props) => (
   <Svg
     version="1.1"
     id="Layer_1"
