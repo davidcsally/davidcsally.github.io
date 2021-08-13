@@ -25,7 +25,7 @@ const StyledP = styled(P)`
   display: inline-block;
 `
 
-const Container = styled<{ justify: string }>(motion.div)`
+const Container = styled(motion.div)<ContainerProps>`
   display: flex;
   width: 100%;
   margin-bottom: 1rem;
