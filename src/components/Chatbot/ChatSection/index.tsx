@@ -64,10 +64,11 @@ const ChatSection = ({
               key={`${message}-${index}`}
               initial={initial}
               justify={isSender ? 'flex-end' : 'flex-start'}
+              // eslint-disable-next-line @typescript-eslint/no-empty-function
               onClick={action === 'close' ? closeChat : () => { }}
               onAnimationComplete={() => {
                 const el = document.getElementById('messages-container')
-                el!.scrollBy(1000, 1000)
+                el?.scrollBy(1000, 1000)
               }}
             >
               {message}
@@ -83,7 +84,7 @@ const ChatSection = ({
             justify={isSender ? 'flex-end' : 'flex-start'}
             onAnimationComplete={() => {
               const el = document.getElementById('messages-container')
-              el!.scrollBy(1000, 1000)
+              el?.scrollBy(1000, 1000)
             }}
           >
             {message}
@@ -107,7 +108,7 @@ const ChatSection = ({
               delay={0}
               onAnimationStart={() => {
                 const el = document.getElementById('messages-container')
-                el!.scrollBy(1000, 1000)
+                el?.scrollBy(1000, 1000)
               }}
             >
               {message}

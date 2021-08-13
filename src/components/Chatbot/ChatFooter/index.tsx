@@ -5,7 +5,9 @@ import P from 'components/Text'
 
 interface Props {
   chatValue: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   submitMessage: (e: any) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setChatValue: (e: any) => void;
 }
 
@@ -31,7 +33,7 @@ const ChatFooter = ({ chatValue, submitMessage, setChatValue }: Props) => (
       value={chatValue}
       id="chat-input"
       onKeyDown={submitMessage}
-      onChange={(e: any) => setChatValue(e.target.value)}
+      onChange={(e) => setChatValue(e.target.value)}
       placeholder="Leave a message for David"
     />
     <Disclaimer>This does not collect or send any information</Disclaimer>

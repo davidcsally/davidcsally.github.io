@@ -85,6 +85,7 @@ const Chatbot = ({
   const [chatMessages, updateMessages] = useReducer(chatReducer, initialState)
   const [chatValue, setChatValue] = useState('')
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const submitMessage = (e: any) => {
     const { value } = e.currentTarget
 
