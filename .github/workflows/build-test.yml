@@ -1,38 +1,32 @@
-name: build
+name: Test build
+
 on:
   push:
 
 jobs:
-  test:
-    strategy:
-      matrix:
-        platform: [ ubuntu-latest ]
-        node: [ '12' ]
-    name: test/node ${{ matrix.node }}/${{ matrix.platform }}
-    runs-on: ${{ matrix.platform }}
-    steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@master
-      with:
-        node-version: ${{ matrix.node }}
-    - run: npm install -g yarn
-    - run: yarn install
-    - run: yarn build
-    - run: yarn test
-  coverage:
-    needs: [ test ]
-    name: coverage
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@master
-      with:
-        node-version: '12'
-    - run: npm install -g yarn
-    - run: yarn install
-    - run: yarn build
-    - uses: paambaati/codeclimate-action@v2.2.4
+    - uses: actions/checkout@v2
+
+    - name: Install
+      run: yarn install
+
+    - name: Lint
+      run: yarn lint
+
+    - name: Test
+      run: yarn test
+
+    - name: Build
+      run: yarn build
+
+    - name: Test & publish code coverage
+      uses: paambaati/codeclimate-action@v2.7.5
       env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID}}
       with:
-        coverageCommand: yarn coverage
+        coverageCommand: yarn test --collectCoverage
+        debug: true
