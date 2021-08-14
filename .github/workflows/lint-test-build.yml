@@ -1,4 +1,4 @@
-name: Test build
+name: Lint, Test, & Build
 
 on:
   push:
@@ -17,12 +17,6 @@ jobs:
     - name: Lint
       run: yarn lint
 
-    - name: Test
-      run: yarn test
-
-    - name: Build
-      run: yarn build
-
     - name: Test & publish code coverage
       uses: paambaati/codeclimate-action@v2.7.5
       env:
@@ -30,3 +24,6 @@ jobs:
       with:
         coverageCommand: yarn test --collectCoverage
         debug: true
+
+    - name: Build
+      run: yarn build
