@@ -24,13 +24,13 @@ const tech = [
 ]
 
 const H2 = styled.h2`
-  color: #ffffff;
+  color: var(--white);
   margin: 2rem 0;
 `
 
 const Subtitle = styled.p`
   font-size: 1.5rem;
-  color: white;
+  color: var(--white);
   font-style: italic;
   font-family: 'Comic Sans MS';
   margin: 0 0 2rem 0;
@@ -70,7 +70,7 @@ const TechLabels = styled.div`
 `
 
 const TechnologySection = () => (
-  <Column>
+  <Column data-testid="technology-section">
     <H2>Skills</H2>
     <Subtitle>The jargon section</Subtitle>
     <Row>
