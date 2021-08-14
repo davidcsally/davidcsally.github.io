@@ -7,5 +7,6 @@ export interface ChatMessage {
   isSender: boolean
   /** Unique index for each message */
   type?: 'message' | 'button'
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   action?: any
 }
