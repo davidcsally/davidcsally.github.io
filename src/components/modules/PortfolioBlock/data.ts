@@ -9,7 +9,7 @@ import { PortfolioItemProps } from './PortfolioItem'
 export default [
   {
     title: 'Dictionary.com',
-    role: 'Senior Software Engineer',
+    description: 'Senior Software Engineer',
     skills: ['React', 'Web Vitals'],
     logo: {
       component: Dictionary,
@@ -20,7 +20,7 @@ export default [
   },
   {
     title: 'Meundies',
-    role: 'Software Engineer',
+    description: 'Software Engineer',
     skills: ['React', 'Redux', 'Rails', 'Solidus'],
     logo: {
       component: MeLogo,
@@ -31,7 +31,7 @@ export default [
   },
   {
     title: 'Disney',
-    role: 'Software Engineer',
+    description: 'Software Engineer',
     skills: ['React', 'Redux', 'Backbone', 'Rails'],
     logo: {
       component: Disney,
@@ -42,7 +42,7 @@ export default [
   },
   {
     title: 'MedCircle',
-    role: 'Full Stack Engineer',
+    description: 'Full Stack Engineer',
     skills: ['React', 'Redux', 'Node', 'Express'],
     logo: {
       component: MedCircle,
@@ -53,7 +53,7 @@ export default [
   },
   {
     title: 'React-Sight',
-    role: 'Open Source Project',
+    description: 'Open Source Project',
     skills: ['React', 'D3', 'Boostrap', 'Chrome Extension'],
     logo: {
       component: ReactSight,
@@ -62,7 +62,7 @@ export default [
   },
   {
     title: 'Bio-Rad Laboratories',
-    role: 'Research Associate',
+    description: 'Research Associate',
     skills: ['Digital PCR', 'centrifuging', 'pipetting', 'soldering'],
     logo: {
       component: Biorad,
