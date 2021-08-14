@@ -1,52 +1,39 @@
-# name: Test build
-
-# on:
-#   push:
-
-# jobs:
-#   build:
-
-#     runs-on: ubuntu-latest
-
-#     steps:
-#     - uses: actions/checkout@v2
-
-#     - name: Install
-#       run: yarn install
-
-#     - name: Lint
-#       run: yarn lint
-
-#     - name: Test
-#       run: yarn test
-
-#     - name: Build
-#       run: yarn build
-  
-name: Lint, Test, & Build
+name: Test build
 
 on:
   push:
 
 jobs:
-  test:
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
-    - run: yarn install
-    - run: yarn build
-    - run: yarn test
+
+    - name: Install
+      run: yarn install
+
+    - name: Lint
+      run: yarn lint
+
+    - name: Test
+      run: yarn test
+
+    - name: Build
+      run: yarn build
 
   coverage:
-    needs: [ test ]
+    needs: [ build ]
     name: coverage
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - run: yarn install
-    - run: yarn build
-    - uses: paambaati/codeclimate-action@v2.2.4
-      env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-      with:
-        coverageCommand: yarn test --collectCoverage
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v2.7.5
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: yarn test --collectCoverage
+          debug: true
+
+    
