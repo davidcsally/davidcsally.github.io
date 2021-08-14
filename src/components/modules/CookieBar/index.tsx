@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { flex } from 'styles/mixins'
 
 interface Props {
-  isCookieBarOpen: boolean
+  isOpen: boolean
   closeCookieBar: () => void
 }
 
@@ -62,10 +62,10 @@ const Button = styled.button`
   cursor: pointer;
 `
 
-export const CookieBar = ({ isCookieBarOpen, closeCookieBar }: Props) => (
+export const CookieBar = ({ isOpen, closeCookieBar }: Props) => (
   <AnimatePresence>
-    {isCookieBarOpen ? (
-      <Container key="cookie-bar" {...animation}>
+    {isOpen ? (
+      <Container data-testid="cookie-bar" key="cookie-bar" {...animation}>
         <Column>
           <Row>
             <p>This site uses cookies. Or does it?</p>

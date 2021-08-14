@@ -55,7 +55,7 @@ const App = () => {
       <SupremeBlock />
       <PortfolioBlock />
       <CookieBar
-        isCookieBarOpen={isCookieBarOpen}
+        isOpen={isCookieBarOpen}
         closeCookieBar={closeCookieBarAndOpenChat}
       />
       <Chatbot isOpen={isChatOpen} closeChat={closeChat} openChat={openChat} />
