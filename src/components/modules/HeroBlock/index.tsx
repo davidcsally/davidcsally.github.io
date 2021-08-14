@@ -81,7 +81,7 @@ const Position = styled.div`
 `
 
 const HeroBlock = () => (
-  <Container>
+  <Container data-testid="hero-module">
     <Position>
       <Image
         src="/images/yosemite.jpg"
