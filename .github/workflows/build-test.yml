@@ -2,15 +2,6 @@ name: build
 on:
   push:
 
-    paths:
-      - src/*
-      - test/*
-      - '*.json'
-      - yarn.lock
-
-  pull_request:
-    paths:
-      - '!*.MD'
 jobs:
   test:
     strategy:
