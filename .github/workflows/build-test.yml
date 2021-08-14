@@ -27,16 +27,6 @@ name: Lint, Test, & Build
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - src/*
-      - test/*
-      - '*.json'
-      - yarn.lock
-  pull_request:
-    paths:
-      - '!*.MD'
 
 jobs:
   test:
