@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import type { FC } from 'react'
 
 import { flex } from 'styles/mixins'
-import { Column } from '../Blocks'
+import { Column } from 'components/shared/Blocks'
 
 interface LogoComponent {
   height?: string

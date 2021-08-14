@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import Input from 'components/Input'
-import P from 'components/Text'
+import Input from 'components/shared/Input'
+import P from 'components/shared/Text'
 
 interface Props {
   chatValue: string

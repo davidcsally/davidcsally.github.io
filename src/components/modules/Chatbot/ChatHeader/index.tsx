@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import P from 'components/Text'
+import P from 'components/shared/Text'
 import CloseIcon from 'components/icons/CloseIcon'
 import ChatProfileImage from '../ChatProfileImage'
 

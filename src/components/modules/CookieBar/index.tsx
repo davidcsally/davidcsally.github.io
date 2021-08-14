@@ -50,7 +50,7 @@ const animation = {
 }
 
 const TinyText = styled.p`
-  font-size: 12px;
+  font-size: 0.75rem;
 `
 
 const Button = styled.button`

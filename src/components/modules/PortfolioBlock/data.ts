@@ -1,9 +1,9 @@
-import { MeLogo } from '../icons/MeLogo'
-import { Disney } from '../icons/Disney'
-import { MedCircle } from '../icons/MedCircle'
-import { Biorad } from '../icons/Biorad'
-import { ReactSight } from '../icons/ReactSight'
-import { Dictionary } from '../icons/Dictionary'
+import { MeLogo } from 'components/icons/MeLogo'
+import { Disney } from 'components/icons/Disney'
+import { MedCircle } from 'components/icons/MedCircle'
+import { Biorad } from 'components/icons/Biorad'
+import { ReactSight } from 'components/icons/ReactSight'
+import { Dictionary } from 'components/icons/Dictionary'
 import { PortfolioItemProps } from './PortfolioItem'
 
 export default [

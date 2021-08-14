@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import type { ReactNode } from 'react'
 import type { MotionProps } from 'framer-motion'
 
-import P from 'components/Text'
+import P from 'components/shared/Text'
 
 interface ContainerProps {
   justify?: 'flex-start' | 'flex-end'

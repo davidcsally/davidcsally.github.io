@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 import Image from 'next/image'
 
-import LinkedIn from '../icons/LinkedIn'
-import Github from '../icons/Github'
-import Angellist from '../icons/Angellist'
-import Medium from '../icons/Medium'
+import LinkedIn from '../../icons/LinkedIn'
+import Github from '../../icons/Github'
+import Angellist from '../../icons/Angellist'
+import Medium from '../../icons/Medium'
 
 interface Props {
   backgroundImage?: string

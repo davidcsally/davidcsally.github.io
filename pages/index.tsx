@@ -3,7 +3,7 @@ import Head from 'next/head'
 import 'normalize.css'
 import 'border-box.css'
 
-import App from '../src/components/App'
+import App from 'components/modules/App'
 
 const Home = () => (
   <>
@@ -16,7 +16,10 @@ const Home = () => (
         content="David Sally, Software Engineer, Los Angeles, React, Node, Postgres, Redux, Redux Saga, Javascript, ES6"
       />
       <link rel="shortcut icon" href="/favicon.ico" type="img/x-icon" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1"
+      />
     </Head>
     <App />
   </>

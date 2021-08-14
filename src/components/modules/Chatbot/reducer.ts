@@ -10,10 +10,11 @@ export const moveNewToSaved = () => ({
 })
 
 export interface State {
-  savedMessages: ChatMessage[];
-  newMessages: ChatMessage[];
+  savedMessages: ChatMessage[]
+  newMessages: ChatMessage[]
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const chatReducer = (state: State, action: any) => {
   const { payload, type } = action
 
@@ -39,12 +40,22 @@ export const chatReducer = (state: State, action: any) => {
     }
 
     case MOVE_NEW_TO_SAVED: {
-      const savedMessages = state.savedMessages.map((m) => ({ ...m, initial: false }))
-      const newMessages = state.newMessages.map((m) => ({ ...m, initial: false }))
+      const savedMessages = state.savedMessages.map((m) => ({
+        ...m,
+        initial: false,
+      }))
+      const newMessages = state.newMessages.map((m) => ({
+        ...m,
+        initial: false,
+      }))
 
-      return { savedMessages: [...savedMessages, ...newMessages], newMessages: [] }
+      return {
+        savedMessages: [...savedMessages, ...newMessages],
+        newMessages: [],
+      }
     }
 
-    default: return state
+    default:
+      return state
   }
 }
