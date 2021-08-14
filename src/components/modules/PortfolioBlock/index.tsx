@@ -51,7 +51,7 @@ export const PortfolioBlock = () => (
           <PortfolioItem
             key={index}
             title={item.title}
-            role={item.role}
+            description={item.description}
             skills={item.skills}
             logo={item.logo}
           />

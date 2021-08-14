@@ -12,7 +12,7 @@ interface LogoComponent {
 
 export interface PortfolioItemProps {
   title: string
-  role: string
+  description: string
   skills: string[]
   logo: {
     component: FC<LogoComponent>
@@ -72,7 +72,7 @@ const Code = styled.code`
 
 export const PortfolioItem = ({
   title,
-  role,
+  description,
   skills,
   logo,
 }: PortfolioItemProps) => (
@@ -82,7 +82,7 @@ export const PortfolioItem = ({
     </LogoContainer>
     <StyledColumn>
       <H3>{title}</H3>
-      <P>{role}</P>
+      <P>{description}</P>
       <Code>{skills.join(', ')}</Code>
     </StyledColumn>
   </Grid>
