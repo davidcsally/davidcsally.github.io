@@ -1,6 +1,7 @@
 ![Deploy](https://github.com/davidcsally/davidcsally.github.io/workflows/Deploy/badge.svg)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/74c97cdc34bb40b4bbec7055cbf9b617)](https://app.codacy.com/manual/davidcsally/davidcsally.github.io?utm_source=github.com&utm_medium=referral&utm_content=davidcsally/davidcsally.github.io&utm_campaign=Badge_Grade_Settings)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6ae8cf2b015816fb26a2/maintainability)](https://codeclimate.com/github/davidcsally/davidcsally.github.io/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/6ae8cf2b015816fb26a2/test_coverage)](https://codeclimate.com/github/davidcsally/davidcsally.github.io/test_coverage)
 ![Code Style](https://img.shields.io/badge/code%20style-david😎-blue)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6c6ea899-dafb-44c7-9249-818608c7623b/deploy-status)](https://app.netlify.com/sites/davidcsally/deploys)
 [![Storybook](https://raw.githubusercontent.com/storybookjs/brand/b7964b28521b16b95a2cfb84642741804b8f0076/badge/badge-storybook.svg)](https://davidcsally.netlify.app/)
