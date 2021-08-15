@@ -40,8 +40,7 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br>
-haha just kidding, there's no tests.
+Runs all jest tests. Add `--collectCoverage` to collect test coverage from all valid files under `/src`. 
 
 ### `yarn run build`
 
