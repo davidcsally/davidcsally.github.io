@@ -23,8 +23,9 @@ Deployment:
 
 ## Pipeline
 - Pull requests run a test build script and previews are automatically deployed to Vercel
+- Test coverage changes are reported in pull requests by Code Climate via Jest 
 - Merges into `main` automatically build and deploy to Vercel
-- A storybook instance is automagically deployed to netlify
+- A Storybook instance is automagically deployed to Netlify
 
 ## Available Scripts
 
