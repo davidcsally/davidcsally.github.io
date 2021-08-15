@@ -7,6 +7,7 @@ const ChatProfileImage = () => (
     height={36}
     width={36}
     loading="lazy"
+    data-testid="profile-image"
   />
 )
 
