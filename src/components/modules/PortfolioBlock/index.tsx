@@ -43,7 +43,7 @@ const Container = styled.div`
 `
 
 export const PortfolioBlock = () => (
-  <Container>
+  <Container data-testid="portfolio-module">
     <MaxWidth>
       <H2>Stuff I&apos;ve done</H2>
       <List>
