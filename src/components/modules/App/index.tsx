@@ -22,8 +22,7 @@ const App = () => {
   const [isCookieBarOpen, setIsCookieBarOpen] = useState(false)
 
   const openChat = () => {
-    if (isChatOpen) return
-    setIsChatOpen(true)
+    if (!isChatOpen) setIsChatOpen(true)
   }
 
   const closeChat = () => setIsChatOpen(false)

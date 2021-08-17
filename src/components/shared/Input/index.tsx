@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import type { InputHTMLAttributes } from 'react'
+import type { ChangeEvent, InputHTMLAttributes, KeyboardEvent } from 'react'
 
 interface LabelProps {
   htmlFor: string
@@ -8,10 +8,8 @@ interface LabelProps {
 
 interface ComponentProps {
   id: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onChange: (e: any) => void
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onKeyDown?: (e: any) => void
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void
+  onKeyDown?: (e: KeyboardEvent<HTMLInputElement>) => void
 }
 
 type Props = InputHTMLAttributes<HTMLInputElement> & ComponentProps

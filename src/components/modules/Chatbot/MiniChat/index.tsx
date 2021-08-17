@@ -5,8 +5,7 @@ import Chat from 'components/icons/Chat'
 
 interface Props {
   className?: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onClick: any
+  onClick: () => void
 }
 
 const StyledChat = styled(Chat)`

@@ -3,18 +3,17 @@ import styled from 'styled-components'
 import Input from 'components/shared/Input'
 import P from 'components/shared/Text'
 
+import type { SubmitMessage } from '../types'
+
 interface Props {
   chatValue: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  submitMessage: (e: any) => void
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  setChatValue: (e: any) => void
+  submitMessage: SubmitMessage
+  setChatValue: (e: string) => void
 }
 
 const Disclaimer = styled(P)`
   font-size: 0.5rem;
   color: darkgray;
-  line-height: normal;
   text-align: center;
   margin-top: auto;
 `
