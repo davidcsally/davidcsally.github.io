@@ -1,9 +1,7 @@
-// eslint-disable-next-line object-curly-newline
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-import GA from '../src/scripts/googleAnalytics'
-import fonts from '../src/styles/fonts'
+import fonts from 'styles/fonts'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -40,10 +38,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: GA }}
-          />
           <style dangerouslySetInnerHTML={{ __html: fonts }} />
         </body>
       </Html>

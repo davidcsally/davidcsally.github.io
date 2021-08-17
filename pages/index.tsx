@@ -1,9 +1,12 @@
 import Head from 'next/head'
+import Script from 'next/script'
 
 import 'normalize.css'
 import 'border-box.css'
 
 import App from 'components/modules/App'
+
+import GA from 'scripts/googleAnalytics'
 
 const Home = () => (
   <>
@@ -22,6 +25,7 @@ const Home = () => (
       />
     </Head>
     <App />
+    <Script strategy="afterInteractive">{GA}</Script>
   </>
 )
 
