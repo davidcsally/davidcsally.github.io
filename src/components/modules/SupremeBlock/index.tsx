@@ -39,8 +39,7 @@ const Overflow = styled(motion.div)`
   white-space: nowrap;
 `
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const calculateNodes = (ref: RefObject<any>) => {
+const calculateNodes = (ref: RefObject<HTMLParagraphElement>) => {
   const node = ref.current
   const body = document.querySelector('body')
 

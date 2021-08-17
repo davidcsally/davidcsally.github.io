@@ -12,6 +12,7 @@ import ChatHeader from './ChatHeader'
 import { initialState } from './mock'
 
 import { chatReducer, MOVE_NEW_TO_SAVED, ADD_MESSAGE } from './reducer'
+import { SubmitMessage } from './types'
 
 interface Props {
   isOpen: boolean
@@ -77,8 +78,7 @@ const Chatbot = ({ isOpen, closeChat, openChat }: Props) => {
   const [chatMessages, updateMessages] = useReducer(chatReducer, initialState)
   const [chatValue, setChatValue] = useState('')
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const submitMessage = (e: any) => {
+  const submitMessage: SubmitMessage = (e) => {
     const { value } = e.currentTarget
 
     if (e.key === 'Enter') {

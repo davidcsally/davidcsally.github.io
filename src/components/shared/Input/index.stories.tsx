@@ -10,13 +10,10 @@ export default {
 const Container = () => {
   const [value, setValue] = useState('')
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const onChange = (e: any) => setValue(e.target.value)
-
   return (
     <Input
       id="test"
-      onChange={onChange}
+      onChange={(e) => setValue(e.target.value)}
       value={value}
       placeholder="Leave a message for David"
     />

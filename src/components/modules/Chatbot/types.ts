@@ -10,3 +10,5 @@ export interface ChatMessage {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   action?: any
 }
+
+export type SubmitMessage = (e: React.KeyboardEvent<HTMLInputElement>) => void
