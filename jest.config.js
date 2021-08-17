@@ -1,5 +1,10 @@
 module.exports = {
   moduleDirectories: ['node_modules', 'src'],
   setupFilesAfterEnv: ['<rootDir>/jest-setup.js'],
-  collectCoverageFrom: ['src/**/*.{js,ts,tsx}', '!src/global.d.ts'],
+  collectCoverageFrom: [
+    'src/**/*.{js,ts,tsx}',
+    '!src/global.d.ts',
+    '!src/**/*.stories.tsx',
+    '!src/**/mock.ts',
+  ],
 }
