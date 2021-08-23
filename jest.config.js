@@ -7,8 +7,9 @@ module.exports = {
     '!src/global.d.ts',
     // or stories
     '!src/**/*.stories.tsx',
-    // or data mocks
+    // or data / mocks
     '!src/**/mock.ts',
+    '!src/**/data.ts',
     // or these "css" files
     '!src/styles/colors.ts',
     '!src/styles/fonts.ts',
