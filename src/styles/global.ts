@@ -27,4 +27,8 @@ export default createGlobalStyle`
       outline-color: var(--outline-color);
     }
   }
+
+  p {
+    margin: 0;
+  }
 `
