@@ -11,7 +11,6 @@ interface Props {
 const Text = styled.p<Props>`
   font-family: 'Inter', 'Comic Sans MS';
   font-size: ${({ fontSize = '1rem' }) => fontSize};
-  margin: 0;
 `
 
 const P = ({ children, ...rest }: Props) => <Text {...rest}>{children}</Text>
