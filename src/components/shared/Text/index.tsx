@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 interface Props {
   fontSize?: string
-  bold?: string
+  bold?: boolean
   color?: string
   textAlign?: string
 }
