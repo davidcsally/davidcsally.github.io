@@ -8,6 +8,7 @@ import { CookieBar } from '../CookieBar'
 import { SupremeBlock } from '../SupremeBlock'
 import { AboutMe } from '../AboutMe'
 import { PortfolioBlock } from '../PortfolioBlock'
+import Footer from '../Footer'
 
 const COOKIE = 'acceptedCookies=true'
 
@@ -53,6 +54,7 @@ const App = () => {
       <AboutMe />
       <SupremeBlock />
       <PortfolioBlock />
+      <Footer />
       <CookieBar
         isOpen={isCookieBarOpen}
         closeCookieBar={closeCookieBarAndOpenChat}
