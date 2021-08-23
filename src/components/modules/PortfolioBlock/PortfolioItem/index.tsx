@@ -48,7 +48,6 @@ const LogoContainer = styled.div<{ backgroundColor: string }>`
 const StyledColumn = styled(Column)`
   flex: 1;
   padding: 1rem;
-  align-items: center;
   background-color: white;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;

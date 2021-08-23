@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { Column } from 'components/shared/Blocks'
+
 const Background = styled.footer`
   background-color: black;
   color: #00ff41;
@@ -8,13 +10,6 @@ const Background = styled.footer`
   a {
     color: #00ff41;
   }
-`
-
-const Column = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 `
 
 const Footer = () => (

@@ -5,6 +5,7 @@ interface Props {
   bold?: boolean
   color?: string
   textAlign?: string
+  fontStyle?: string
 }
 
 const Text = styled.span<Props>`
@@ -12,5 +13,6 @@ const Text = styled.span<Props>`
   ${({ color }) => color && `color: ${color};`}
   ${({ bold }) => bold && `font-weight: bold;`}
   ${({ textAlign }) => textAlign && `text-align: ${textAlign};`}
+  ${({ fontStyle }) => fontStyle && `font-style: ${fontStyle};`}
 `
 export default Text

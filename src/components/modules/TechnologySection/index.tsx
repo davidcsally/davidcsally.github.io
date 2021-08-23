@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+import { flex } from 'styles/mixins'
+import Margin from 'components/shared/Margin'
+import Text from 'components/shared/Text'
+
 const tech = [
   'JavaScript',
   'TypeScript',
@@ -23,37 +27,22 @@ const tech = [
   'Neo4j',
 ]
 
-const H2 = styled.h2`
-  color: var(--white);
-  margin: 2rem 0;
-`
-
-const Subtitle = styled.p`
-  font-size: 1.5rem;
-  color: var(--white);
-  font-style: italic;
+const ComicSans = styled.span`
   font-family: 'Comic Sans MS';
-  margin: 0 0 2rem 0;
 `
 
 const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
+  ${flex({ direction: 'column', justifyContent: 'flex-start' })}
+`
+
+const Layout = styled.div`
   min-height: 400px;
   background-color: blue;
-  padding: 1rem;
+  padding: 2rem;
 `
 
 const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
+  ${flex({ flexWrap: 'wrap' })}
 `
 
 const TechLabels = styled.div`
@@ -67,15 +56,32 @@ const TechLabels = styled.div`
 `
 
 const TechnologySection = () => (
-  <Column data-testid="technology-section">
-    <H2>Skills</H2>
-    <Subtitle>The jargon section</Subtitle>
-    <Row>
-      {tech.map((t) => (
-        <TechLabels key="t">{t}</TechLabels>
-      ))}
-    </Row>
-  </Column>
+  <Layout>
+    <Column data-testid="technology-section">
+      <Margin mb="2rem">
+        <Text fontSize="2rem" as="h2" color="var(--white)">
+          Skills
+        </Text>
+      </Margin>
+      <Margin mb="2rem">
+        <ComicSans>
+          <Text
+            as="h3"
+            color="var(--white)"
+            fontSize="1.5rem"
+            fontStyle="italic"
+          >
+            The jargon section
+          </Text>
+        </ComicSans>
+      </Margin>
+      <Row>
+        {tech.map((t) => (
+          <TechLabels key="t">{t}</TechLabels>
+        ))}
+      </Row>
+    </Column>
+  </Layout>
 )
 
 export default TechnologySection
