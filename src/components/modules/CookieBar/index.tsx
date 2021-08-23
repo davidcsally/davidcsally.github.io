@@ -62,7 +62,7 @@ const Button = styled.button`
   cursor: pointer;
 `
 
-export const CookieBar = ({ isOpen, closeCookieBar }: Props) => (
+const CookieBar = ({ isOpen, closeCookieBar }: Props) => (
   <AnimatePresence>
     {isOpen ? (
       <Container data-testid="cookie-bar" key="cookie-bar" {...animation}>
@@ -81,3 +81,5 @@ export const CookieBar = ({ isOpen, closeCookieBar }: Props) => (
     ) : null}
   </AnimatePresence>
 )
+
+export default CookieBar

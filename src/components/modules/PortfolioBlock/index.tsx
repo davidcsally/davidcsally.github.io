@@ -42,7 +42,7 @@ const Container = styled.section`
   background-color: #f2f2f2;
 `
 
-export const PortfolioBlock = () => (
+const PortfolioBlock = () => (
   <Container data-testid="portfolio-module">
     <MaxWidth>
       <H2>Stuff I&apos;ve done</H2>
@@ -60,3 +60,5 @@ export const PortfolioBlock = () => (
     </MaxWidth>
   </Container>
 )
+
+export default PortfolioBlock

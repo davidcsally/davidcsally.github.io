@@ -39,7 +39,6 @@ module.exports = {
     'react/jsx-props-no-spreading': 0,
     'react/react-in-jsx-scope': 0,
     'react/no-array-index-key': 0,
-    'react/sort-comp': 0,
     'react/jsx-one-expression-per-line': 0,
 
     //

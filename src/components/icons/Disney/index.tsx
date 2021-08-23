@@ -14,7 +14,7 @@ interface Props {
   width: number
 }
 
-export const Disney = ({ fill = 'white', height, width }: Props) => (
+const Disney = ({ fill = 'white', height, width }: Props) => (
   <Svg id="icon-logo" width={width} height={height} viewBox="0 0 319.96 93.04">
     <title>shopDisney Logo</title>
     <path
@@ -74,3 +74,5 @@ export const Disney = ({ fill = 'white', height, width }: Props) => (
     />
   </Svg>
 )
+
+export default Disney

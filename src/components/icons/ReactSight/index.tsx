@@ -25,7 +25,7 @@ const Positioning = styled.div`
   }
 `
 
-export const ReactSight = () => (
+const ReactSight = () => (
   <Positioning>
     <Image
       src="/images/reactsight.png"
@@ -36,3 +36,5 @@ export const ReactSight = () => (
     />
   </Positioning>
 )
+
+export default ReactSight

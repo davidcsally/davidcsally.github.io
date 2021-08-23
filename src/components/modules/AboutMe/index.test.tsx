@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { AboutMe } from '.'
+import AboutMe from '.'
 
 describe('AboutMe', () => {
   it('renders without crashing', () => {

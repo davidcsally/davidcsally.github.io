@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-import { CookieBar } from '.'
+import CookieBar from '.'
 
 describe('CookieBar', () => {
   const closeCookieBar = jest.fn()

@@ -13,7 +13,7 @@ const Positioning = styled.div`
   }
 `
 
-export const Biorad = () => (
+const Biorad = () => (
   <Positioning>
     <Image
       src="/images/biorad.png"
@@ -24,3 +24,5 @@ export const Biorad = () => (
     />
   </Positioning>
 )
+
+export default Biorad

@@ -14,7 +14,7 @@ interface Props {
   width: number
 }
 
-export const MedCircle = ({ className, height = 40, width = 75 }: Props) => (
+const MedCircle = ({ className, height = 40, width = 75 }: Props) => (
   <Svg
     viewBox="0 0 108 108"
     className={className}
@@ -91,3 +91,5 @@ export const MedCircle = ({ className, height = 40, width = 75 }: Props) => (
     </g>
   </Svg>
 )
+
+export default MedCircle

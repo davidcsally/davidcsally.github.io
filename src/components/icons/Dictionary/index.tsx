@@ -14,7 +14,7 @@ interface Props {
   width: number
 }
 
-export const Dictionary = ({ className, height, width }: Props) => (
+const Dictionary = ({ className, height, width }: Props) => (
   <Svg
     version="1.1"
     id="Layer_1"
@@ -92,3 +92,5 @@ export const Dictionary = ({ className, height, width }: Props) => (
     </g>
   </Svg>
 )
+
+export default Dictionary

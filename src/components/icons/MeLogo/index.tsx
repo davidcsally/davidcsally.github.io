@@ -15,7 +15,7 @@ interface Props {
   width: number
 }
 
-export const MeLogo = ({
+const MeLogo = ({
   fill = 'white',
   className,
   height = 40,
@@ -29,3 +29,5 @@ export const MeLogo = ({
     />
   </Svg>
 )
+
+export default MeLogo

@@ -144,7 +144,7 @@ const Margin = styled.div<{ mb?: string; mr?: string }>`
 `
 
 /** Just a lil section about me */
-export const AboutMe = () => {
+const AboutMe = () => {
   const [isFlipped, setIsFlipped] = useState(false)
 
   return (
@@ -196,3 +196,5 @@ export const AboutMe = () => {
     </Container>
   )
 }
+
+export default AboutMe

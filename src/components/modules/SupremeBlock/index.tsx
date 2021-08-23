@@ -53,7 +53,7 @@ const calculateNodes = (ref: RefObject<HTMLParagraphElement>) => {
 /**
  * This block says has text that scrolls with the viewport
  */
-export const SupremeBlock = () => {
+const SupremeBlock = () => {
   const [numToShow, setNumToShow] = useState(1)
   const { scrollYProgress } = useViewportScroll()
   const myRef = useRef<HTMLParagraphElement>(null)
@@ -90,3 +90,5 @@ export const SupremeBlock = () => {
     </Mask>
   )
 }
+
+export default SupremeBlock
