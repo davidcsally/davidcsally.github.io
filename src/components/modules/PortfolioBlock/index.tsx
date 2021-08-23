@@ -7,7 +7,6 @@ import { PortfolioItem } from './PortfolioItem'
 
 const H2 = styled.h2`
   font-size: 2rem;
-  margin: 0;
   margin-bottom: 2rem;
   font-family: 'Inter', Helvetica, sans-serif;
 `

@@ -19,7 +19,6 @@ const MaxWidth = styled.div`
 
 const H2 = styled.h2`
   font-size: 2rem;
-  margin: 0;
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px white;
 `

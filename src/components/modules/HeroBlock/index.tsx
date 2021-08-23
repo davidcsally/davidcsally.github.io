@@ -22,7 +22,6 @@ const H1 = styled.h1`
   color: white;
   background-color: var(--supremely-red);
   padding: 1rem;
-  margin: 0;
   font-size: 2rem;
   font-family: 'Futura-Heavy-Oblique';
 
