@@ -32,7 +32,7 @@ const MaxWidth = styled.div`
   margin: 0 auto;
 `
 
-const Container = styled.div`
+const Container = styled.section`
   min-height: 500px;
   padding: 2rem;
   display: flex;

@@ -50,10 +50,12 @@ const App = () => {
   return (
     <div>
       <GlobalStyles />
-      <HeroBlock />
-      <AboutMe />
-      <SupremeBlock />
-      <PortfolioBlock />
+      <main>
+        <HeroBlock />
+        <AboutMe />
+        <SupremeBlock />
+        <PortfolioBlock />
+      </main>
       <Footer />
       <CookieBar
         isOpen={isCookieBarOpen}

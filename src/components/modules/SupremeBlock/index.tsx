@@ -80,7 +80,7 @@ export const SupremeBlock = () => {
   }
 
   return (
-    <Mask>
+    <Mask as="section">
       <Column>
         <Overflow style={{ x: x1 }}>{nodes}</Overflow>
         <Overflow style={{ x: x2 }}>{nodes}</Overflow>
