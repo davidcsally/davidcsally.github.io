@@ -4,7 +4,8 @@ import { AnimatePresence, motion } from 'framer-motion'
 import type { ReactNode } from 'react'
 import type { MotionProps } from 'framer-motion'
 
-import P from 'components/shared/Text'
+import Text from 'components/shared/Text'
+import Margin from 'components/shared/Margin'
 
 interface ContainerProps {
   justify?: 'flex-start' | 'flex-end'
@@ -18,7 +19,7 @@ interface ComponentProps extends ContainerProps {
 
 type Props = MotionProps & ComponentProps
 
-const StyledP = styled(P)`
+const StyledP = styled(Text)`
   background-color: #f8f8f8;
   border-radius: 20px;
   padding: 0.5rem 1rem;
@@ -28,7 +29,6 @@ const StyledP = styled(P)`
 const Container = styled(motion.div)<ContainerProps>`
   display: flex;
   width: 100%;
-  margin-bottom: 1rem;
   justify-content: ${({ justify }) => justify};
 `
 
@@ -51,19 +51,21 @@ const ChatBubble = ({
   children,
   className,
   initial,
-  delay = 0,
+  delay,
   justify = 'flex-start',
   ...rest
 }: Props) => (
   <AnimatePresence initial={!!initial}>
-    <Container
-      className={className}
-      justify={justify}
-      {...rest}
-      {...animation(delay)}
-    >
-      <StyledP>{children}</StyledP>
-    </Container>
+    <Margin mb="1rem">
+      <Container
+        className={className}
+        justify={justify}
+        {...rest}
+        {...animation(delay)}
+      >
+        <StyledP>{children}</StyledP>
+      </Container>
+    </Margin>
   </AnimatePresence>
 )
 
