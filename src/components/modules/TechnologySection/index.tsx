@@ -64,9 +64,6 @@ const TechLabels = styled.div`
   padding: 0.25rem 1rem;
   margin: 1rem 0.25rem;
   width: auto;
-
-  &:hover {
-  }
 `
 
 const TechnologySection = () => (

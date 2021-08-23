@@ -2,15 +2,13 @@ import styled from 'styled-components'
 
 import Image from 'next/image'
 
-import LinkedIn from '../../icons/LinkedIn'
-import Github from '../../icons/Github'
-import Angellist from '../../icons/Angellist'
-import Medium from '../../icons/Medium'
+import Margin from 'components/shared/Margin'
+import Text from 'components/shared/Text'
 
-interface Props {
-  backgroundImage?: string
-  paddingTop?: string
-}
+import LinkedIn from 'components/icons/LinkedIn'
+import Github from 'components/icons/Github'
+import Angellist from 'components/icons/Angellist'
+import Medium from 'components/icons/Medium'
 
 const P = styled.p`
   font-family: 'Courier New', Courier, monospace;
@@ -20,19 +18,11 @@ const P = styled.p`
   color: white;
 `
 
-const Description = styled.p`
-  color: white;
-  margin-top: 10px;
-  font-weight: 400;
-  line-height: 1.8;
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-`
-
 const H1 = styled.h1`
   color: white;
   background-color: var(--supremely-red);
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 0;
   font-size: 2rem;
   font-family: 'Futura-Heavy-Oblique';
 
@@ -54,8 +44,8 @@ const ButtonContainer = styled.div`
   z-index: 1;
 `
 
-const TextContainer = styled.div<Props>`
-  padding-top: ${({ paddingTop }) => paddingTop};
+const TextContainer = styled.div`
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,10 +81,16 @@ const HeroBlock = () => (
         priority
       />
     </Position>
-    <TextContainer paddingTop="100px">
-      <P>hello, world!</P>
-      <H1>David Sally</H1>
-      <Description>Software Engineer | Oakland, CA</Description>
+    <TextContainer>
+      <Margin mb="1rem">
+        <P>hello, world!</P>
+      </Margin>
+      <Margin mb="1rem">
+        <H1>David Sally</H1>
+      </Margin>
+      <Margin mb="1rem">
+        <Text color="white">Software Engineer | Oakland, CA</Text>
+      </Margin>
     </TextContainer>
     <ButtonContainer>
       <LinkedIn href="https://www.linkedin.com/in/davidcsally" />

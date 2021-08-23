@@ -4,6 +4,7 @@ import type { FC } from 'react'
 
 import { flex } from 'styles/mixins'
 import { Column } from 'components/shared/Blocks'
+import Text from 'components/shared/Text'
 
 interface LogoComponent {
   height?: string
@@ -50,19 +51,12 @@ const StyledColumn = styled(Column)`
   background-color: white;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
+  justify-content: flex-start;
 `
 
 const H3 = styled.h3`
-  color: black;
-  margin: 0;
+  margin: 0 0 1rem 0;
   text-align: center;
-  font-family: 'Inter', Helvetica, sans-serif;
-`
-
-const P = styled.p`
-  line-height: 1.5rem;
-  color: #ffffff;
-  color: black;
   font-family: 'Inter', Helvetica, sans-serif;
 `
 
@@ -82,7 +76,7 @@ export const PortfolioItem = ({
     </LogoContainer>
     <StyledColumn>
       <H3>{title}</H3>
-      <P>{description}</P>
+      <Text textAlign="center">{description}</Text>
       <Code>{skills.join(', ')}</Code>
     </StyledColumn>
   </Grid>

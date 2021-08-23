@@ -1,18 +1,16 @@
 import styled from 'styled-components'
 
-import type { ReactNode } from 'react'
-
 interface Props {
-  children: ReactNode
-  className?: string
   fontSize?: string
+  bold?: string
+  color?: string
+  textAlign?: string
 }
 
-const Text = styled.p<Props>`
-  font-family: 'Inter', 'Comic Sans MS';
+const Text = styled.span<Props>`
   font-size: ${({ fontSize = '1rem' }) => fontSize};
+  ${({ color }) => color && `color: ${color};`}
+  ${({ bold }) => bold && `font-weight: bold;`}
+  ${({ textAlign }) => textAlign && `text-align: ${textAlign};`}
 `
-
-const P = ({ children, ...rest }: Props) => <Text {...rest}>{children}</Text>
-
-export default P
+export default Text

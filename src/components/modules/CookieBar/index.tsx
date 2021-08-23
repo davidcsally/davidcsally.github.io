@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { AnimatePresence, motion } from 'framer-motion'
 
+import Text from 'components/shared/Text'
+import Margin from 'components/shared/Margin'
 import { flex } from 'styles/mixins'
 
 interface Props {
@@ -49,10 +51,6 @@ const animation = {
   },
 }
 
-const TinyText = styled.p`
-  font-size: 0.75rem;
-`
-
 const Button = styled.button`
   padding: 1rem 1rem;
   border: 2px solid black;
@@ -67,15 +65,18 @@ const CookieBar = ({ isOpen, closeCookieBar }: Props) => (
     {isOpen ? (
       <Container data-testid="cookie-bar" key="cookie-bar" {...animation}>
         <Column>
-          <Row>
-            <p>This site uses cookies. Or does it?</p>
-            <Button type="button" onClick={() => closeCookieBar()}>
-              Who Cares
-            </Button>
-          </Row>
-          <TinyText>
+          <Margin mb="0.5rem">
+            <Row>
+              <p>This site uses cookies. Or does it?</p>
+              <Button type="button" onClick={() => closeCookieBar()}>
+                Who Cares
+              </Button>
+            </Row>
+          </Margin>
+
+          <Text fontSize="0.75rem">
             (but actually it uses a cookie to remember if you clicked this)
-          </TinyText>
+          </Text>
         </Column>
       </Container>
     ) : null}
