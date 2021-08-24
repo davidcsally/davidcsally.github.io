@@ -9,6 +9,7 @@ import SupremeBlock from '../SupremeBlock'
 import AboutMe from '../AboutMe'
 import PortfolioBlock from '../PortfolioBlock'
 import Footer from '../Footer'
+import TechnologySection from '../TechnologySection'
 
 const COOKIE = 'acceptedCookies=true'
 
@@ -48,12 +49,13 @@ const App = () => {
   }, [])
 
   return (
-    <div>
+    <div data-testid="app">
       <GlobalStyles />
       <main>
         <HeroBlock />
         <AboutMe />
         <SupremeBlock />
+        <TechnologySection />
         <PortfolioBlock />
       </main>
       <Footer />
