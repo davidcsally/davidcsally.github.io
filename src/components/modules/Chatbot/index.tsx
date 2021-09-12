@@ -95,7 +95,7 @@ const Chatbot = ({ isOpen, closeChat, openChat }: Props) => {
   return (
     <AnimatePresence>
       {isOpen ? (
-        <Container key="chat" layout {...animation}>
+        <Container key="chat" data-testid="chatbot" layout {...animation}>
           <ChatHeader closeChat={onClose} />
           <ChatSection
             closeChat={onClose}

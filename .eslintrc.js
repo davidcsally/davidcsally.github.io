@@ -10,6 +10,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:prettier/recommended',
     'plugin:@next/next/recommended',
+    'plugin:cypress/recommended',
   ],
   globals: {
     Atomics: 'readonly',
