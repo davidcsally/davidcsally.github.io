@@ -55,7 +55,8 @@ const App = () => {
         <HeroBlock />
         <AboutMe />
         <SupremeBlock />
-        <TechnologySection />
+        {/* this still needs work */}
+        {/* <TechnologySection /> */}
         <PortfolioBlock />
       </main>
       <Footer />
