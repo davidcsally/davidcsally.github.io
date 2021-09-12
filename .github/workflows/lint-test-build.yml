@@ -25,5 +25,5 @@ jobs:
         coverageCommand: yarn test --collectCoverage
         debug: true
 
-    - name: Build
-      run: yarn build
+    - name: Cypress
+      run: yarn test:cypress
