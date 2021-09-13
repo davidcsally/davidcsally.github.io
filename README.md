@@ -23,9 +23,10 @@ Deployment:
 
 ## Pipeline
 - Pull requests run a test build script and previews are automatically deployed to Vercel
-- Test coverage changes are reported in pull requests by Code Climate via Jest 
+- Test coverage changes are reported in pull requests by Code Climate via Jest
+- Cypress ensures that the entire is site is working, from the node server to the client
 - Merges into `main` automatically build and deploy to Vercel
-- A Storybook instance is automagically deployed to Netlify
+- A Storybook instance is auto-magically deployed to Netlify
 
 ## Available Scripts
 
@@ -43,10 +44,14 @@ You will also see any lint errors in the console.
 
 Runs all jest tests. Add `--collectCoverage` to collect test coverage from all valid files under `/src`. 
 
-### `yarn run build`
+### `yarn test:cypress`
 
-Build the thing. Nextjs goes brrrr
+Runs the cypress testing suite. 
 
-### `yarn run storybook`
+### `yarn build` and `yarn start`
+
+Build the thing. Nextjs goes brrrrr.
+
+### `yarn storybook`
 
 Open the storybook development sandbox.
