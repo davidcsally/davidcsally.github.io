@@ -13,6 +13,11 @@ export const SVG = styled.svg`
 
 export const Container = styled.a`
   background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
 
   :hover {
     ${Path} {
