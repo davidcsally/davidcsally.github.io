@@ -83,7 +83,7 @@ const AboutMe = () => {
   return (
     <Container data-testid="about-me">
       <MaxWidth>
-        <H2>About Me</H2>
+        <H2 tabIndex={0}>About Me</H2>
         <Column>
           <TextSection />
           <SquareRatio max="500px">

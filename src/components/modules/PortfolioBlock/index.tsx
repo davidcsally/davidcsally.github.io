@@ -44,7 +44,7 @@ const Container = styled.section`
 const PortfolioBlock = () => (
   <Container data-testid="portfolio-module">
     <MaxWidth>
-      <H2>Stuff I&apos;ve done</H2>
+      <H2 tabIndex={0}>Stuff I&apos;ve done</H2>
       <List>
         {data.map((item, index) => (
           <PortfolioItem

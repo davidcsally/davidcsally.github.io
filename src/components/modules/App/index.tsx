@@ -9,7 +9,6 @@ import SupremeBlock from '../SupremeBlock'
 import AboutMe from '../AboutMe'
 import PortfolioBlock from '../PortfolioBlock'
 import Footer from '../Footer'
-import TechnologySection from '../TechnologySection'
 
 const COOKIE = 'acceptedCookies=true'
 
