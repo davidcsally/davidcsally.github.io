@@ -9,6 +9,7 @@ import LinkedIn from 'components/icons/LinkedIn'
 import Github from 'components/icons/Github'
 import Angellist from 'components/icons/Angellist'
 import Medium from 'components/icons/Medium'
+import Instagram from 'components/icons/Instagram'
 
 const P = styled.p`
   font-family: 'Courier New', Courier, monospace;
@@ -69,6 +70,32 @@ const Position = styled.div`
   width: 100%;
 `
 
+const Nope = styled.div`
+  position: relative;
+  box-shadow: 0;
+  transition: box-shadow 200ms linear;
+  border-radius: 50%;
+
+  :after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    border-bottom: solid 2px red;
+    top: 50%;
+    transform: rotate(45deg);
+    transition: opacity 200ms linear;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 0px 2px red;
+
+    :after {
+      opacity: 1;
+    }
+  }
+`
+
 const HeroBlock = () => (
   <Container data-testid="hero-module">
     <Position>
@@ -96,6 +123,9 @@ const HeroBlock = () => (
       <Github href="https://github.com/davidcsally" />
       <Angellist href="https://angel.co/david-sally" />
       <Medium href="https://medium.com/@davidchristophersally" />
+      <Nope>
+        <Instagram />
+      </Nope>
     </ButtonContainer>
   </Container>
 )
