@@ -48,5 +48,12 @@ module.exports = {
     'react-hooks/exhaustive-deps': 0,
 
     semi: ['error', 'never'],
+    // mac / windows end of line
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
 }

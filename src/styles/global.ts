@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 import { palette } from './colors'
 
-export default createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   ${palette}
 
   body {
@@ -32,3 +32,5 @@ export default createGlobalStyle`
     margin: 0;
   }
 `
+
+export default GlobalStyles

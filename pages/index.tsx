@@ -25,7 +25,9 @@ const Home = () => (
       />
     </Head>
     <App />
-    <Script strategy="afterInteractive">{GA}</Script>
+    <Script id="ga-script" strategy="afterInteractive">
+      {GA}
+    </Script>
   </>
 )
 
