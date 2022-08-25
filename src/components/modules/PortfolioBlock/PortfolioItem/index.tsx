@@ -78,7 +78,9 @@ export const PortfolioItem = ({
         <H3>{title}</H3>
       </Margin>
       <Margin mb="0.5rem">
-        <Text textAlign="center">{description}</Text>
+        <Text display="flex" textAlign="center">
+          {description}
+        </Text>
       </Margin>
       <Code>{skills.join(', ')}</Code>
     </StyledColumn>

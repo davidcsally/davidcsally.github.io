@@ -4,12 +4,12 @@ const Svg = styled.svg`
   height: 80%;
   transition: transform 200ms linear;
   width: auto;
-  
+
   &:hover {
     transform: scale(1.1);
   }
 `
-const LatticeIcon = ({}) => (
+const LatticeIcon = () => (
   <Svg viewBox="0 0 24 24" focusable="false" role="img">
     <title>Lattice Logo</title>
     <g fill="currentColor" xmlns="http://www.w3.org/2000/svg">

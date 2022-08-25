@@ -4,9 +4,19 @@ import MedCircle from 'components/icons/MedCircle'
 import Biorad from 'components/icons/Biorad'
 import ReactSight from 'components/icons/ReactSight'
 import Dictionary from 'components/icons/Dictionary'
+import Lattice from 'components/icons/Lattice'
 import { PortfolioItemProps } from './PortfolioItem'
 
 export default [
+  {
+    title: 'Lattice',
+    description: 'Senior Software Engineer',
+    skills: ['React', 'Relay', 'Node', 'GraphQL'],
+    logo: {
+      component: Lattice,
+      backgroundColor: '#e7e7e7',
+    },
+  },
   {
     title: 'Dictionary.com',
     description: 'Senior Software Engineer',
