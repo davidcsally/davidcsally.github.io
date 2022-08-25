@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import GlobalStyles from 'styles/global'
+import { GlobalStyle } from 'styles/global'
 
 import HeroBlock from '../HeroBlock'
 import Chatbot from '../Chatbot'
@@ -49,7 +49,8 @@ const App = () => {
 
   return (
     <div data-testid="app">
-      <GlobalStyles />
+      {/* @ts-expect-error Idk something is wrong with the types */}
+      <GlobalStyle />
       <main>
         <HeroBlock />
         <AboutMe />
