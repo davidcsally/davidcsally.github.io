@@ -38,7 +38,10 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <style dangerouslySetInnerHTML={{ __html: fonts }} />
+          <style
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: fonts }}
+          />
         </body>
       </Html>
     )

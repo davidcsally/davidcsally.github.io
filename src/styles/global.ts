@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 import { palette } from './colors'
 
-export default createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   ${palette}
 
   body {
