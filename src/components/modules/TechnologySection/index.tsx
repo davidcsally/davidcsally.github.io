@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import { flex } from 'styles/mixins'
 import Margin from 'components/shared/Margin'

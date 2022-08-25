@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import P from 'components/shared/Text'
 import CloseIcon from 'components/icons/CloseIcon'

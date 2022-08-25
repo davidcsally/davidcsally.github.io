@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import type { ChangeEvent, InputHTMLAttributes, KeyboardEvent } from 'react'
 

@@ -1,5 +1,5 @@
 import { useState, useReducer } from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import { media } from 'styles/media'

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 export const Path = styled.path`
   transition: fill 150ms linear;

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useViewportScroll, useTransform, motion } from 'framer-motion'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 import type { RefObject } from 'react'
 
